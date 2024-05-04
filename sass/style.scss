@@ -1,12 +1,12 @@
 @use "sass:map";
 
-// コンテンツ幅
-// -------------------------------------------------->
+/* コンテンツ幅（カンプ幅 1440px）
+------------------------------------------ */
 
-$content-width: 768px; // カンプ幅 1440px
+$content-width: 768px;
 
-// ブレイクポイント
-// -------------------------------------------------->
+/* ブレイクポイント
+------------------------------------------ */
 
 $breakpoints: (
   "sp": "(max-width: 375px)",
@@ -14,8 +14,8 @@ $breakpoints: (
   "pc": "(min-width: #{$content-width})",
 ) !default;
 
-// メディアクエリ
-// -------------------------------------------------->
+/* メディアクエリ
+------------------------------------------ */
 
 @mixin mq($breakpoint: sp) {
   @media #{map.get($breakpoints, $breakpoint)} {
@@ -23,19 +23,19 @@ $breakpoints: (
   }
 }
 
-// カラー
-// -------------------------------------------------->
+/* カラー
+------------------------------------------ */
 
 $color-base: #f2edeb;
 $color-main1: #a67d59;
 $color-main2: #bd9f85;
 $color-main3: #55463d;
 $color-sub: red;
-$color-accent: blue;
+$color-accent: red;
 $color-text: #55463d;
 
-// フォント
-// -------------------------------------------------->
+/* フォント
+------------------------------------------ */
 
 $font-jp: "Zen Kaku Gothic New";
 $font-en1: "DM Sans";
@@ -57,22 +57,21 @@ $font-en2: "Cormorant";
   letter-spacing: calc($spacing / $size * 1em);
 }
 
-// アウトライン
-// -------------------------------------------------->
+/* アウトライン
+------------------------------------------ */
 
 * {
   outline: 1px dashed magenta;
 }
 
-// 共通設定
-// -------------------------------------------------->
+/* 共通
+------------------------------------------ */
 
 body {
   font-family: "DM Sans", "Zen Kaku Gothic New", sans-serif;
   font-size: 16px;
   color: $color-text;
   line-height: 1.5;
-  background-color: $color-base;
 }
 
 img {
@@ -91,6 +90,7 @@ a {
   }
 }
 
+header,
 main,
 footer {
   margin-left: auto;
@@ -130,7 +130,6 @@ footer {
 /* inner
 ------------------------------------------ */
 
-// カンプ幅とコンテンツ幅の差を入力する
 .l-inner {
   padding-left: 36px;
   padding-right: 36px;
