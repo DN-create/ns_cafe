@@ -1,7 +1,3 @@
-* {
-  outline: 1px dashed magenta;
-}
-
 body {
   font-family: "DM Sans", "Zen Kaku Gothic New", sans-serif;
   font-size: 16px;
@@ -33,6 +29,12 @@ a:hover {
   text-align: center;
   position: relative;
 }
+@media (min-width: 768px) {
+  .c-section__heading {
+    font-size: 40px;
+    letter-spacing: 1.6px;
+  }
+}
 
 /* inner
 ------------------------------------------ */
@@ -51,6 +53,11 @@ a:hover {
 
 /* about
 ------------------------------------------ */
+.p-about {
+  padding-top: 48px;
+  padding-bottom: 44px;
+}
+
 .p-about__wrapper {
   position: relative;
 }
@@ -77,7 +84,7 @@ a:hover {
           transform: translate(-50%, -50%);
   width: 64px;
   height: 64px;
-  background: url(../img/section_icon-about.png) no-repeat center center/contain;
+  background: url(../img/about_icon-heading.png) no-repeat center center/contain;
 }
 
 .p-about__item {
@@ -123,8 +130,8 @@ a:hover {
 ._cafe::before {
   position: absolute;
   content: "";
-  top: 50px;
-  left: 0px;
+  top: 25px;
+  left: -5px;
   width: 147px;
   height: 11px;
   background: url(../img/about_deco01.png) no-repeat center center/contain;
@@ -133,15 +140,15 @@ a:hover {
 ._cake::before {
   position: absolute;
   content: "";
-  top: 50px;
-  left: 0px;
+  top: 25px;
+  left: -5px;
   width: 147px;
   height: 11px;
   background: url(../img/about_deco02.png) no-repeat center center/contain;
 }
 
 .p-about__text {
-  margin-top: 20px;
+  margin-top: 24px;
   font-size: 16px;
 }
 
@@ -157,12 +164,15 @@ a:hover {
 .p-about__image {
   width: 136px;
   height: 133px;
-  -webkit-box-shadow: 0px 3px 6px rgba(85, 70, 61, 0.2);
-          box-shadow: 0px 3px 6px rgba(85, 70, 61, 0.2);
 }
 
 /* menu
 ------------------------------------------ */
+.p-menu {
+  padding-top: 32px;
+  padding-bottom: 22px;
+}
+
 .p-menu__heading::before {
   position: absolute;
   content: "";
@@ -172,30 +182,76 @@ a:hover {
           transform: translate(-50%, -50%);
   width: 64px;
   height: 64px;
-  background: url(../img/section_icon-menu.png) no-repeat center center/contain;
+  background: url(../img/menu_icon-heading.png) no-repeat center center/contain;
 }
 
 .p-menu__wrapper {
+  margin-top: 24px;
   font-family: "DM Sans";
 }
 
-.p-menu-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+.p-menu__category-heading {
+  font-family: "DM Sans";
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+.p-menu__category-heading::before {
+  position: absolute;
+  content: "";
+  top: 22px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 111px;
+  height: 15px;
+  background: url(../img/menu_deco01.png) no-repeat center center/contain;
 }
 
-.p-menu-card {
-  padding: 16px 22px;
+.p-menu-list {
+  margin-top: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+}
+
+.p-menu-list__item {
+  padding-top: 22px;
+  padding-bottom: 14px;
+  width: 144px;
   background: rgba(255, 255, 255, 0.5);
   text-align: center;
 }
 
-.p-menu-card__image {
+.u-pt16 {
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+
+.p-menu-card__head {
   width: 100px;
   height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-ml3 {
+  margin-left: 3px;
+}
+
+.u-ml1 {
+  margin-left: 1px;
+}
+
+.p-menu-card__body {
+  margin-top: 19px;
+}
+
+.u-mt15 {
+  margin-top: 15px;
 }
 
 .p-menu-card__name {
@@ -203,11 +259,24 @@ a:hover {
 }
 
 .p-menu-card__price {
+  margin-top: -2px;
   font-size: 12px;
+}
+
+.u-mt2 {
+  margin-top: 2px;
+}
+
+.p-menu__category--drink {
+  margin-top: 32px;
 }
 
 .p-menu-card__notes {
   font-size: 10px;
+}
+
+.u-mt-5 {
+  margin-top: -5px;
 }
 
 .p-menu__cover-background {
@@ -217,8 +286,8 @@ a:hover {
 .p-menu__cover-background::before {
   position: absolute;
   content: "";
-  top: -85px;
-  left: 50%;
+  top: -65px;
+  left: 51%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 312px;
@@ -234,21 +303,21 @@ a:hover {
 /* info
 ------------------------------------------ */
 .p-info {
-  padding-top: 70px;
+  padding-top: 34px;
   position: relative;
 }
 .p-info::before {
   position: absolute;
   content: "";
-  top: 0px;
-  right: 0px;
+  top: 250px;
+  right: -40px;
   background: url(../img/info_background.png) no-repeat center center/contain;
   width: 302.154px;
-  height: 204.678px;
+  height: 211.678px;
 }
 
 .p-info__wrapper {
-  margin-top: 30px;
+  margin-top: 37px;
 }
 
 .p-info__shop-logo {
@@ -256,31 +325,36 @@ a:hover {
   height: 32.262px;
 }
 
+.p-info-list {
+  margin-top: 31px;
+}
+
 .p-info-list__item {
-  margin-bottom: 24px;
+  margin-bottom: 17px;
 }
 
 .p-info-list__tag {
   display: inline-block;
-  padding: 8px;
+  padding: 2px 8px;
   color: #fff;
   font-size: 16px;
   background-color: #a67d59;
 }
 
 .p-info-list__text {
-  margin-top: 16px;
+  margin-top: 9px;
   font-size: 16px;
 }
 
 .p-info-map {
+  padding-top: 6px;
   position: relative;
 }
 .p-info-map::after {
   position: absolute;
   content: "";
-  bottom: -100px;
-  left: 50%;
+  bottom: -85px;
+  left: 49%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 302px;
@@ -291,7 +365,7 @@ a:hover {
 /* sns
 ------------------------------------------ */
 .p-sns {
-  padding-top: 150px;
+  padding-top: 140px;
 }
 
 .p-sns__wrapper {
@@ -304,7 +378,7 @@ a:hover {
 }
 
 .p-sns__image {
-  margin-top: 24px;
+  margin-top: 16px;
   text-align: center;
 }
 .p-sns__image img {

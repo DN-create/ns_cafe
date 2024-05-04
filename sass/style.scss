@@ -61,7 +61,7 @@ $font-en2: "Cormorant";
 // -------------------------------------------------->
 
 * {
-  outline: 1px dashed magenta;
+  // outline: 1px dashed magenta;
 }
 
 // 共通設定
@@ -97,6 +97,11 @@ a {
   font-size: 32px;
   text-align: center;
   position: relative;
+
+  @include mq("pc") {
+    font-size: 40px;
+    letter-spacing: 1.6px;
+  }
 }
 
 /* inner
@@ -117,6 +122,11 @@ a {
 
 /* about
 ------------------------------------------ */
+
+.p-about {
+  padding-top: 48px;
+  padding-bottom: 44px;
+}
 
 .p-about__wrapper {
   position: relative;
@@ -145,7 +155,7 @@ a {
     transform: translate(-50%, -50%);
     width: 64px;
     height: 64px;
-    background: url(../img/section_icon-about.png) no-repeat center center /
+    background: url(../img/about_icon-heading.png) no-repeat center center /
       contain;
   }
 }
@@ -179,8 +189,8 @@ a {
   &::before {
     position: absolute;
     content: "";
-    top: 50px;
-    left: 0px;
+    top: 25px;
+    left: -5px;
     width: 147px;
     height: 11px;
     background: url(../img/about_deco01.png) no-repeat center center / contain;
@@ -191,8 +201,8 @@ a {
   &::before {
     position: absolute;
     content: "";
-    top: 50px;
-    left: 0px;
+    top: 25px;
+    left: -5px;
     width: 147px;
     height: 11px;
     background: url(../img/about_deco02.png) no-repeat center center / contain;
@@ -200,7 +210,7 @@ a {
 }
 
 .p-about__text {
-  margin-top: 20px;
+  margin-top: 24px;
   font-size: 16px;
 }
 
@@ -215,11 +225,15 @@ a {
 .p-about__image {
   width: 136px;
   height: 133px;
-  box-shadow: 0px 3px 6px rgba(85, 70, 61, 0.2);
 }
 
 /* menu
 ------------------------------------------ */
+
+.p-menu {
+  padding-top: 32px;
+  padding-bottom: 22px;
+}
 
 .p-menu__heading {
   &::before {
@@ -230,47 +244,84 @@ a {
     transform: translate(-50%, -50%);
     width: 64px;
     height: 64px;
-    background: url(../img/section_icon-menu.png) no-repeat center center /
+    background: url(../img/menu_icon-heading.png) no-repeat center center /
       contain;
   }
 }
 
-.p-menu {
-}
-
 .p-menu__wrapper {
+  margin-top: 24px;
   font-family: $font-en1;
 }
 
 .p-menu__category--cake {
 }
 
+.p-menu__category-heading {
+  font-family: $font-en1;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 111px;
+    height: 15px;
+    background: url(../img/menu_deco01.png) no-repeat center center / contain;
+  }
+}
+
 .p-menu-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  margin-top: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .p-menu-list__item {
-}
-
-.p-menu-card {
-  padding: 16px 22px;
+  padding-top: 22px;
+  padding-bottom: 14px;
+  width: 144px;
   background: rgba(255, 255, 255, 0.5);
   text-align: center;
 }
 
+.u-pt16 {
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+
+.p-menu-card {
+}
+
 .p-menu-card__head {
+  width: 100px;
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .p-menu-card__image {
-width: 100px;
-height: 75px;
+}
+
+.u-ml3 {
+  margin-left: 3px;
+}
+
+.u-ml1 {
+  margin-left: 1px;
 }
 
 .p-menu-card__body {
+  margin-top: 19px;
+}
+
+.u-mt15 {
+  margin-top: 15px;
 }
 
 .p-menu-card__name {
@@ -278,14 +329,24 @@ height: 75px;
 }
 
 .p-menu-card__price {
+  margin-top: -2px;
   font-size: 12px;
 }
 
+.u-mt2 {
+  margin-top: 2px;
+}
+
 .p-menu__category--drink {
+  margin-top: 32px;
 }
 
 .p-menu-card__notes {
   font-size: 10px;
+}
+
+.u-mt-5 {
+  margin-top: -5px;
 }
 
 .p-menu__cover-background {
@@ -295,8 +356,8 @@ height: 75px;
   &::before {
     position: absolute;
     content: "";
-    top: -85px;
-    left: 50%;
+    top: -65px;
+    left: 51%;
     transform: translateX(-50%);
     width: 312px;
     height: 42.889px;
@@ -313,23 +374,23 @@ height: 75px;
 ------------------------------------------ */
 
 .p-info {
-  padding-top: 70px;
+  padding-top: 34px;
   position: relative;
 
   &::before {
     position: absolute;
     content: "";
-    top: 0px;
-    right: 0px;
+    top: 250px;
+    right: -40px;
     background: url(../img/info_background.png) no-repeat center center /
       contain;
     width: 302.154px;
-    height: 204.678px;
+    height: 211.678px;
   }
 }
 
 .p-info__wrapper {
-  margin-top: 30px;
+  margin-top: 37px;
 }
 
 .p-info__shop-logo {
@@ -338,33 +399,35 @@ height: 75px;
 }
 
 .p-info-list {
+  margin-top: 31px;
 }
 
 .p-info-list__item {
-  margin-bottom: 24px;
+  margin-bottom: 17px;
 }
 
 .p-info-list__tag {
   display: inline-block;
-  padding: 8px;
+  padding: 2px 8px;
   color: #fff;
   font-size: 16px;
   background-color: $color-main1;
 }
 
 .p-info-list__text {
-  margin-top: 16px;
+  margin-top: 9px;
   font-size: 16px;
 }
 
 .p-info-map {
+  padding-top: 6px;
   position: relative;
 
   &::after {
     position: absolute;
     content: "";
-    bottom: -100px;
-    left: 50%;
+    bottom: -85px;
+    left: 49%;
     transform: translateX(-50%);
     width: 302px;
     height: 49.462px;
@@ -376,7 +439,7 @@ height: 75px;
 ------------------------------------------ */
 
 .p-sns {
-  padding-top: 150px;
+  padding-top: 140px;
 }
 
 .p-sns__wrapper {
@@ -389,7 +452,7 @@ height: 75px;
 }
 
 .p-sns__image {
-  margin-top: 24px;
+  margin-top: 16px;
   text-align: center;
 
   img {
