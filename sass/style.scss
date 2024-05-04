@@ -61,7 +61,7 @@ $font-en2: "Cormorant";
 // -------------------------------------------------->
 
 * {
-  // outline: 1px dashed magenta;
+  outline: 1px dashed magenta;
 }
 
 // 共通設定
@@ -91,6 +91,29 @@ a {
   }
 }
 
+main,
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+  background-color: $color-base;
+  max-width: 375px;
+
+  @include mq("tb") {
+    max-width: 540px;
+  }
+
+  @include mq("pc") {
+    max-width: 768px;
+  }
+}
+
+.body-wrapper {
+  width: 100%;
+  background-image: url(../img/body_background.jpg);
+  background-repeat: repeat;
+}
+
 .c-section__heading {
   color: #d43333;
   font-family: $font-en2;
@@ -113,8 +136,8 @@ a {
   padding-right: 36px;
 
   @include mq("pc") {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 64px;
+    padding-right: 64px;
     margin: 0 auto;
     max-width: calc($content-width + 30px * 2);
   }
@@ -157,6 +180,11 @@ a {
     height: 64px;
     background: url(../img/about_icon-heading.png) no-repeat center center /
       contain;
+
+    @include mq("pc") {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
@@ -183,6 +211,11 @@ a {
   font-size: 16px;
   font-weight: 700;
   position: relative;
+
+  @include mq("pc") {
+    font-size: 24px;
+    letter-spacing: 0.48px;
+  }
 }
 
 ._cafe {
@@ -212,6 +245,12 @@ a {
 .p-about__text {
   margin-top: 24px;
   font-size: 16px;
+
+  @include mq("pc") {
+    font-size: 20px;
+    line-height: 1.76;
+    letter-spacing: 0.4px;
+  }
 }
 
 .p-about__head {
@@ -225,6 +264,11 @@ a {
 .p-about__image {
   width: 136px;
   height: 133px;
+
+  @include mq("pc") {
+    width: 278px;
+    height: 272px;
+  }
 }
 
 /* menu
@@ -246,6 +290,11 @@ a {
     height: 64px;
     background: url(../img/menu_icon-heading.png) no-repeat center center /
       contain;
+
+    @include mq("pc") {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
@@ -263,6 +312,10 @@ a {
   text-align: center;
   position: relative;
 
+  @include mq("pc") {
+    font-size: 36px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -272,6 +325,11 @@ a {
     width: 111px;
     height: 15px;
     background: url(../img/menu_deco01.png) no-repeat center center / contain;
+
+    @include mq("pc") {
+      width: 200px;
+      height: 27.027px;
+    }
   }
 }
 
@@ -303,6 +361,11 @@ a {
   height: 75px;
   margin-left: auto;
   margin-right: auto;
+
+  @include mq("pc") {
+    width: 200px;
+    height: 150px;
+  }
 }
 
 .p-menu-card__image {
@@ -326,11 +389,19 @@ a {
 
 .p-menu-card__name {
   font-size: 16px;
+
+  @include mq("pc") {
+    font-size: 24px;
+  }
 }
 
 .p-menu-card__price {
   margin-top: -2px;
   font-size: 12px;
+
+  @include mq("pc") {
+    font-size: 16px;
+  }
 }
 
 .u-mt2 {
@@ -343,6 +414,10 @@ a {
 
 .p-menu-card__notes {
   font-size: 10px;
+
+  @include mq("pc") {
+    font-size: 12px;
+  }
 }
 
 .u-mt-5 {
@@ -362,6 +437,11 @@ a {
     width: 312px;
     height: 42.889px;
     background: url(../img/menu_deco02.png) no-repeat center center / contain;
+
+    @include mq("pc") {
+      width: 640px;
+      height: 87.978px;
+    }
   }
 
   img {
@@ -396,6 +476,11 @@ a {
 .p-info__shop-logo {
   width: 146.487px;
   height: 32.262px;
+
+  @include mq("pc") {
+    width: 272px;
+    height: 60px;
+  }
 }
 
 .p-info-list {
@@ -412,11 +497,21 @@ a {
   color: #fff;
   font-size: 16px;
   background-color: $color-main1;
+
+  @include mq("pc") {
+    font-size: 20px;
+    line-height: 1.76;
+    letter-spacing: 0.4px;
+  }
 }
 
 .p-info-list__text {
   margin-top: 9px;
   font-size: 16px;
+
+  @include mq("pc") {
+    font-size: 24px;
+  }
 }
 
 .p-info-map {
@@ -432,6 +527,11 @@ a {
     width: 302px;
     height: 49.462px;
     background: url(../img/info_deco01.png) no-repeat center center / contain;
+
+    @include mq("pc") {
+      width: 640px;
+      height: 104.821px;
+    }
   }
 }
 
@@ -458,6 +558,11 @@ a {
   img {
     width: 32px;
     height: 32px;
+
+    @include mq("pc") {
+      width: 44px;
+      height: 44px;
+    }
   }
 }
 
@@ -475,10 +580,19 @@ a {
 .p-account__icon {
   width: 40px;
   height: 40px;
+
+  @include mq("pc") {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .p-account__name {
   font-size: 20px;
+
+  @include mq("pc") {
+    font-size: 24px;
+  }
 }
 
 .p-account__post {
@@ -496,4 +610,8 @@ a {
 
 .footer__copyright {
   font-size: 10px;
+
+  @include mq("pc") {
+    font-size: 12px;
+  }
 }
