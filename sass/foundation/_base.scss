@@ -1,0 +1,44 @@
+@use "./variable";
+
+/* 基本設定
+------------------------------------------ */
+
+body {
+  font-family: "DM Sans", "Zen Kaku Gothic New", sans-serif;
+  font-size: 16px;
+  color: variable.$color-text;
+  line-height: 1.5;
+}
+
+main,
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+  background-color: variable.$color-base;
+  max-width: 375px;
+
+  @include variable.mq("tb") {
+    max-width: 540px;
+  }
+
+  @include variable.mq("pc") {
+    max-width: 768px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease 0s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

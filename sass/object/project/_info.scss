@@ -1,0 +1,86 @@
+@use "../../foundation/variable";
+
+/* info
+------------------------------------------ */
+
+.p-info {
+  padding-top: 34px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 250px;
+    right: -40px;
+    background: url(../img/info_background.png) no-repeat center center /
+      contain;
+    width: 302.154px;
+    height: 211.678px;
+  }
+}
+
+.p-info__wrapper {
+  margin-top: 37px;
+}
+
+.p-info__shop-logo {
+  width: 146.487px;
+  height: 32.262px;
+
+  @include variable.mq("pc") {
+    width: 272px;
+    height: 60px;
+  }
+}
+
+.p-info-list {
+  margin-top: 31px;
+}
+
+.p-info-list__item {
+  margin-bottom: 17px;
+}
+
+.p-info-list__tag {
+  display: inline-block;
+  padding: 2px 8px;
+  color: #fff;
+  font-size: 16px;
+  background-color: variable.$color-main1;
+
+  @include variable.mq("pc") {
+    font-size: 20px;
+    line-height: 1.76;
+    letter-spacing: 0.4px;
+  }
+}
+
+.p-info-list__text {
+  margin-top: 9px;
+  font-size: 16px;
+
+  @include variable.mq("pc") {
+    font-size: 24px;
+  }
+}
+
+.p-info-map {
+  padding-top: 6px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -85px;
+    left: 49%;
+    transform: translateX(-50%);
+    width: 302px;
+    height: 49.462px;
+    background: url(../img/info_deco01.png) no-repeat center center / contain;
+
+    @include variable.mq("pc") {
+      width: 640px;
+      height: 104.821px;
+    }
+  }
+}

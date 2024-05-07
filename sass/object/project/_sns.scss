@@ -1,0 +1,65 @@
+@use "../../foundation/variable";
+
+/* sns
+------------------------------------------ */
+
+.p-sns {
+  padding-top: 140px;
+}
+
+.p-sns__wrapper {
+  text-align: center;
+}
+
+.p-sns__text {
+  color: variable.$color-main1;
+  font-size: 20px;
+}
+
+.p-sns__image {
+  margin-top: 16px;
+  text-align: center;
+
+  img {
+    width: 32px;
+    height: 32px;
+
+    @include variable.mq("pc") {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
+
+.p-account {
+  margin-top: 18px;
+}
+
+.p-account__info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.p-account__icon {
+  width: 40px;
+  height: 40px;
+
+  @include variable.mq("pc") {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.p-account__name {
+  font-size: 20px;
+
+  @include variable.mq("pc") {
+    font-size: 24px;
+  }
+}
+
+.p-account__post {
+  margin-top: 8px;
+}

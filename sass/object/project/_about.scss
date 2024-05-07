@@ -1,0 +1,129 @@
+@use "../../foundation/variable";
+
+/* about
+------------------------------------------ */
+
+.p-about {
+  padding-top: 48px;
+  padding-bottom: 44px;
+}
+
+.p-about__wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -40px;
+    left: -140px;
+    background: url(../img/about_background.png) no-repeat center center /
+      contain;
+    width: 320.909px;
+    height: 217.382px;
+    transform: rotate(-4deg);
+    opacity: 0.7;
+    z-index: -1;
+  }
+}
+
+.p-about__heading {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: url(../img/about_icon-heading.png) no-repeat center center /
+      contain;
+
+    @include variable.mq("pc") {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.p-about__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  &._reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.p-about__body {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-about__title {
+  color: variable.$color-main1;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+
+  @include variable.mq("pc") {
+    font-size: 24px;
+    letter-spacing: 0.48px;
+  }
+}
+
+._cafe {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: -5px;
+    width: 147px;
+    height: 11px;
+    background: url(../img/about_deco01.png) no-repeat center center / contain;
+  }
+}
+
+._cake {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: -5px;
+    width: 147px;
+    height: 11px;
+    background: url(../img/about_deco02.png) no-repeat center center / contain;
+  }
+}
+
+.p-about__text {
+  margin-top: 24px;
+  font-size: 16px;
+
+  @include variable.mq("pc") {
+    font-size: 20px;
+    line-height: 1.76;
+    letter-spacing: 0.4px;
+  }
+}
+
+.p-about__head {
+  text-align: center;
+
+  @include variable.mq("pc") {
+    width: 50%;
+  }
+}
+
+.p-about__image {
+  width: 136px;
+  height: 133px;
+
+  @include variable.mq("pc") {
+    width: 278px;
+    height: 272px;
+  }
+}

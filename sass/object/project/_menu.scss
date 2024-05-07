@@ -1,0 +1,155 @@
+@use "../../foundation/variable";
+
+/* menu
+------------------------------------------ */
+
+.p-menu {
+  padding-top: 32px;
+  padding-bottom: 22px;
+}
+
+.p-menu__heading {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: url(../img/menu_icon-heading.png) no-repeat center center /
+      contain;
+
+    @include variable.mq("pc") {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.p-menu__wrapper {
+  margin-top: 24px;
+  font-family: variable.$font-en1;
+}
+
+.p-menu__category--cake {
+}
+
+.p-menu__category-heading {
+  font-family: variable.$font-en1;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+
+  @include variable.mq("pc") {
+    font-size: 36px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 111px;
+    height: 15px;
+    background: url(../img/menu_deco01.png) no-repeat center center / contain;
+
+    @include variable.mq("pc") {
+      width: 200px;
+      height: 27.027px;
+    }
+  }
+}
+
+.p-menu-list {
+  margin-top: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.p-menu-list__item {
+  padding-top: 22px;
+  padding-bottom: 14px;
+  width: 144px;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.p-menu-card {
+}
+
+.p-menu-card__head {
+  width: 100px;
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include variable.mq("pc") {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+.p-menu-card__image {
+}
+
+.p-menu-card__body {
+  margin-top: 19px;
+}
+
+.p-menu-card__name {
+  font-size: 16px;
+
+  @include variable.mq("pc") {
+    font-size: 24px;
+  }
+}
+
+.p-menu-card__price {
+  margin-top: -2px;
+  font-size: 12px;
+
+  @include variable.mq("pc") {
+    font-size: 16px;
+  }
+}
+
+.p-menu__category--drink {
+  margin-top: 32px;
+}
+
+.p-menu-card__notes {
+  font-size: 10px;
+
+  @include variable.mq("pc") {
+    font-size: 12px;
+  }
+}
+
+.p-menu__cover-background {
+  margin-top: 80px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -65px;
+    left: 51%;
+    transform: translateX(-50%);
+    width: 312px;
+    height: 42.889px;
+    background: url(../img/menu_deco02.png) no-repeat center center / contain;
+
+    @include variable.mq("pc") {
+      width: 640px;
+      height: 87.978px;
+    }
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

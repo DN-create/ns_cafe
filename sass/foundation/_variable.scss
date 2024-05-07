@@ -1,0 +1,42 @@
+@use "sass:map";
+
+/* コンテンツ幅（カンプ幅 px）
+------------------------------------------ */
+
+$content-width: 768px;
+
+/* ブレイクポイント
+------------------------------------------ */
+
+$breakpoints: (
+  "sp": "(max-width: 375px)",
+  "tb": "(min-width: 376px) and (max-width: 767px)",
+  "pc": "(min-width: #{$content-width})",
+) !default;
+
+/* メディアクエリ
+------------------------------------------ */
+
+@mixin mq($breakpoint: sp) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* カラー
+------------------------------------------ */
+
+$color-base: #f2edeb;
+$color-main1: #a67d59;
+$color-main2: #bd9f85;
+$color-main3: #55463d;
+// $color-sub: red;
+// $color-accent: red;
+$color-text: #55463d;
+
+/* フォント
+------------------------------------------ */
+
+$font-jp: "Zen Kaku Gothic New";
+$font-en1: "DM Sans";
+$font-en2: "Cormorant";

@@ -1,5 +1,67 @@
 @charset "UTF-8";
-/* コンテンツ幅（カンプ幅 1440px）
+/* foundation
+------------------------------------------ */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl,
+li, dt, dd, p, div, span, img, a, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header, footer, nav, section, article, main,
+aside, figure, figcaption {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+input, select, textarea {
+  font: inherit;
+  color: inherit;
+  vertical-align: top;
+}
+
+figure, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* コンテンツ幅（カンプ幅 px）
 ------------------------------------------ */
 /* ブレイクポイント
 ------------------------------------------ */
@@ -9,19 +71,34 @@
 ------------------------------------------ */
 /* フォント
 ------------------------------------------ */
-/* アウトライン
------------------------------------------- */
-* {
-  outline: 1px dashed magenta;
-}
-
-/* 共通
+/* 基本設定
 ------------------------------------------ */
 body {
   font-family: "DM Sans", "Zen Kaku Gothic New", sans-serif;
   font-size: 16px;
   color: #55463d;
   line-height: 1.5;
+}
+
+main,
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+  background-color: #f2edeb;
+  max-width: 375px;
+}
+@media (min-width: 376px) and (max-width: 767px) {
+  main,
+  footer {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  main,
+  footer {
+    max-width: 768px;
+  }
 }
 
 img {
@@ -40,36 +117,33 @@ a:hover {
   opacity: 0.7;
 }
 
-header,
-main,
-footer {
-  margin-left: auto;
-  margin-right: auto;
-  overflow-x: hidden;
-  background-color: #f2edeb;
-  max-width: 375px;
-}
-@media (min-width: 376px) and (max-width: 767px) {
-  header,
-  main,
-  footer {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  header,
-  main,
-  footer {
-    max-width: 768px;
-  }
-}
-
-.body-wrapper {
+/* layout
+------------------------------------------ */
+.l-wrapper {
   width: 100%;
   background-image: url(../img/body_background.jpg);
   background-repeat: repeat;
 }
 
+/* footer
+------------------------------------------ */
+.footer {
+  padding-top: 48px;
+  padding-bottom: 24px;
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 10px;
+}
+@media (min-width: 768px) {
+  .footer__copyright {
+    font-size: 12px;
+  }
+}
+
+/* component
+------------------------------------------ */
 .c-section__heading {
   color: #d43333;
   font-family: "Cormorant";
@@ -84,21 +158,8 @@ footer {
   }
 }
 
-/* inner
+/* project
 ------------------------------------------ */
-.l-inner {
-  padding-left: 36px;
-  padding-right: 36px;
-}
-@media (min-width: 768px) {
-  .l-inner {
-    padding-left: 64px;
-    padding-right: 64px;
-    margin: 0 auto;
-    max-width: 828px;
-  }
-}
-
 /* about
 ------------------------------------------ */
 .p-about {
@@ -316,11 +377,6 @@ footer {
   text-align: center;
 }
 
-.u-pt16 {
-  padding-top: 16px;
-  padding-bottom: 10px;
-}
-
 .p-menu-card__head {
   width: 100px;
   height: 75px;
@@ -334,20 +390,8 @@ footer {
   }
 }
 
-.u-ml3 {
-  margin-left: 3px;
-}
-
-.u-ml1 {
-  margin-left: 1px;
-}
-
 .p-menu-card__body {
   margin-top: 19px;
-}
-
-.u-mt15 {
-  margin-top: 15px;
 }
 
 .p-menu-card__name {
@@ -369,10 +413,6 @@ footer {
   }
 }
 
-.u-mt2 {
-  margin-top: 2px;
-}
-
 .p-menu__category--drink {
   margin-top: 32px;
 }
@@ -384,10 +424,6 @@ footer {
   .p-menu-card__notes {
     font-size: 12px;
   }
-}
-
-.u-mt-5 {
-  margin-top: -5px;
 }
 
 .p-menu__cover-background {
@@ -574,19 +610,32 @@ footer {
   margin-top: 8px;
 }
 
-/* footer
+/* utility
 ------------------------------------------ */
-.footer {
-  padding-top: 48px;
-  padding-bottom: 24px;
-  text-align: center;
+.u-mt2 {
+  margin-top: 2px;
 }
 
-.footer__copyright {
-  font-size: 10px;
+.u-mt-5 {
+  margin-top: -5px;
 }
-@media (min-width: 768px) {
-  .footer__copyright {
-    font-size: 12px;
-  }
+
+.u-ml3 {
+  margin-left: 3px;
 }
+
+.u-ml1 {
+  margin-left: 1px;
+}
+
+.u-mt15 {
+  margin-top: 15px;
+}
+
+.u-pt16 {
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+
+/* 作業用アウトライン
+------------------------------------------ */
