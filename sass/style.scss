@@ -16,6 +16,8 @@
 
 @use "./object/component/section";
 @use "./object/component/button";
+@use "./object/component/inner";
+@use "./object/component/animation";
 
 /* project
 ------------------------------------------ */
@@ -34,6 +36,6 @@
 /* 作業用アウトライン
 ------------------------------------------ */
 
-// * {
-//   outline: 1px dashed magenta;
-// }
+* {
+  outline: 1px dashed magenta;
+}

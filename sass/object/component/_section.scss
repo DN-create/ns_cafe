@@ -10,7 +10,7 @@
   text-align: center;
   position: relative;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     font-size: 40px;
     letter-spacing: 1.6px;
   }

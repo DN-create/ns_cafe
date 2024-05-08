@@ -14,15 +14,15 @@ main,
 footer {
   margin-left: auto;
   margin-right: auto;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   background-color: variable.$color-base;
   max-width: 375px;
 
-  @include variable.mq("tb") {
+  @include variable.mq("md") {
     max-width: 540px;
   }
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     max-width: 768px;
   }
 }

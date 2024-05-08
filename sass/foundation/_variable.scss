@@ -9,15 +9,17 @@ $content-width: 768px;
 ------------------------------------------ */
 
 $breakpoints: (
-  "sp": "(max-width: 375px)",
-  "tb": "(min-width: 376px) and (max-width: 767px)",
-  "pc": "(min-width: #{$content-width})",
+  "sm": "(max-width: 375px)",
+  "md": "(min-width: 376px)",
+  "lg": "(min-width: #{$content-width})",
+  "xl": "(min-width: 1280px)",
+  "xxl": "(min-width: 1440px)",
 ) !default;
 
 /* メディアクエリ
 ------------------------------------------ */
 
-@mixin mq($breakpoint: sp) {
+@mixin mq($breakpoint: sm) {
   @media #{map.get($breakpoints, $breakpoint)} {
     @content;
   }

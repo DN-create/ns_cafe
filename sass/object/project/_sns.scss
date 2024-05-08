@@ -24,7 +24,7 @@
     width: 32px;
     height: 32px;
 
-    @include variable.mq("pc") {
+    @include variable.mq("lg") {
       width: 44px;
       height: 44px;
     }
@@ -46,7 +46,7 @@
   width: 40px;
   height: 40px;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     width: 44px;
     height: 44px;
   }
@@ -55,7 +55,7 @@
 .p-account__name {
   font-size: 20px;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     font-size: 24px;
   }
 }

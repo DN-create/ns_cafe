@@ -20,7 +20,7 @@
     background: url(../img/menu_icon-heading.png) no-repeat center center /
       contain;
 
-    @include variable.mq("pc") {
+    @include variable.mq("lg") {
       width: 100px;
       height: 100px;
     }
@@ -41,7 +41,7 @@
   text-align: center;
   position: relative;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     font-size: 36px;
   }
 
@@ -55,7 +55,7 @@
     height: 15px;
     background: url(../img/menu_deco01.png) no-repeat center center / contain;
 
-    @include variable.mq("pc") {
+    @include variable.mq("lg") {
       width: 200px;
       height: 27.027px;
     }
@@ -66,7 +66,12 @@
   margin-top: 23px;
   display: flex;
   flex-wrap: wrap;
+justify-content: center;
   gap: 15px;
+
+  @include variable.mq('lg') {
+    gap: 64px;
+  }
 }
 
 .p-menu-list__item {
@@ -75,6 +80,12 @@
   width: 144px;
   background: rgba(255, 255, 255, 0.5);
   text-align: center;
+
+  @include variable.mq('lg') {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    width: 288px;
+  }
 }
 
 .p-menu-card {
@@ -86,7 +97,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     width: 200px;
     height: 150px;
   }
@@ -97,12 +108,16 @@
 
 .p-menu-card__body {
   margin-top: 19px;
+
+  @include variable.mq('lg') {
+    margin-top: 30px;
+  }
 }
 
 .p-menu-card__name {
   font-size: 16px;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     font-size: 24px;
   }
 }
@@ -111,7 +126,7 @@
   margin-top: -2px;
   font-size: 12px;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     font-size: 16px;
   }
 }
@@ -123,7 +138,7 @@
 .p-menu-card__notes {
   font-size: 10px;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     font-size: 12px;
   }
 }
@@ -142,7 +157,7 @@
     height: 42.889px;
     background: url(../img/menu_deco02.png) no-repeat center center / contain;
 
-    @include variable.mq("pc") {
+    @include variable.mq("lg") {
       width: 640px;
       height: 87.978px;
     }
@@ -153,3 +168,51 @@
     object-fit: cover;
   }
 }
+
+.p-menu__decoration {
+  position: relative;
+}
+
+.p-menu__decoration-item {
+  display: none;
+
+  @include variable.mq('xl') {
+    display: block;
+  }
+
+  &.--cooking {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: -100px;
+  }
+
+  &.--spatula {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: -100px;
+  }
+
+  &.--spatulabowl {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: -100px;
+  }
+
+  &.--spatulamold {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left:-100px;
+  }
+
+  &.--oven {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right:-100px;
+  }
+}
+

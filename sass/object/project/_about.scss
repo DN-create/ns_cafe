@@ -38,7 +38,7 @@
     background: url(../img/about_icon-heading.png) no-repeat center center /
       contain;
 
-    @include variable.mq("pc") {
+    @include variable.mq("lg") {
       width: 100px;
       height: 100px;
     }
@@ -69,7 +69,7 @@
   font-weight: 700;
   position: relative;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     font-size: 24px;
     letter-spacing: 0.48px;
   }
@@ -84,6 +84,13 @@
     width: 147px;
     height: 11px;
     background: url(../img/about_deco01.png) no-repeat center center / contain;
+
+    @include variable.mq("lg") {
+      top: 35px;
+      left: 0px;
+      width: 225px;
+      height: 18px;
+    }
   }
 }
 
@@ -96,6 +103,13 @@
     width: 147px;
     height: 11px;
     background: url(../img/about_deco02.png) no-repeat center center / contain;
+
+    @include variable.mq("lg") {
+      top: 35px;
+      left: 0px;
+      width: 225px;
+      height: 18px;
+    }
   }
 }
 
@@ -103,7 +117,7 @@
   margin-top: 24px;
   font-size: 16px;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     font-size: 20px;
     line-height: 1.76;
     letter-spacing: 0.4px;
@@ -113,7 +127,7 @@
 .p-about__head {
   text-align: center;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     width: 50%;
   }
 }
@@ -122,8 +136,48 @@
   width: 136px;
   height: 133px;
 
-  @include variable.mq("pc") {
+  @include variable.mq("lg") {
     width: 278px;
     height: 272px;
+  }
+}
+
+.p-about__decoration {
+  position: relative;
+}
+
+.p-about__decoration-item {
+  display: none;
+
+  @include variable.mq('xl') {
+    display: block;
+  }
+
+  &.--egg {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: -100px;
+  }
+
+  &.--eggbowl {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: -100px;
+  }
+
+  &.--whisk {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: -100px;
+  }
+
+  &.--whiskbowl {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left:-100px;
   }
 }
