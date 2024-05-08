@@ -1,13 +1,26 @@
 /* ゆらゆら揺れるアニメーション */
-.c-swing-animation{
-  animation: swing 4s ease infinite;
+.c-swing-animation01{
+  animation: swing-ease 4s ease infinite;
   scale: 1;
 }
 
-@keyframes swing{
+@keyframes swing-ease{
 	0%  {transform:rotate(-6deg);}
 	35% {transform:rotate(-6deg);}
   50% {transform:rotate(6deg);}
   85% {transform:rotate(6deg);}
 	100% {transform:rotate(-6deg);}
+}
+
+.c-swing-animation02{
+  animation: swing-linear 4s linear infinite;
+  scale: 1;
+}
+
+@keyframes swing-linear{
+	0%  {transform:rotate(6deg);}
+	35% {transform:rotate(6deg);}
+  50% {transform:rotate(-6deg);}
+  85% {transform:rotate(-6deg);}
+	100% {transform:rotate(6deg);}
 }

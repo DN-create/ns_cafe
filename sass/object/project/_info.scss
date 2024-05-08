@@ -7,6 +7,10 @@
   padding-top: 34px;
   position: relative;
 
+  @include variable.mq("lg") {
+    padding-top: 60px;
+  }
+
   &::before {
     // position: absolute;
     // content: "";
@@ -21,6 +25,10 @@
 
 .p-info__wrapper {
   margin-top: 37px;
+
+  @include variable.mq("lg") {
+    margin-top: 58px;
+  }
 }
 
 .p-info__shop-logo {
@@ -35,10 +43,18 @@
 
 .p-info-list {
   margin-top: 31px;
+
+  @include variable.mq("lg") {
+    margin-top: 67px;
+  }
 }
 
 .p-info-list__item {
   margin-bottom: 17px;
+
+  @include variable.mq("lg") {
+    margin-bottom: 36px;
+  }
 }
 
 .p-info-list__tag {
@@ -49,6 +65,7 @@
   background-color: variable.$color-main1;
 
   @include variable.mq("lg") {
+    padding: 4px 16px;
     font-size: 20px;
     line-height: 1.76;
     letter-spacing: 0.4px;
@@ -60,7 +77,8 @@
   font-size: 16px;
 
   @include variable.mq("lg") {
-    font-size: 24px;
+    margin-top: 18px;
+    font-size: 20px;
   }
 }
 
@@ -79,8 +97,76 @@
     background: url(../img/info_deco01.png) no-repeat center center / contain;
 
     @include variable.mq("lg") {
+      bottom: -168px;
+      left: 50%;
       width: 640px;
       height: 104.821px;
     }
+  }
+}
+
+.p-info__decoration {
+  position: relative;
+}
+
+.p-info__decoration-item {
+  display: none;
+
+  @include variable.mq("xl") {
+    display: block;
+  }
+
+  &.--caddy {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0px;
+    width: 192px;
+    height: 117px;
+  }
+
+  &.--pot {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0px;
+    width: 192px;
+    height: 127px;
+  }
+
+  &.--pouring {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0px;
+    width: 192px;
+    height: 204px;
+  }
+
+  &.--cup {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0px;
+    width: 192px;
+    height: 88px;
+  }
+
+  &.--cake {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0px;
+    width: 192px;
+    height: 117px;
+  }
+
+  &.--eating {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: 0px;
+    width: 192px;
+    height: 227px;
   }
 }

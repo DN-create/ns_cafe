@@ -131,6 +131,11 @@ a:hover {
   padding-bottom: 24px;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .l-footer {
+    padding-top: 45px;
+  }
+}
 
 .l-footer__copyright {
   font-size: 10px;
@@ -171,13 +176,13 @@ a:hover {
 }
 
 /* ゆらゆら揺れるアニメーション */
-.c-swing-animation {
-  -webkit-animation: swing 4s ease infinite;
-          animation: swing 4s ease infinite;
+.c-swing-animation01 {
+  -webkit-animation: swing-ease 4s ease infinite;
+          animation: swing-ease 4s ease infinite;
   scale: 1;
 }
 
-@-webkit-keyframes swing {
+@-webkit-keyframes swing-ease {
   0% {
     -webkit-transform: rotate(-6deg);
             transform: rotate(-6deg);
@@ -200,7 +205,7 @@ a:hover {
   }
 }
 
-@keyframes swing {
+@keyframes swing-ease {
   0% {
     -webkit-transform: rotate(-6deg);
             transform: rotate(-6deg);
@@ -220,6 +225,57 @@ a:hover {
   100% {
     -webkit-transform: rotate(-6deg);
             transform: rotate(-6deg);
+  }
+}
+.c-swing-animation02 {
+  -webkit-animation: swing-linear 4s linear infinite;
+          animation: swing-linear 4s linear infinite;
+  scale: 1;
+}
+
+@-webkit-keyframes swing-linear {
+  0% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  35% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  50% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+  }
+  85% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+  }
+  100% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+}
+
+@keyframes swing-linear {
+  0% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  35% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  50% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+  }
+  85% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+  }
+  100% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
   }
 }
 /* project
@@ -230,9 +286,19 @@ a:hover {
   padding-top: 48px;
   padding-bottom: 44px;
 }
+@media (min-width: 768px) {
+  .p-about {
+    padding-bottom: 42px;
+  }
+}
 
 .p-about__wrapper {
   position: relative;
+}
+@media (min-width: 768px) {
+  .p-about__wrapper {
+    margin-top: 56px;
+  }
 }
 .p-about__wrapper::before {
   position: absolute;
@@ -267,6 +333,7 @@ a:hover {
 }
 
 .p-about__item {
+  margin-bottom: 63px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,6 +344,14 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+}
+@media (min-width: 768px) {
+  .p-about__item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: 65px;
+  }
 }
 .p-about__item._reverse {
   -webkit-box-orient: horizontal;
@@ -307,6 +382,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-about__title {
+    margin-top: 48px;
     font-size: 24px;
     letter-spacing: 0.48px;
   }
@@ -323,7 +399,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   ._cafe::before {
-    top: 35px;
+    top: 42px;
     left: 0px;
     width: 225px;
     height: 18px;
@@ -341,7 +417,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   ._cake::before {
-    top: 35px;
+    top: 42px;
     left: 0px;
     width: 225px;
     height: 18px;
@@ -354,6 +430,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-about__text {
+    margin-top: 46px;
     font-size: 20px;
     line-height: 1.76;
     letter-spacing: 0.4px;
@@ -365,6 +442,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-about__head {
+    text-align: left;
     width: 50%;
   }
 }
@@ -375,8 +453,8 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-about__image {
-    width: 278px;
-    height: 272px;
+    width: 288px;
+    height: 288px;
   }
 }
 
@@ -395,26 +473,34 @@ a:hover {
 .p-about__decoration-item.--egg {
   position: absolute;
   content: "";
-  top: 0px;
-  right: -100px;
+  top: 145px;
+  right: -290px;
+  width: 192px;
+  height: 138.667px;
 }
 .p-about__decoration-item.--eggbowl {
   position: absolute;
   content: "";
-  top: 0px;
-  right: -100px;
+  top: 284px;
+  right: -290px;
+  width: 192px;
+  height: 112px;
 }
 .p-about__decoration-item.--whisk {
   position: absolute;
   content: "";
-  top: 0px;
-  left: -100px;
+  top: 592px;
+  left: -268px;
+  width: 192px;
+  height: 206px;
 }
 .p-about__decoration-item.--whiskbowl {
   position: absolute;
   content: "";
-  top: 0px;
-  left: -100px;
+  top: 697px;
+  left: -300px;
+  width: 192px;
+  height: 139px;
 }
 
 /* menu
@@ -446,6 +532,11 @@ a:hover {
   margin-top: 24px;
   font-family: "DM Sans";
 }
+@media (min-width: 768px) {
+  .p-menu__wrapper {
+    margin-top: 61px;
+  }
+}
 
 .p-menu__category-heading {
   font-family: "DM Sans";
@@ -471,6 +562,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-menu__category-heading::before {
+    top: 49px;
     width: 200px;
     height: 27.027px;
   }
@@ -490,6 +582,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-menu-list {
+    margin-top: 64px;
     gap: 64px;
   }
 }
@@ -504,7 +597,7 @@ a:hover {
 @media (min-width: 768px) {
   .p-menu-list__item {
     padding-top: 44px;
-    padding-bottom: 44px;
+    padding-bottom: 38px;
     width: 288px;
   }
 }
@@ -527,7 +620,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-menu-card__body {
-    margin-top: 30px;
+    margin-top: 42px;
   }
 }
 
@@ -546,12 +639,18 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-menu-card__price {
+    margin-top: 6px;
     font-size: 16px;
   }
 }
 
 .p-menu__category--drink {
   margin-top: 32px;
+}
+@media (min-width: 768px) {
+  .p-menu__category--drink {
+    margin-top: 64px;
+  }
 }
 
 .p-menu-card__notes {
@@ -580,6 +679,8 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-menu__cover-background::before {
+    top: -85px;
+    left: 50%;
     width: 640px;
     height: 87.978px;
   }
@@ -605,32 +706,42 @@ a:hover {
 .p-menu__decoration-item.--cooking {
   position: absolute;
   content: "";
-  top: 0px;
-  right: -100px;
+  top: 273px;
+  right: -291px;
+  width: 192px;
+  height: 204px;
 }
 .p-menu__decoration-item.--spatula {
   position: absolute;
   content: "";
-  top: 0px;
-  left: -100px;
+  top: 713px;
+  left: -273px;
+  width: 173.215px;
+  height: 185.845px;
 }
 .p-menu__decoration-item.--spatulabowl {
   position: absolute;
   content: "";
-  top: 0px;
-  left: -100px;
+  top: 786px;
+  left: -319px;
+  width: 191.215px;
+  height: auto;
 }
 .p-menu__decoration-item.--spatulamold {
   position: absolute;
   content: "";
-  top: 0px;
-  left: -100px;
+  top: 874px;
+  left: -228px;
+  width: 173.215px;
+  height: 103.748px;
 }
 .p-menu__decoration-item.--oven {
   position: absolute;
   content: "";
-  top: 0px;
-  right: -100px;
+  top: 1251px;
+  right: -291px;
+  width: 192px;
+  height: 181px;
 }
 
 /* info
@@ -639,8 +750,18 @@ a:hover {
   padding-top: 34px;
   position: relative;
 }
+@media (min-width: 768px) {
+  .p-info {
+    padding-top: 60px;
+  }
+}
 .p-info__wrapper {
   margin-top: 37px;
+}
+@media (min-width: 768px) {
+  .p-info__wrapper {
+    margin-top: 58px;
+  }
 }
 
 .p-info__shop-logo {
@@ -657,9 +778,19 @@ a:hover {
 .p-info-list {
   margin-top: 31px;
 }
+@media (min-width: 768px) {
+  .p-info-list {
+    margin-top: 67px;
+  }
+}
 
 .p-info-list__item {
   margin-bottom: 17px;
+}
+@media (min-width: 768px) {
+  .p-info-list__item {
+    margin-bottom: 36px;
+  }
 }
 
 .p-info-list__tag {
@@ -671,6 +802,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-info-list__tag {
+    padding: 4px 16px;
     font-size: 20px;
     line-height: 1.76;
     letter-spacing: 0.4px;
@@ -683,7 +815,8 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-info-list__text {
-    font-size: 24px;
+    margin-top: 18px;
+    font-size: 20px;
   }
 }
 
@@ -704,15 +837,83 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-info-map::after {
+    bottom: -168px;
+    left: 50%;
     width: 640px;
     height: 104.821px;
   }
+}
+
+.p-info__decoration {
+  position: relative;
+}
+
+.p-info__decoration-item {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .p-info__decoration-item {
+    display: block;
+  }
+}
+.p-info__decoration-item.--caddy {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 0px;
+  width: 192px;
+  height: 117px;
+}
+.p-info__decoration-item.--pot {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 0px;
+  width: 192px;
+  height: 127px;
+}
+.p-info__decoration-item.--pouring {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 0px;
+  width: 192px;
+  height: 204px;
+}
+.p-info__decoration-item.--cup {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 0px;
+  width: 192px;
+  height: 88px;
+}
+.p-info__decoration-item.--cake {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 0px;
+  width: 192px;
+  height: 117px;
+}
+.p-info__decoration-item.--eating {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 0px;
+  width: 192px;
+  height: 227px;
 }
 
 /* sns
 ------------------------------------------ */
 .p-sns {
   padding-top: 140px;
+}
+@media (min-width: 768px) {
+  .p-sns {
+    padding-top: 226px;
+  }
 }
 
 .p-sns__wrapper {
@@ -723,10 +924,20 @@ a:hover {
   color: #a67d59;
   font-size: 20px;
 }
+@media (min-width: 768px) {
+  .p-sns__text {
+    font-size: 36px;
+  }
+}
 
 .p-sns__image {
   margin-top: 16px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .p-sns__image {
+    margin-top: 34px;
+  }
 }
 .p-sns__image img {
   width: 32px;
@@ -742,6 +953,11 @@ a:hover {
 .p-account {
   margin-top: 18px;
 }
+@media (min-width: 768px) {
+  .p-account {
+    margin-top: 41px;
+  }
+}
 
 .p-account__info {
   display: -webkit-box;
@@ -755,13 +971,19 @@ a:hover {
           align-items: center;
   gap: 8px;
 }
+@media (min-width: 768px) {
+  .p-account__info {
+    padding-left: 2px;
+    gap: 16px;
+  }
+}
 
-.p-account__icon {
+.p-account__icon img {
   width: 40px;
   height: 40px;
 }
 @media (min-width: 768px) {
-  .p-account__icon {
+  .p-account__icon img {
     width: 44px;
     height: 44px;
   }
@@ -778,6 +1000,11 @@ a:hover {
 
 .p-account__post {
   margin-top: 8px;
+}
+@media (min-width: 768px) {
+  .p-account__post {
+    margin-top: 27px;
+  }
 }
 
 /* utility
@@ -809,6 +1036,3 @@ a:hover {
 
 /* 作業用アウトライン
 ------------------------------------------ */
-* {
-  outline: 1px dashed magenta;
-}

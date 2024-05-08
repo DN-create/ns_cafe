@@ -30,6 +30,10 @@
 .p-menu__wrapper {
   margin-top: 24px;
   font-family: variable.$font-en1;
+
+  @include variable.mq("lg") {
+    margin-top: 61px;
+  }
 }
 
 .p-menu__category--cake {
@@ -56,6 +60,7 @@
     background: url(../img/menu_deco01.png) no-repeat center center / contain;
 
     @include variable.mq("lg") {
+      top: 49px;
       width: 200px;
       height: 27.027px;
     }
@@ -66,10 +71,11 @@
   margin-top: 23px;
   display: flex;
   flex-wrap: wrap;
-justify-content: center;
+  justify-content: center;
   gap: 15px;
 
-  @include variable.mq('lg') {
+  @include variable.mq("lg") {
+    margin-top: 64px;
     gap: 64px;
   }
 }
@@ -81,9 +87,9 @@ justify-content: center;
   background: rgba(255, 255, 255, 0.5);
   text-align: center;
 
-  @include variable.mq('lg') {
+  @include variable.mq("lg") {
     padding-top: 44px;
-    padding-bottom: 44px;
+    padding-bottom: 38px;
     width: 288px;
   }
 }
@@ -109,8 +115,8 @@ justify-content: center;
 .p-menu-card__body {
   margin-top: 19px;
 
-  @include variable.mq('lg') {
-    margin-top: 30px;
+  @include variable.mq("lg") {
+    margin-top: 42px;
   }
 }
 
@@ -127,12 +133,17 @@ justify-content: center;
   font-size: 12px;
 
   @include variable.mq("lg") {
+    margin-top: 6px;
     font-size: 16px;
   }
 }
 
 .p-menu__category--drink {
   margin-top: 32px;
+
+  @include variable.mq("lg") {
+    margin-top: 64px;
+  }
 }
 
 .p-menu-card__notes {
@@ -158,6 +169,8 @@ justify-content: center;
     background: url(../img/menu_deco02.png) no-repeat center center / contain;
 
     @include variable.mq("lg") {
+      top: -85px;
+      left: 50%;
       width: 640px;
       height: 87.978px;
     }
@@ -176,43 +189,52 @@ justify-content: center;
 .p-menu__decoration-item {
   display: none;
 
-  @include variable.mq('xl') {
+  @include variable.mq("xl") {
     display: block;
   }
 
   &.--cooking {
     position: absolute;
     content: "";
-    top: 0px;
-    right: -100px;
+    top: 273px;
+    right: -291px;
+    width: 192px;
+    height: 204px;
   }
 
   &.--spatula {
     position: absolute;
     content: "";
-    top: 0px;
-    left: -100px;
+    top: 713px;
+    left: -273px;
+    width: 173.215px;
+    height: 185.845px;
   }
 
   &.--spatulabowl {
     position: absolute;
     content: "";
-    top: 0px;
-    left: -100px;
+    top: 786px;
+    left: -319px;
+    width: 191.215px;
+    height: auto;
   }
 
   &.--spatulamold {
     position: absolute;
     content: "";
-    top: 0px;
-    left:-100px;
+    top: 874px;
+    left: -228px;
+    width: 173.215px;
+    height: 103.748px;
   }
 
   &.--oven {
     position: absolute;
     content: "";
-    top: 0px;
-    right:-100px;
+    top: 1251px;
+    right: -291px;
+    width: 192px;
+    height: 181px;
   }
 }
-
