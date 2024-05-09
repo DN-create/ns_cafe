@@ -6,20 +6,32 @@
 .p-info {
   padding-top: 34px;
   position: relative;
+  overflow: hidden;
 
   @include variable.mq("lg") {
     padding-top: 60px;
   }
 
+  @include variable.mq("xl") {
+    overflow: visible;
+  }
+
   &::before {
-    // position: absolute;
-    // content: "";
-    // top: 250px;
-    // right: -40px;
-    // background: url(../img/info_background.png) no-repeat center center /
-    //   contain;
-    // width: 302.154px;
-    // height: 211.678px;
+    position: absolute;
+    content: "";
+    top: 247px;
+    right: -38px;
+    background: url(../img/info_background.png) no-repeat center center /
+      contain;
+    width: 305.154px;
+    height: 216.678px;
+
+    @include variable.mq("lg") {
+      top: 442px;
+      right: -75px;
+      width: 627.812px;
+      height: 450.18px;
+    }
   }
 }
 
@@ -28,6 +40,27 @@
 
   @include variable.mq("lg") {
     margin-top: 58px;
+  }
+}
+
+.p-info__heading {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 64px;
+    background: url(../img/info_icon-heading.png) no-repeat center center /
+      contain;
+
+    @include variable.mq("lg") {
+      width: 100px;
+      height: 99.01px;
+    }
   }
 }
 
@@ -53,7 +86,7 @@
   margin-bottom: 17px;
 
   @include variable.mq("lg") {
-    margin-bottom: 36px;
+    margin-bottom: 33px;
   }
 }
 
@@ -80,29 +113,16 @@
     margin-top: 18px;
     font-size: 20px;
   }
+
+  span {
+    @include variable.mq("lg") {
+      font-size: 24px;
+    }
+  }
 }
 
 .p-info-map {
   padding-top: 6px;
-  position: relative;
-
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: -85px;
-    left: 49%;
-    transform: translateX(-50%);
-    width: 302px;
-    height: 49.462px;
-    background: url(../img/info_deco01.png) no-repeat center center / contain;
-
-    @include variable.mq("lg") {
-      bottom: -168px;
-      left: 50%;
-      width: 640px;
-      height: 104.821px;
-    }
-  }
 }
 
 .p-info__decoration {
@@ -119,8 +139,8 @@
   &.--caddy {
     position: absolute;
     content: "";
-    top: 0px;
-    right: 0px;
+    top: -328px;
+    left: -315px;
     width: 192px;
     height: 117px;
   }
@@ -128,8 +148,8 @@
   &.--pot {
     position: absolute;
     content: "";
-    top: 0px;
-    right: 0px;
+    top: -236px;
+    left: -251px;
     width: 192px;
     height: 127px;
   }
@@ -137,8 +157,8 @@
   &.--pouring {
     position: absolute;
     content: "";
-    top: 0px;
-    right: 0px;
+    top: 126px;
+    right: -291px;
     width: 192px;
     height: 204px;
   }
@@ -146,8 +166,8 @@
   &.--cup {
     position: absolute;
     content: "";
-    top: 0px;
-    right: 0px;
+    top: 665px;
+    left: -316px;
     width: 192px;
     height: 88px;
   }
@@ -155,8 +175,8 @@
   &.--cake {
     position: absolute;
     content: "";
-    top: 0px;
-    right: 0px;
+    top: 745px;
+    left: -252px;
     width: 192px;
     height: 117px;
   }
@@ -164,8 +184,8 @@
   &.--eating {
     position: absolute;
     content: "";
-    top: 0px;
-    right: 0px;
+    top: 1104px;
+    right: -291px;
     width: 192px;
     height: 227px;
   }

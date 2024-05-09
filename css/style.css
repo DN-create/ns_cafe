@@ -127,7 +127,7 @@ a:hover {
 /* footer
 ------------------------------------------ */
 .l-footer {
-  padding-top: 48px;
+  padding-top: 28px;
   padding-bottom: 24px;
   text-align: center;
 }
@@ -284,7 +284,6 @@ a:hover {
 ------------------------------------------ */
 .p-about {
   padding-top: 48px;
-  padding-bottom: 44px;
 }
 @media (min-width: 768px) {
   .p-about {
@@ -292,28 +291,9 @@ a:hover {
   }
 }
 
-.p-about__wrapper {
+.p-about__heading {
   position: relative;
 }
-@media (min-width: 768px) {
-  .p-about__wrapper {
-    margin-top: 56px;
-  }
-}
-.p-about__wrapper::before {
-  position: absolute;
-  content: "";
-  bottom: -40px;
-  left: -140px;
-  background: url(../img/about_background.png) no-repeat center center/contain;
-  width: 320.909px;
-  height: 217.382px;
-  -webkit-transform: rotate(-4deg);
-          transform: rotate(-4deg);
-  opacity: 0.7;
-  z-index: -1;
-}
-
 .p-about__heading::before {
   position: absolute;
   content: "";
@@ -332,8 +312,38 @@ a:hover {
   }
 }
 
+.p-about__wrapper {
+  margin-top: 34px;
+  position: relative;
+}
+.p-about__wrapper::before {
+  position: absolute;
+  content: "";
+  bottom: -45px;
+  left: -106px;
+  background: url(../img/about_background.png) no-repeat center center/contain;
+  width: 358.909px;
+  height: 240.382px;
+  opacity: 0.7;
+  z-index: 0;
+}
+@media (min-width: 768px) {
+  .p-about__wrapper::before {
+    bottom: -129px;
+    left: -171px;
+    width: 662.222px;
+    height: 464.199px;
+  }
+}
+@media (min-width: 768px) {
+  .p-about__wrapper {
+    margin-top: 56px;
+  }
+}
+
 .p-about__item {
-  margin-bottom: 63px;
+  position: relative;
+  margin-bottom: 57px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,10 +353,11 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 14px;
 }
 @media (min-width: 768px) {
   .p-about__item {
+    margin-bottom: 63px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
@@ -391,10 +402,10 @@ a:hover {
 ._cafe::before {
   position: absolute;
   content: "";
-  top: 25px;
-  left: -5px;
-  width: 147px;
-  height: 11px;
+  top: 26px;
+  left: -16px;
+  width: 178px;
+  height: 12px;
   background: url(../img/about_deco01.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) {
@@ -410,9 +421,9 @@ a:hover {
   position: absolute;
   content: "";
   top: 25px;
-  left: -5px;
-  width: 147px;
-  height: 11px;
+  left: 0px;
+  width: 148px;
+  height: 12px;
   background: url(../img/about_deco02.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) {
@@ -425,7 +436,7 @@ a:hover {
 }
 
 .p-about__text {
-  margin-top: 24px;
+  margin-top: 30px;
   font-size: 16px;
 }
 @media (min-width: 768px) {
@@ -448,8 +459,8 @@ a:hover {
 }
 
 .p-about__image {
-  width: 136px;
-  height: 133px;
+  width: 146px;
+  height: 139px;
 }
 @media (min-width: 768px) {
   .p-about__image {
@@ -538,6 +549,17 @@ a:hover {
   }
 }
 
+.p-menu__category--cake {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 304px;
+}
+@media (min-width: 768px) {
+  .p-menu__category--cake {
+    max-width: 640px;
+  }
+}
+
 .p-menu__category-heading {
   font-family: "DM Sans";
   font-size: 20px;
@@ -587,15 +609,30 @@ a:hover {
   }
 }
 
-.p-menu-list__item {
+.p-menu-list__item--cake {
   padding-top: 22px;
-  padding-bottom: 22px;
+  padding-bottom: 18px;
   width: 144px;
   background: rgba(255, 255, 255, 0.5);
   text-align: center;
 }
 @media (min-width: 768px) {
-  .p-menu-list__item {
+  .p-menu-list__item--cake {
+    padding-top: 44px;
+    padding-bottom: 38px;
+    width: 288px;
+  }
+}
+
+.p-menu-list__item--drink {
+  padding-top: 22px;
+  padding-bottom: 16px;
+  width: 144px;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .p-menu-list__item--drink {
     padding-top: 44px;
     padding-bottom: 38px;
     width: 288px;
@@ -615,30 +652,55 @@ a:hover {
   }
 }
 
-.p-menu-card__body {
-  margin-top: 19px;
+.p-menu-card__body--cake {
+  margin-top: 16px;
 }
 @media (min-width: 768px) {
-  .p-menu-card__body {
+  .p-menu-card__body--cake {
     margin-top: 42px;
   }
 }
+.p-menu-card__body--drink {
+  margin-top: 8px;
+}
+@media (min-width: 768px) {
+  .p-menu-card__body--drink {
+    margin-top: 26px;
+  }
+}
 
-.p-menu-card__name {
+.p-menu-card__name--cake {
   font-size: 16px;
 }
 @media (min-width: 768px) {
-  .p-menu-card__name {
+  .p-menu-card__name--cake {
+    font-size: 24px;
+  }
+}
+.p-menu-card__name--drink {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .p-menu-card__name--drink {
     font-size: 24px;
   }
 }
 
-.p-menu-card__price {
+.p-menu-card__price--cake {
   margin-top: -2px;
   font-size: 12px;
 }
 @media (min-width: 768px) {
-  .p-menu-card__price {
+  .p-menu-card__price--cake {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}
+.p-menu-card__price--drink {
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .p-menu-card__price--drink {
     margin-top: 6px;
     font-size: 16px;
   }
@@ -646,30 +708,48 @@ a:hover {
 
 .p-menu__category--drink {
   margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 304px;
 }
 @media (min-width: 768px) {
   .p-menu__category--drink {
     margin-top: 64px;
+    max-width: 640px;
   }
 }
 
-.p-menu-card__notes {
+.p-menu-card__notes--drink {
+  margin-top: -6px;
   font-size: 10px;
 }
 @media (min-width: 768px) {
-  .p-menu-card__notes {
+  .p-menu-card__notes--drink {
+    margin-top: 0px;
     font-size: 12px;
   }
 }
 
 .p-menu__cover-background {
   margin-top: 80px;
+  height: 140px;
   position: relative;
+}
+@media (min-width: 376px) {
+  .p-menu__cover-background {
+    height: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .p-menu__cover-background {
+    margin-top: 145px;
+    height: 287px;
+  }
 }
 .p-menu__cover-background::before {
   position: absolute;
   content: "";
-  top: -65px;
+  top: -41px;
   left: 51%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -679,14 +759,16 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-menu__cover-background::before {
-    top: -85px;
+    top: -84px;
     left: 50%;
     width: 640px;
     height: 87.978px;
   }
 }
 .p-menu__cover-background img {
+  position: absolute;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -749,18 +831,63 @@ a:hover {
 .p-info {
   padding-top: 34px;
   position: relative;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .p-info {
     padding-top: 60px;
   }
 }
+@media (min-width: 1280px) {
+  .p-info {
+    overflow: visible;
+  }
+}
+.p-info::before {
+  position: absolute;
+  content: "";
+  top: 247px;
+  right: -38px;
+  background: url(../img/info_background.png) no-repeat center center/contain;
+  width: 305.154px;
+  height: 216.678px;
+}
+@media (min-width: 768px) {
+  .p-info::before {
+    top: 442px;
+    right: -75px;
+    width: 627.812px;
+    height: 450.18px;
+  }
+}
+
 .p-info__wrapper {
   margin-top: 37px;
 }
 @media (min-width: 768px) {
   .p-info__wrapper {
     margin-top: 58px;
+  }
+}
+
+.p-info__heading {
+  position: relative;
+}
+.p-info__heading::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70px;
+  height: 64px;
+  background: url(../img/info_icon-heading.png) no-repeat center center/contain;
+}
+@media (min-width: 768px) {
+  .p-info__heading::before {
+    width: 100px;
+    height: 99.01px;
   }
 }
 
@@ -789,7 +916,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .p-info-list__item {
-    margin-bottom: 36px;
+    margin-bottom: 33px;
   }
 }
 
@@ -819,29 +946,14 @@ a:hover {
     font-size: 20px;
   }
 }
+@media (min-width: 768px) {
+  .p-info-list__text span {
+    font-size: 24px;
+  }
+}
 
 .p-info-map {
   padding-top: 6px;
-  position: relative;
-}
-.p-info-map::after {
-  position: absolute;
-  content: "";
-  bottom: -85px;
-  left: 49%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 302px;
-  height: 49.462px;
-  background: url(../img/info_deco01.png) no-repeat center center/contain;
-}
-@media (min-width: 768px) {
-  .p-info-map::after {
-    bottom: -168px;
-    left: 50%;
-    width: 640px;
-    height: 104.821px;
-  }
 }
 
 .p-info__decoration {
@@ -859,48 +971,48 @@ a:hover {
 .p-info__decoration-item.--caddy {
   position: absolute;
   content: "";
-  top: 0px;
-  right: 0px;
+  top: -328px;
+  left: -315px;
   width: 192px;
   height: 117px;
 }
 .p-info__decoration-item.--pot {
   position: absolute;
   content: "";
-  top: 0px;
-  right: 0px;
+  top: -236px;
+  left: -251px;
   width: 192px;
   height: 127px;
 }
 .p-info__decoration-item.--pouring {
   position: absolute;
   content: "";
-  top: 0px;
-  right: 0px;
+  top: 126px;
+  right: -291px;
   width: 192px;
   height: 204px;
 }
 .p-info__decoration-item.--cup {
   position: absolute;
   content: "";
-  top: 0px;
-  right: 0px;
+  top: 665px;
+  left: -316px;
   width: 192px;
   height: 88px;
 }
 .p-info__decoration-item.--cake {
   position: absolute;
   content: "";
-  top: 0px;
-  right: 0px;
+  top: 745px;
+  left: -252px;
   width: 192px;
   height: 117px;
 }
 .p-info__decoration-item.--eating {
   position: absolute;
   content: "";
-  top: 0px;
-  right: 0px;
+  top: 1104px;
+  right: -291px;
   width: 192px;
   height: 227px;
 }
@@ -918,6 +1030,26 @@ a:hover {
 
 .p-sns__wrapper {
   text-align: center;
+  position: relative;
+}
+.p-sns__wrapper::after {
+  position: absolute;
+  content: "";
+  top: -104px;
+  left: 49%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 302px;
+  height: 49.462px;
+  background: url(../img/info_deco01.png) no-repeat center center/contain;
+}
+@media (min-width: 768px) {
+  .p-sns__wrapper::after {
+    top: -165px;
+    left: 50%;
+    width: 640px;
+    height: 104.821px;
+  }
 }
 
 .p-sns__text {
@@ -1005,6 +1137,35 @@ a:hover {
   .p-account__post {
     margin-top: 27px;
   }
+}
+
+.p-sns__decoration {
+  position: relative;
+}
+
+.p-sns__decoration-item {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .p-sns__decoration-item {
+    display: block;
+  }
+}
+.p-sns__decoration-item.--yummy1 {
+  position: absolute;
+  content: "";
+  top: 203px;
+  left: -273px;
+  width: 170.37px;
+  height: 200px;
+}
+.p-sns__decoration-item.--yummy2 {
+  position: absolute;
+  content: "";
+  top: 672px;
+  right: -280px;
+  width: 169px;
+  height: 200px;
 }
 
 /* utility

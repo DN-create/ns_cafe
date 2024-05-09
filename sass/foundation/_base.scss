@@ -14,8 +14,8 @@ main,
 footer {
   margin-left: auto;
   margin-right: auto;
-  // overflow-x: hidden;
   background-color: variable.$color-base;
+  // background-color: #333;
   max-width: 375px;
 
   @include variable.mq("md") {

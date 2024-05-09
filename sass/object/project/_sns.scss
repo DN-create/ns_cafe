@@ -13,6 +13,25 @@
 
 .p-sns__wrapper {
   text-align: center;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -104px;
+    left: 49%;
+    transform: translateX(-50%);
+    width: 302px;
+    height: 49.462px;
+    background: url(../img/info_deco01.png) no-repeat center center / contain;
+
+    @include variable.mq("lg") {
+      top: -165px;
+      left: 50%;
+      width: 640px;
+      height: 104.821px;
+    }
+  }
 }
 
 .p-sns__text {
@@ -88,5 +107,35 @@
 
   @include variable.mq("lg") {
     margin-top: 27px;
+  }
+}
+
+.p-sns__decoration {
+  position: relative;
+}
+
+.p-sns__decoration-item {
+  display: none;
+
+  @include variable.mq("xl") {
+    display: block;
+  }
+
+  &.--yummy1 {
+    position: absolute;
+    content: "";
+    top: 203px;
+    left: -273px;
+    width: 170.37px;
+    height: 200px;
+  }
+
+  &.--yummy2 {
+    position: absolute;
+    content: "";
+    top: 672px;
+    right: -280px;
+    width: 169px;
+    height: 200px;
   }
 }

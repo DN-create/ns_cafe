@@ -5,36 +5,15 @@
 
 .p-about {
   padding-top: 48px;
-  padding-bottom: 44px;
 
   @include variable.mq("lg") {
     padding-bottom: 42px;
   }
 }
 
-.p-about__wrapper {
+.p-about__heading {
   position: relative;
 
-  @include variable.mq("lg") {
-    margin-top: 56px;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    bottom: -40px;
-    left: -140px;
-    background: url(../img/about_background.png) no-repeat center center /
-      contain;
-    width: 320.909px;
-    height: 217.382px;
-    transform: rotate(-4deg);
-    opacity: 0.7;
-    z-index: -1;
-  }
-}
-
-.p-about__heading {
   &::before {
     position: absolute;
     content: "";
@@ -53,14 +32,45 @@
   }
 }
 
+.p-about__wrapper {
+  margin-top: 34px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -45px;
+    left: -106px;
+    background: url(../img/about_background.png) no-repeat center center /
+      contain;
+    width: 358.909px;
+    height: 240.382px;
+    opacity: 0.7;
+    z-index: 0;
+
+    @include variable.mq("lg") {
+      bottom: -129px;
+      left: -171px;
+      width: 662.222px;
+      height: 464.199px;
+    }
+  }
+
+  @include variable.mq("lg") {
+    margin-top: 56px;
+  }
+}
+
 .p-about__item {
-  margin-bottom: 63px;
+  position: relative;
+  margin-bottom: 57px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
 
   @include variable.mq("lg") {
+    margin-bottom: 63px;
     align-items: start;
     gap: 65px;
   }
@@ -94,10 +104,10 @@
   &::before {
     position: absolute;
     content: "";
-    top: 25px;
-    left: -5px;
-    width: 147px;
-    height: 11px;
+    top: 26px;
+    left: -16px;
+    width: 178px;
+    height: 12px;
     background: url(../img/about_deco01.png) no-repeat center center / contain;
 
     @include variable.mq("lg") {
@@ -114,9 +124,9 @@
     position: absolute;
     content: "";
     top: 25px;
-    left: -5px;
-    width: 147px;
-    height: 11px;
+    left: 0px;
+    width: 148px;
+    height: 12px;
     background: url(../img/about_deco02.png) no-repeat center center / contain;
 
     @include variable.mq("lg") {
@@ -129,7 +139,7 @@
 }
 
 .p-about__text {
-  margin-top: 24px;
+  margin-top: 30px;
   font-size: 16px;
 
   @include variable.mq("lg") {
@@ -150,8 +160,8 @@
 }
 
 .p-about__image {
-  width: 136px;
-  height: 133px;
+  width: 146px;
+  height: 139px;
 
   @include variable.mq("lg") {
     width: 288px;
