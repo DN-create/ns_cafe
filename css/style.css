@@ -1064,6 +1064,7 @@ a:hover {
 
 .p-sns__image {
   margin-top: 16px;
+  display: inline-block;
   text-align: center;
 }
 @media (min-width: 768px) {

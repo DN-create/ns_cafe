@@ -45,6 +45,7 @@
 
 .p-sns__image {
   margin-top: 16px;
+  display: inline-block;
   text-align: center;
 
   @include variable.mq("lg") {
