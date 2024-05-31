@@ -1,5 +1,5 @@
-@use "../foundation/variable";
-
+// @use "../foundation/variable";
+@use "../foundation/variable" as *;
 .l-wrapper {
   width: 100%;
   background-image: url(../img/body_background.jpg);

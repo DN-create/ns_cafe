@@ -1,0 +1,37 @@
+// @use "../global" as *;
+@use "../sass/foundation/variable" as *;
+
+.c-bg__image {
+    @include mq('tb') {
+     display: none; 
+    }
+
+    @include mq('sp') {
+     display: none; 
+    }
+}
+
+.c-bg__image-flour {
+    position: absolute;
+    right: 77px;
+    top: 157px;
+}
+
+.c-bg__image-flesh {
+    position: absolute;
+    right: 0px;
+    top: 373px;
+}
+
+.c-bg__image-boul {
+    position: absolute;
+    top: 735px;
+    left: 23px;
+}
+
+.c-bg__image-scall {
+    position: absolute;
+    top: 813px;
+    left: 44px;
+}
+

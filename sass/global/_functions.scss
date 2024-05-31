@@ -1,0 +1,221 @@
+// @use "./variables" as *;
+@use "../foundation/variable" as *;
+
+/*==========================================================
+# ローディングアニメーション
+===========================================================*/
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+/*fixedで全面に固定*/
+
+/* 
+------------------------------------------*/
+// コメントアウト化でローディングの一時停止
+// #splash {
+//     position: fixed;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 999;
+//     background:$base-color;
+//     text-align:center;
+//     color:#fff;
+// }
+
+/* 
+------------------------------------------*/
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg{
+    width:300px;
+}
+
+/*=============== SVGアニメーション内の指定 =================*/
+
+/*アニメーション前の指定*/
+#mask path {
+      //   fill-opacity: 0;/*最初は透過0で見えない状態*/
+        transition: fill-opacity .5s;/*カラーがつく際のアニメーション0.5秒で変化*/
+      //   fill: none;/*塗りがない状態*/
+      //   stroke: #333;/*線の色*/
+      animation:1s ease-in 0s infinite alternate forwards running expansion; /*アニメーションを繰り返す*/
+    }
+
+/*アニメーション後に.doneというクラス名がで付与された時の指定*/
+#mask.done path{
+      // fill: #333;/*塗りの色*/
+      fill-opacity: 1;/*透過1で見える状態*/
+      // stroke: none;/*線の色なし*/
+    }
+
+    
+@keyframes expansion{
+  0%{
+  //   width:10px;
+  //   transform: rotate(-45deg);
+  }
+
+  100%{
+  //   width:300px;
+    transform: rotate(-2deg);
+  }
+}
+
+
+/*==========================================================
+# ローディング_三点リーダー
+===========================================================*/
+.loading {
+  // font-size: 30px;
+  color: $main-color;
+  font-family: $ff-en;
+
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  // -webkit-animation: ellipsis steps(5, end) 1300ms infinite; /* アニメーションの表示間隔のステップと全体時間 */
+  animation: ellipsis 1.3s steps(3, end) 0s infinite;
+  content: ""; /* 全部表示させた時の文字 */
+  // width: 0px;
+  color: $main-color;
+  // text-align: left;
+}
+
+@keyframes ellipsis {
+      0% { content: ""; } /* 0%のときは何も表示しない */
+      33% { content: "."; } /* 33%のときは1つ目の点を表示 */
+      67% { content: ".."; } /* 67%のときは2つ目の点を追加 */
+      100% { content: "..."; } /* 100%のときは3つ目の点を追加 */
+}
+
+//   @-webkit-keyframes ellipsis {
+//     to {
+//       width: fit-content;
+//     }
+//   }
+
+
+/*==========================================================
+# コーヒー豆アニメーション
+===========================================================*/
+.stepsTrigger {
+  opacity: 0;
+}
+
+.steps {
+  margin: 0 auto;
+  width: 120px;
+  height: 190px;
+  // background-color: blue;
+  // background: url(/img/fv_coffee_first.png) no-repeat;
+  background: url(/img/fv_coffee_first.png) no-repeat;
+  // cursor: pointer;
+  // z-index: 1;
+  position: relative;
+
+  /*==========================================================
+  # 一度だけアニメーションさせる
+  ===========================================================*/
+  animation: stepsline 3s steps(7) forwards;
+  /* stepsline→アニメーション名
+  1s→アニメーションをする時間
+  step→()の中には、アニメーション制作コマ数-1の値を入れる(例：4コマ - 1コマ ＝3コマ)
+  forwards→最後の形を維持*/
+
+  /* ズームのスタイルを追加 */
+  transform: scale(1); /* 2倍のサイズに拡大 */
+  transform-origin: center center; /* 拡大の中心点を要素の中心に設定 */
+  
+   /* 右寄せのスタイルを追加 */
+   position: absolute; /* または position: fixed; 画面に対して固定 */
+  left: 45px;
+   //  bottom: 0; /* もし下寄せもしたければ追加 */
+  top: -10%;
+
+}
+
+.steps-top {
+  top: -100%;
+}
+
+/*==========================================================
+# hoverで反映させる場合はこちら
+===========================================================*/
+// .c-apng-image:hover {
+  //     animation: stepsline 1s steps(4) forwards;
+// }
+
+@keyframes stepsline {
+  0% {
+      opacity: 0;
+      background-position: 0 0;
+  }
+  100% {
+      opacity: 1;
+      background-position:-720px 0;
+      /*アニメーション制作コマ数から1コマ分引いた横幅を指定。
+      (例：今回は1フレーム横幅100pxで制作しているので全体の400px-100px=300px→-300ox)を指定。*/
+  }
+}
+
+/*==========================================================
+# swiper
+===========================================================*/
+
+.swiper-slide {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  // height: 100%;
+  animation: slideAnimation 2s linear infinite; /* アニメーションを追加 */
+  transition: transform 2s ease; /* スライド切り替え時のアニメーション時間を設定 */
+}
+
+.swiper-slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.swiper-container {
+  mask-size: cover;
+  mask-image: url(/public/assets/img/Vector.png);
+  mask-repeat: no-repeat;
+  mask-position: 160% 0%;
+  bottom: 0px;
+  overflow: hidden;
+  position: absolute;
+  left: 120px;
+  // right: 0%;
+  top: 13%;
+  width: 100%;
+  z-index: -2;
+  
+  @include mq('sm') {
+    left: 30px;
+    top: 9%;
+    width: 160%; 
+  }
+}
+
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-30px);
+  }
+}

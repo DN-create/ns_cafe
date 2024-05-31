@@ -1,0 +1,58 @@
+// @use "../global" as *;
+// @use "../global/" as *;
+@use "../foundation/variable" as *;
+
+
+.l-header-nav {
+    // display: none;
+    top: 0px;  /*l-headerの余白分*/
+    left: 0px;  /*l-headerの余白分　ヘッダーには左右に15px余白があるので、l-headerの子要素となる.smは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
+    position: absolute; /*絶対配置　top　leftからの位置を絶対配置する*/
+    z-index: 10;
+    width: 100%;
+    background-color: $base-color;
+    // border-radius : 30px ;
+    height: 1150px;
+
+    transform: translateX(105%);//枠外に戻すための処理
+
+    transition: transform 0.5s ease 0s;
+
+
+    &.is-active {
+        display: block;/*hamburgerボタンを押したら表示*/
+        transform: translateX(0);//枠内に戻すための処理
+    }
+}
+
+.l-header-nav ul {
+    flex-direction: column; /*ulのflexboxを縦並びにする*/
+}
+
+.l-header-nav li {
+    text-align: center;
+
+    
+    &:not(:first-child) {
+        margin-top: 56px;
+    }
+    
+    &:first-child {
+        margin-top: 150px;
+    }
+
+    &:nth-child(5):hover {
+        opacity: 0.6;
+    }
+    
+}
+
+.l-header-nav li a {
+    font-size: $fz-title;
+    color: $text-color;
+    font-family: $ff-en;
+
+    &:hover {
+        color: $accent-color;
+    }
+}

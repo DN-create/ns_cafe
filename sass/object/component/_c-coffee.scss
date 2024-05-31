@@ -1,0 +1,91 @@
+// @use "../global" as *;
+@use "../foundation/variable" as *;
+
+.c-coffee__container {
+    position: relative;
+    width: 100%;
+    // height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-coffee__image-1 {
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 40%;
+    width: 105px; 
+    top: 20px;
+
+    @include mq('tb') {
+        top: 21px;
+    }
+
+    @include mq('sp') {
+        width: clamp(4.125rem, 1.793rem + 9.95vw, 6.563rem); //sp版から徐々に拡大
+        top: 10px;
+        left: 42%;
+    }
+}
+
+.c-coffee__image-before,
+.c-coffee__image-after {
+    position: absolute;
+    backface-visibility: hidden; // 裏面が見えないようにする
+    transition: transform 2s;
+
+    top: 177px;
+    left: 27%;
+    width: 46px;
+}
+
+.c-coffee__image-before {
+    transform: rotateY(0deg); // 初期状態は正面を向いている
+
+    top: 185px;
+    left: 200px;
+    width: 26px;
+
+    @include mq('sp') {
+        width: clamp(1.063rem, 0.526rem + 2.29vw, 1.625rem);
+        top: clamp(7.188rem, 3.013rem + 17.81vw, 11.563rem);
+        left: clamp(5rem, -2.156rem + 30.53vw, 12.5rem);
+    }
+}
+
+.c-coffee__image-after {
+    transform: rotateY(180deg); // 初期状態は裏を向いている
+    z-index: -1; // 最初はbeforeの後ろに配置
+
+    @include mq('tb') {
+        top: 175px;
+        left: 190px;
+        width: 45px;
+    }
+
+    @include mq('sp') {
+        top: clamp(6.875rem, 2.999rem + 16.54vw, 10.938rem);
+        left: clamp(4.688rem, -2.171rem + 29.26vw, 11.875rem);
+        width: clamp(1.875rem, 0.98rem + 3.82vw, 2.813rem);
+    }
+}
+
+.c-coffee__image-3 {
+    position: absolute;
+    top: 211px;
+    left: 143px;
+    width: 45px;
+
+    @include mq('sp') {
+        // left: 9%;
+        // top: -37%;
+        // width: 6%;
+
+    // top: 133px;
+    top: clamp(8.313rem, 3.661rem + 19.85vw, 13.188rem);
+    // left: 45px;
+    left: clamp(2.813rem, -3.032rem + 24.94vw, 8.938rem);
+    // width: 30px;
+    width: clamp(1.875rem, 0.98rem + 3.82vw, 2.813rem);
+    }
+}
