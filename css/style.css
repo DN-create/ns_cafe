@@ -217,6 +217,25 @@ figcaption {
 	color: #d43333;
 }
 
+/* footer
+------------------------------------------ */
+
+.l-footer {
+	padding-bottom: 24px;
+	padding-top: 28px;
+	text-align: center;
+}
+
+.l-footer__copyright {
+	font-size: 10px;
+}
+
+.l-wrapper {
+	background-image: url(/img/body_background.jpg);
+	background-repeat: repeat;
+	width: 100%;
+}
+
 .c-hamburger {
 	background: #fefefe;
 	border-radius: 9999px;
@@ -404,6 +423,31 @@ figcaption {
 	top: 813px;
 }
 
+/* ゆらゆら揺れるアニメーション */
+
+.c-swing-animation01 {
+	animation: swing-ease 4s ease infinite;
+	scale: 1;
+}
+
+.c-swing-animation02 {
+	animation: swing-linear 4s linear infinite;
+	scale: 1;
+}
+
+.c-inner {
+	padding-left: 36px;
+	padding-right: 36px;
+}
+
+.c-section__heading {
+	color: #d43333;
+	font-family: "Cormorant";
+	font-size: 32px;
+	position: relative;
+	text-align: center;
+}
+
 .p-mainVisual {
 	display: flex;
 	flex-direction: column;
@@ -446,6 +490,563 @@ figcaption {
 	margin-left: 55px;
 	margin-top: 15px;
 	width: 395px;
+}
+
+/* about
+------------------------------------------ */
+
+.p-about {
+	padding-top: 48px;
+}
+
+.p-about__heading {
+	position: relative;
+}
+
+.p-about__heading::before {
+	background: url(/img/about_icon-heading.png) no-repeat center center/contain;
+	content: "";
+	height: 64px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 64px;
+}
+
+.p-about__wrapper {
+	margin-top: 34px;
+	position: relative;
+}
+
+.p-about__wrapper::before {
+	background: url(/img/about_background.png) no-repeat center center/contain;
+	bottom: -45px;
+	content: "";
+	height: 240.382px;
+	left: -106px;
+	opacity: 0.7;
+	position: absolute;
+	width: 358.909px;
+	z-index: 0;
+}
+
+.p-about__item {
+	align-items: center;
+	display: flex;
+	gap: 14px;
+	justify-content: center;
+	margin-bottom: 57px;
+	position: relative;
+}
+
+.p-about__item._reverse {
+	flex-direction: row-reverse;
+}
+
+.p-about__body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+}
+
+.p-about__title {
+	color: #a67d59;
+	font-size: 16px;
+	font-weight: 700;
+	position: relative;
+}
+
+._cafe::before {
+	background: url(/img/about_deco01.png) no-repeat center center/contain;
+	content: "";
+	height: 12px;
+	left: -16px;
+	position: absolute;
+	top: 26px;
+	width: 178px;
+}
+
+._cake::before {
+	background: url(/img/about_deco02.png) no-repeat center center/contain;
+	content: "";
+	height: 12px;
+	left: 0px;
+	position: absolute;
+	top: 25px;
+	width: 148px;
+}
+
+.p-about__text {
+	font-size: 16px;
+	margin-top: 30px;
+}
+
+.p-about__head {
+	text-align: center;
+}
+
+.p-about__image {
+	height: 139px;
+	width: 146px;
+}
+
+.p-about__decoration {
+	position: relative;
+}
+
+.p-about__decoration-item {
+	display: none;
+}
+
+.p-about__decoration-item.--egg {
+	content: "";
+	height: 138.667px;
+	position: absolute;
+	right: -290px;
+	top: 145px;
+	width: 192px;
+}
+
+.p-about__decoration-item.--eggbowl {
+	content: "";
+	height: 112px;
+	position: absolute;
+	right: -290px;
+	top: 284px;
+	width: 192px;
+}
+
+.p-about__decoration-item.--whisk {
+	content: "";
+	height: 206px;
+	left: -268px;
+	position: absolute;
+	top: 592px;
+	width: 192px;
+}
+
+.p-about__decoration-item.--whiskbowl {
+	content: "";
+	height: 139px;
+	left: -300px;
+	position: absolute;
+	top: 697px;
+	width: 192px;
+}
+
+/* info
+------------------------------------------ */
+
+.p-info {
+	overflow: hidden;
+	padding-top: 34px;
+	position: relative;
+}
+
+.p-info::before {
+	background: url(/img/info_background.png) no-repeat center center/contain;
+	content: "";
+	height: 216.678px;
+	position: absolute;
+	right: -38px;
+	top: 247px;
+	width: 305.154px;
+}
+
+.p-info__wrapper {
+	margin-top: 37px;
+}
+
+.p-info__heading {
+	position: relative;
+}
+
+.p-info__heading::before {
+	background: url(/img/info_icon-heading.png) no-repeat center center/contain;
+	content: "";
+	height: 64px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 70px;
+}
+
+.p-info__shop-logo {
+	height: 32.262px;
+	width: 146.487px;
+}
+
+.p-info-list {
+	margin-top: 31px;
+}
+
+.p-info-list__item {
+	margin-bottom: 17px;
+}
+
+.p-info-list__tag {
+	background-color: #a67d59;
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	padding: 2px 8px;
+}
+
+.p-info-list__text {
+	font-size: 16px;
+	margin-top: 9px;
+}
+
+.p-info-map {
+	padding-top: 6px;
+}
+
+.p-info__decoration {
+	position: relative;
+}
+
+.p-info__decoration-item {
+	display: none;
+}
+
+.p-info__decoration-item.--caddy {
+	content: "";
+	height: 117px;
+	left: -315px;
+	position: absolute;
+	top: -328px;
+	width: 192px;
+}
+
+.p-info__decoration-item.--pot {
+	content: "";
+	height: 127px;
+	left: -251px;
+	position: absolute;
+	top: -236px;
+	width: 192px;
+}
+
+.p-info__decoration-item.--pouring {
+	content: "";
+	height: 204px;
+	position: absolute;
+	right: -291px;
+	top: 126px;
+	width: 192px;
+}
+
+.p-info__decoration-item.--cup {
+	content: "";
+	height: 88px;
+	left: -316px;
+	position: absolute;
+	top: 665px;
+	width: 192px;
+}
+
+.p-info__decoration-item.--cake {
+	content: "";
+	height: 117px;
+	left: -252px;
+	position: absolute;
+	top: 745px;
+	width: 192px;
+}
+
+.p-info__decoration-item.--eating {
+	content: "";
+	height: 227px;
+	position: absolute;
+	right: -291px;
+	top: 1104px;
+	width: 192px;
+}
+
+/* menu
+------------------------------------------ */
+
+.p-menu {
+	padding-bottom: 22px;
+	padding-top: 32px;
+}
+
+.p-menu__heading::before {
+	background: url(/img/menu_icon-heading.png) no-repeat center center/contain;
+	content: "";
+	height: 64px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 64px;
+}
+
+.p-menu__wrapper {
+	font-family: "DM Sans";
+	margin-top: 24px;
+}
+
+.p-menu__category--cake {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 304px;
+}
+
+.p-menu__category-heading {
+	font-family: "DM Sans";
+	font-size: 20px;
+	position: relative;
+	text-align: center;
+}
+
+.p-menu__category-heading::before {
+	background: url(/img/menu_deco01.png) no-repeat center center/contain;
+	content: "";
+	height: 15px;
+	left: 50%;
+	position: absolute;
+	top: 22px;
+	transform: translateX(-50%);
+	width: 111px;
+}
+
+.p-menu-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	justify-content: center;
+	margin-top: 23px;
+}
+
+.p-menu-list__item--cake {
+	background: rgba(255, 255, 255, 0.5);
+	padding-bottom: 18px;
+	padding-top: 22px;
+	text-align: center;
+	width: 144px;
+}
+
+.p-menu-list__item--drink {
+	background: rgba(255, 255, 255, 0.5);
+	padding-bottom: 16px;
+	padding-top: 22px;
+	text-align: center;
+	width: 144px;
+}
+
+.p-menu-card__head {
+	height: 75px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+}
+
+.p-menu-card__body--cake {
+	margin-top: 16px;
+}
+
+.p-menu-card__body--drink {
+	margin-top: 8px;
+}
+
+.p-menu-card__name--cake {
+	font-size: 16px;
+}
+
+.p-menu-card__name--drink {
+	font-size: 16px;
+}
+
+.p-menu-card__price--cake {
+	font-size: 12px;
+	margin-top: -2px;
+}
+
+.p-menu-card__price--drink {
+	font-size: 12px;
+}
+
+.p-menu__category--drink {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 32px;
+	max-width: 304px;
+}
+
+.p-menu-card__notes--drink {
+	font-size: 10px;
+	margin-top: -6px;
+}
+
+.p-menu__cover-background {
+	height: 140px;
+	margin-top: 80px;
+	position: relative;
+}
+
+.p-menu__cover-background::before {
+	background: url(/img/menu_deco02.png) no-repeat center center/contain;
+	content: "";
+	height: 42.889px;
+	left: 51%;
+	position: absolute;
+	top: -41px;
+	transform: translateX(-50%);
+	width: 312px;
+}
+
+.p-menu__cover-background img {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.p-menu__decoration {
+	position: relative;
+}
+
+.p-menu__decoration-item {
+	display: none;
+}
+
+.p-menu__decoration-item.--cooking {
+	content: "";
+	height: 204px;
+	position: absolute;
+	right: -291px;
+	top: 273px;
+	width: 192px;
+}
+
+.p-menu__decoration-item.--spatula {
+	content: "";
+	height: 185.845px;
+	left: -273px;
+	position: absolute;
+	top: 713px;
+	width: 173.215px;
+}
+
+.p-menu__decoration-item.--spatulabowl {
+	content: "";
+	height: auto;
+	left: -319px;
+	position: absolute;
+	top: 786px;
+	width: 191.215px;
+}
+
+.p-menu__decoration-item.--spatulamold {
+	content: "";
+	height: 103.748px;
+	left: -228px;
+	position: absolute;
+	top: 874px;
+	width: 173.215px;
+}
+
+.p-menu__decoration-item.--oven {
+	content: "";
+	height: 181px;
+	position: absolute;
+	right: -291px;
+	top: 1251px;
+	width: 192px;
+}
+
+/* sns
+------------------------------------------ */
+
+.p-sns {
+	padding-top: 140px;
+}
+
+.p-sns__wrapper {
+	position: relative;
+	text-align: center;
+}
+
+.p-sns__wrapper::after {
+	background: url(/img/info_deco01.png) no-repeat center center/contain;
+	content: "";
+	height: 49.462px;
+	left: 49%;
+	position: absolute;
+	top: -104px;
+	transform: translateX(-50%);
+	width: 302px;
+}
+
+.p-sns__text {
+	color: #a67d59;
+	font-size: 20px;
+}
+
+.p-sns__image {
+	display: inline-block;
+	margin-top: 16px;
+	text-align: center;
+}
+
+.p-sns__image img {
+	height: 32px;
+	width: 32px;
+}
+
+.p-account {
+	margin-top: 18px;
+}
+
+.p-account__info {
+	align-items: center;
+	display: flex;
+	gap: 8px;
+	justify-content: start;
+}
+
+.p-account__icon img {
+	height: 40px;
+	width: 40px;
+}
+
+.p-account__name {
+	font-size: 20px;
+}
+
+.p-account__post {
+	margin-top: 8px;
+}
+
+.p-sns__decoration {
+	position: relative;
+}
+
+.p-sns__decoration-item {
+	display: none;
+}
+
+.p-sns__decoration-item.--yummy1 {
+	content: "";
+	height: 200px;
+	left: -273px;
+	position: absolute;
+	top: 203px;
+	width: 170.37px;
+}
+
+.p-sns__decoration-item.--yummy2 {
+	content: "";
+	height: 200px;
+	position: absolute;
+	right: -280px;
+	top: 672px;
+	width: 169px;
 }
 
 /*==========================================================
@@ -612,6 +1213,10 @@ footer {
 	max-width: 540px;
 }
 
+.p-menu__cover-background {
+	height: 200px;
+}
+
 }
 
 @media (min-width: 768px) {
@@ -619,6 +1224,277 @@ footer {
 main,
 footer {
 	max-width: 768px;
+}
+
+.l-footer {
+	padding-top: 45px;
+}
+
+.l-footer__copyright {
+	font-size: 12px;
+}
+
+.c-inner {
+	margin: 0 auto;
+	max-width: 828px;
+	padding-left: 64px;
+	padding-right: 64px;
+}
+
+.c-section__heading {
+	font-size: 40px;
+	letter-spacing: 1.6px;
+}
+
+.p-about {
+	padding-bottom: 42px;
+}
+
+.p-about__heading::before {
+	height: 100px;
+	width: 100px;
+}
+
+.p-about__wrapper::before {
+	bottom: -129px;
+	height: 464.199px;
+	left: -171px;
+	width: 662.222px;
+}
+
+.p-about__wrapper {
+	margin-top: 56px;
+}
+
+.p-about__item {
+	align-items: start;
+	gap: 65px;
+	margin-bottom: 63px;
+}
+
+.p-about__title {
+	font-size: 24px;
+	letter-spacing: 0.48px;
+	margin-top: 48px;
+}
+
+._cafe::before {
+	height: 18px;
+	left: 0px;
+	top: 42px;
+	width: 225px;
+}
+
+._cake::before {
+	height: 18px;
+	left: 0px;
+	top: 42px;
+	width: 225px;
+}
+
+.p-about__text {
+	font-size: 20px;
+	letter-spacing: 0.4px;
+	line-height: 1.76;
+	margin-top: 46px;
+}
+
+.p-about__head {
+	text-align: left;
+	width: 50%;
+}
+
+.p-about__image {
+	height: 288px;
+	width: 288px;
+}
+
+.p-info {
+	padding-top: 60px;
+}
+
+.p-info::before {
+	height: 450.18px;
+	right: -75px;
+	top: 442px;
+	width: 627.812px;
+}
+
+.p-info__wrapper {
+	margin-top: 58px;
+}
+
+.p-info__heading::before {
+	height: 99.01px;
+	width: 100px;
+}
+
+.p-info__shop-logo {
+	height: 60px;
+	width: 272px;
+}
+
+.p-info-list {
+	margin-top: 67px;
+}
+
+.p-info-list__item {
+	margin-bottom: 33px;
+}
+
+.p-info-list__tag {
+	font-size: 20px;
+	letter-spacing: 0.4px;
+	line-height: 1.76;
+	padding: 4px 16px;
+}
+
+.p-info-list__text {
+	font-size: 20px;
+	margin-top: 18px;
+}
+
+.p-info-list__text span {
+	font-size: 24px;
+}
+
+.p-menu__heading::before {
+	height: 100px;
+	width: 100px;
+}
+
+.p-menu__wrapper {
+	margin-top: 61px;
+}
+
+.p-menu__category--cake {
+	max-width: 640px;
+}
+
+.p-menu__category-heading {
+	font-size: 36px;
+}
+
+.p-menu__category-heading::before {
+	height: 27.027px;
+	top: 49px;
+	width: 200px;
+}
+
+.p-menu-list {
+	gap: 64px;
+	margin-top: 64px;
+}
+
+.p-menu-list__item--cake {
+	padding-bottom: 38px;
+	padding-top: 44px;
+	width: 288px;
+}
+
+.p-menu-list__item--drink {
+	padding-bottom: 38px;
+	padding-top: 44px;
+	width: 288px;
+}
+
+.p-menu-card__head {
+	height: 150px;
+	width: 200px;
+}
+
+.p-menu-card__body--cake {
+	margin-top: 42px;
+}
+
+.p-menu-card__body--drink {
+	margin-top: 26px;
+}
+
+.p-menu-card__name--cake {
+	font-size: 24px;
+}
+
+.p-menu-card__name--drink {
+	font-size: 24px;
+}
+
+.p-menu-card__price--cake {
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+.p-menu-card__price--drink {
+	font-size: 16px;
+	margin-top: 6px;
+}
+
+.p-menu__category--drink {
+	margin-top: 64px;
+	max-width: 640px;
+}
+
+.p-menu-card__notes--drink {
+	font-size: 12px;
+	margin-top: 0px;
+}
+
+.p-menu__cover-background {
+	height: 287px;
+	margin-top: 145px;
+}
+
+.p-menu__cover-background::before {
+	height: 87.978px;
+	left: 50%;
+	top: -84px;
+	width: 640px;
+}
+
+.p-sns {
+	padding-top: 226px;
+}
+
+.p-sns__wrapper::after {
+	height: 104.821px;
+	left: 50%;
+	top: -165px;
+	width: 640px;
+}
+
+.p-sns__text {
+	font-size: 36px;
+}
+
+.p-sns__image {
+	margin-top: 34px;
+}
+
+.p-sns__image img {
+	height: 44px;
+	width: 44px;
+}
+
+.p-account {
+	margin-top: 41px;
+}
+
+.p-account__info {
+	gap: 16px;
+	padding-left: 2px;
+}
+
+.p-account__icon img {
+	height: 44px;
+	width: 44px;
+}
+
+.p-account__name {
+	font-size: 24px;
+}
+
+.p-account__post {
+	margin-top: 27px;
 }
 
 }
@@ -655,6 +1531,26 @@ footer {
 .p-mainVisual__bg {
 	max-width: 70%;
 	min-width: 80%;
+}
+
+.p-about__decoration-item {
+	display: block;
+}
+
+.p-info {
+	overflow: visible;
+}
+
+.p-info__decoration-item {
+	display: block;
+}
+
+.p-menu__decoration-item {
+	display: block;
+}
+
+.p-sns__decoration-item {
+	display: block;
 }
 
 }
@@ -741,6 +1637,54 @@ footer {
 	left: 30px;
 	top: 9%;
 	width: 160%;
+}
+
+}
+
+@keyframes swing-ease {
+
+0% {
+	transform: rotate(-6deg);
+}
+
+35% {
+	transform: rotate(-6deg);
+}
+
+50% {
+	transform: rotate(6deg);
+}
+
+85% {
+	transform: rotate(6deg);
+}
+
+100% {
+	transform: rotate(-6deg);
+}
+
+}
+
+@keyframes swing-linear {
+
+0% {
+	transform: rotate(6deg);
+}
+
+35% {
+	transform: rotate(6deg);
+}
+
+50% {
+	transform: rotate(-6deg);
+}
+
+85% {
+	transform: rotate(-6deg);
+}
+
+100% {
+	transform: rotate(6deg);
 }
 
 }

@@ -1,5 +1,5 @@
-@use "../../foundation/variable";
-
+// @use "../../foundation/variable";
+@use "../global" as *;
 /* info
 ------------------------------------------ */
 
@@ -8,11 +8,11 @@
   position: relative;
   overflow: hidden;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     padding-top: 60px;
   }
 
-  @include variable.mq("xl") {
+  @include mq("xl") {
     overflow: visible;
   }
 
@@ -21,12 +21,12 @@
     content: "";
     top: 247px;
     right: -38px;
-    background: url(../img/info_background.png) no-repeat center center /
+    background: url(/img/info_background.png) no-repeat center center /
       contain;
     width: 305.154px;
     height: 216.678px;
 
-    @include variable.mq("lg") {
+    @include mq("lg") {
       top: 442px;
       right: -75px;
       width: 627.812px;
@@ -38,7 +38,7 @@
 .p-info__wrapper {
   margin-top: 37px;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     margin-top: 58px;
   }
 }
@@ -54,10 +54,10 @@
     transform: translate(-50%, -50%);
     width: 70px;
     height: 64px;
-    background: url(../img/info_icon-heading.png) no-repeat center center /
+    background: url(/img/info_icon-heading.png) no-repeat center center /
       contain;
 
-    @include variable.mq("lg") {
+    @include mq("lg") {
       width: 100px;
       height: 99.01px;
     }
@@ -68,7 +68,7 @@
   width: 146.487px;
   height: 32.262px;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     width: 272px;
     height: 60px;
   }
@@ -77,7 +77,7 @@
 .p-info-list {
   margin-top: 31px;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     margin-top: 67px;
   }
 }
@@ -85,7 +85,7 @@
 .p-info-list__item {
   margin-bottom: 17px;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     margin-bottom: 33px;
   }
 }
@@ -95,9 +95,9 @@
   padding: 2px 8px;
   color: #fff;
   font-size: 16px;
-  background-color: variable.$color-main1;
+  background-color: $color-main1;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     padding: 4px 16px;
     font-size: 20px;
     line-height: 1.76;
@@ -109,13 +109,13 @@
   margin-top: 9px;
   font-size: 16px;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     margin-top: 18px;
     font-size: 20px;
   }
 
   span {
-    @include variable.mq("lg") {
+    @include mq("lg") {
       font-size: 24px;
     }
   }
@@ -132,7 +132,7 @@
 .p-info__decoration-item {
   display: none;
 
-  @include variable.mq("xl") {
+  @include mq("xl") {
     display: block;
   }
 

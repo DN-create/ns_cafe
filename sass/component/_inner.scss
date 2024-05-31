@@ -1,13 +1,14 @@
-@use "../../foundation/variable";
+// @use "../../foundation/variable";
+@use "../global" as *;
 
 .c-inner {
   padding-left: 36px;
   padding-right: 36px;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     padding-left: 64px;
     padding-right: 64px;
     margin: 0 auto;
-    max-width: calc(variable.$content-width + 30px * 2);
+    max-width: calc($content-width + 30px * 2);
   }
 }

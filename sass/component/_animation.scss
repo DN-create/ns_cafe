@@ -1,3 +1,5 @@
+@use "../global" as *;
+
 /* ゆらゆら揺れるアニメーション */
 .c-swing-animation01{
   animation: swing-ease 4s ease infinite;

@@ -17,10 +17,10 @@
     transform: translate(-50%, -50%);
     width: 64px;
     height: 64px;
-    background: url(../img/menu_icon-heading.png) no-repeat center center /
+    background: url(/img/menu_icon-heading.png) no-repeat center center /
       contain;
 
-    @include variable.mq("lg") {
+    @include mq("lg") {
       width: 100px;
       height: 100px;
     }
@@ -29,9 +29,9 @@
 
 .p-menu__wrapper {
   margin-top: 24px;
-  font-family: variable.$font-en1;
+  font-family: $font-en1;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     margin-top: 61px;
   }
 }
@@ -41,18 +41,18 @@
   margin-right: auto;
   max-width: 304px;
 
-  @include variable.mq('lg') {
+  @include mq('lg') {
     max-width: 640px;
   }
 }
 
 .p-menu__category-heading {
-  font-family: variable.$font-en1;
+  font-family: $font-en1;
   font-size: 20px;
   text-align: center;
   position: relative;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     font-size: 36px;
   }
 
@@ -64,9 +64,9 @@
     transform: translateX(-50%);
     width: 111px;
     height: 15px;
-    background: url(../img/menu_deco01.png) no-repeat center center / contain;
+    background: url(/img/menu_deco01.png) no-repeat center center / contain;
 
-    @include variable.mq("lg") {
+    @include mq("lg") {
       top: 49px;
       width: 200px;
       height: 27.027px;
@@ -81,7 +81,7 @@
   justify-content: center;
   gap: 15px;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     margin-top: 64px;
     gap: 64px;
   }
@@ -94,7 +94,7 @@
   background: rgba(255, 255, 255, 0.5);
   text-align: center;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     padding-top: 44px;
     padding-bottom: 38px;
     width: 288px;
@@ -108,15 +108,13 @@
   background: rgba(255, 255, 255, 0.5);
   text-align: center;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     padding-top: 44px;
     padding-bottom: 38px;
     width: 288px;
   }
 }
 
-.p-menu-card {
-}
 
 .p-menu-card__head {
   width: 100px;
@@ -124,21 +122,19 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     width: 200px;
     height: 150px;
   }
 }
 
-.p-menu-card__image {
-}
 
 .p-menu-card__body {
 
   &--cake {
     margin-top: 16px;
 
-    @include variable.mq('lg') {
+    @include mq('lg') {
       margin-top: 42px;
     }
   }
@@ -146,7 +142,7 @@
   &--drink {
     margin-top: 8px;
 
-    @include variable.mq('lg') {
+    @include mq('lg') {
       margin-top: 26px;
     }
   }
@@ -157,7 +153,7 @@
   &--cake {
     font-size: 16px;
 
-    @include variable.mq("lg") {
+    @include mq("lg") {
       font-size: 24px;
     }
   }
@@ -165,7 +161,7 @@
   &--drink {
     font-size: 16px;
 
-    @include variable.mq("lg") {
+    @include mq("lg") {
       font-size: 24px;
     }
   }
@@ -177,7 +173,7 @@
     margin-top: -2px;
     font-size: 12px;
 
-    @include variable.mq("lg") {
+    @include mq("lg") {
       margin-top: 5px;
       font-size: 16px;
     }
@@ -186,7 +182,7 @@
   &--drink {
     font-size: 12px;
 
-    @include variable.mq("lg") {
+    @include mq("lg") {
       margin-top: 6px;
       font-size: 16px;
     }
@@ -199,7 +195,7 @@
   margin-right: auto;
   max-width: 304px;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     margin-top: 64px;
     max-width: 640px;
   }
@@ -207,14 +203,11 @@
 
 .p-menu-card__notes {
 
-  &--cake {
-  }
-
   &--drink {
     margin-top: -6px;
     font-size: 10px;
 
-    @include variable.mq("lg") {
+    @include mq("lg") {
       margin-top: 0px;
       font-size: 12px;
     }
@@ -226,11 +219,11 @@
   height: 140px;
   position: relative;
 
-  @include variable.mq('md') {
+  @include mq('md') {
     height: 200px;
   }
 
-  @include variable.mq('lg') {
+  @include mq('lg') {
     margin-top: 145px;
     height: 287px;
   }
@@ -243,9 +236,9 @@
     transform: translateX(-50%);
     width: 312px;
     height: 42.889px;
-    background: url(../img/menu_deco02.png) no-repeat center center / contain;
+    background: url(/img/menu_deco02.png) no-repeat center center / contain;
 
-    @include variable.mq("lg") {
+    @include mq("lg") {
       top: -84px;
       left: 50%;
       width: 640px;
@@ -268,7 +261,7 @@
 .p-menu__decoration-item {
   display: none;
 
-  @include variable.mq("xl") {
+  @include mq("xl") {
     display: block;
   }
 

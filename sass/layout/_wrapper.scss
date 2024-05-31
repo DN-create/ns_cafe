@@ -1,7 +1,9 @@
 // @use "../foundation/variable";
-@use "../foundation/variable" as *;
+// @use "../foundation/variable" as *;
+@use "../global" as *;
 .l-wrapper {
   width: 100%;
-  background-image: url(../img/body_background.jpg);
+  // background-image: url(../img/body_background.jpg);
+  background-image: url(/img/body_background.jpg);
   background-repeat: repeat;
 }
