@@ -1,5 +1,5 @@
 // @use "../global" as *;
-@use "../sass/foundation/variable" as *;
+@use "../global" as *;
 
 .c-bg__image {
     @include mq('tb') {

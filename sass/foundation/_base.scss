@@ -1,4 +1,4 @@
-@use "./variable";
+// @use "./variable";
 @use "../global" as *;
 
 /* 基本設定
@@ -7,7 +7,7 @@
 body {
   font-family: "DM Sans", "Zen Kaku Gothic New", sans-serif;
   font-size: 16px;
-  color: variable.$color-text;
+  color:$color-text;
   line-height: 1.5;
 }
 
@@ -15,15 +15,15 @@ main,
 footer {
   margin-left: auto;
   margin-right: auto;
-  background-color: variable.$color-base;
+  background-color: $color-base;
   // background-color: #333;
   max-width: 375px;
 
-  @include variable.mq("md") {
+  @include mq("md") {
     max-width: 540px;
   }
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     max-width: 768px;
   }
 }

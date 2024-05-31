@@ -1,4 +1,4 @@
-@use "sass:map";
+// @use "sass:map";
 // @use "../global" as *;
 
 
@@ -6,6 +6,8 @@
 ------------------------------------------ */
 
 $content-width: 768px;
+$layout-width-inner :1280px; //インナー幅サイズ
+$sp-width: 768px; //スマホサイズ
 
 /* ブレイクポイント
 ------------------------------------------ */
@@ -16,16 +18,12 @@ $breakpoints: (
   "lg": "(min-width: #{$content-width})",
   "xl": "(min-width: 1280px)",
   "xxl": "(min-width: 1440px)",
+
+  "sp" : "(max-width: 767px)",
+  "tb" : "(min-width: 768px) and (max-width: #{$layout-width-inner - 1})",
+  "pc" : "(min-width: #{$layout-width-inner})",
 ) !default;
 
-/* メディアクエリ
------------------------------------------- */
-
-@mixin mq($breakpoint: sm) {
-  @media #{map.get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
 
 /* カラー
 ------------------------------------------ */
@@ -78,17 +76,7 @@ $font-en2: "Cormorant";
 //   $fw-base:500; //ベースフォントウェイト
 //   $lh-base:1.6; //ベース行間
   
-  // レイアウト
-  $layout-width-inner :1280px; //インナー幅サイズ
-  $sp-width: 768px; //スマホサイズ
   
-
-  // ブレークポイント
-  $breakpoints-sub: (
-    "sp" : "(max-width: 767px)",
-    "tb" : "(min-width: 768px) and (max-width: #{$layout-width-inner - 1})",
-    "pc" : "(min-width: #{$layout-width-inner})",
-  );
   
   //重なり順の定義
   $layer: (

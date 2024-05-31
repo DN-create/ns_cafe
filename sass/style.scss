@@ -1,43 +1,49 @@
+@use "foundation";
+@use "layout";
+@use "component";
+@use "project";
+@use "utility";
+
 /* foundation
 ------------------------------------------ */
 
-@use "./foundation/reset";
-@use "./foundation/variable";
-@use "./foundation/base";
+// @use "./foundation/reset";
+// @use "./foundation/variable";
+// @use "./foundation/base";
 
-@use "./foundation/index";
+// @use "./foundation/index";
 
 /* layout
 ------------------------------------------ */
 
-@use "./layout/wrapper";
-@use "./layout/footer";
+// @use "./layout/wrapper";
+// @use "./layout/footer";
 
-@use "./layout/l-header-nav";
+// @use "./layout/l-header-nav";
 
 /* component
 ------------------------------------------ */
 
-@use "./object/component/section";
+// @use "./object/component/section";
 // @use "./object/component/button";
-@use "./object/component/inner";
-@use "./object/component/animation";
-@use "./object/component/c-bg-image";
-@use "./object/component/c-coffee";
-@use "./object/component/c-hamburger";
+// @use "./object/component/inner";
+// @use "./object/component/animation";
+// @use "./object/component/c-bg-image";
+// @use "./object/component/c-coffee";
+// @use "./object/component/c-hamburger";
 
 /* project
 ------------------------------------------ */
 
-@use "./object/project/about";
-@use "./object/project/menu";
-@use "./object/project/info";
-@use "./object/project/sns";
+// @use "./object/project/about";
+// @use "./object/project/menu";
+// @use "./object/project/info";
+// @use "./object/project/sns";
 
 /* utility
 ------------------------------------------ */
 
-@use "./object/utility/utility";
+// @use "./object/utility/utility";
 
 
 /* 作業用アウトライン
