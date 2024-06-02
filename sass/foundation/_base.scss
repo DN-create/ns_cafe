@@ -9,6 +9,7 @@ body {
   font-size: 16px;
   color:$color-text;
   line-height: 1.5;
+  background-image: url(/img/pc_bg_color.png);
 }
 
 main,
@@ -57,17 +58,18 @@ a {
 // }
 
 main {
-  background-image: url(/img/pc_bg_color.png);
-  color: #fff;
+  // background-image: url(/img/pc_bg_color.png);
+  // background-image: url(/img/body_background.jpg);
+  // color: #fff;
   margin: 0 auto;
   justify-content: center;
   width: 100%;
   min-width: 375px;
   position: relative;
+  background: rgba(242, 237, 235, 1);
 }
 
 .wrapper {
-  background: rgba(242, 237, 235, 1);
   filter: drop-shadow(0px 2px 4px rgba(85, 70, 61, 0.20));
   padding-right: 24px;
   padding-left: 32px;

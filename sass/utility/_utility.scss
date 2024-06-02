@@ -181,11 +181,20 @@
   justify-content: flex-start;
   align-items: center;
   // height: 100%;
-  animation: slideAnimation 2s linear infinite; /* アニメーションを追加 */
-  transition: transform 2s ease; /* スライド切り替え時のアニメーション時間を設定 */
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
 }
 
 .swiper-slide img {
+  animation: slideAnimation 2000ms linear 1 forwards; /* アニメーションを追加 */
+  // transition: transform 1000ms ease; /* スライド切り替え時のアニメーション時間を設定 */
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -194,7 +203,7 @@
 
 .swiper-container {
   mask-size: cover;
-  mask-image: url(/public/assets/img/Vector.png);
+  mask-image: url(/img/Vector.png);
   mask-repeat: no-repeat;
   mask-position: 160% 0%;
   bottom: 0px;
@@ -213,12 +222,3 @@
   }
 }
 
-
-@keyframes slideAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-30px);
-  }
-}

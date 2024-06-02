@@ -21,6 +21,7 @@
 ------------------------------------------ */
 
 body {
+	background-image: url(/img/pc_bg_color.png);
 	color: #55463d;
 	font-family: "DM Sans", "Zen Kaku Gothic New", sans-serif;
 	font-size: 16px;
@@ -56,8 +57,7 @@ a:hover {
 ===========================================================*/
 
 main {
-	background-image: url(/img/pc_bg_color.png);
-	color: #fff;
+	background: rgb(242, 237, 235);
 	justify-content: center;
 	margin: 0 auto;
 	min-width: 375px;
@@ -66,7 +66,6 @@ main {
 }
 
 .wrapper {
-	background: rgb(242, 237, 235);
 	filter: drop-shadow(0px 2px 4px rgba(85, 70, 61, 0.2));
 	height: 1000px;
 	margin: 0 auto;
@@ -231,7 +230,6 @@ figcaption {
 }
 
 .l-wrapper {
-	background-image: url(/img/body_background.jpg);
 	background-repeat: repeat;
 	width: 100%;
 }
@@ -358,6 +356,7 @@ figcaption {
 	align-items: center;
 	display: flex;
 	justify-content: center;
+	overflow: visible; /* 親要素が隠れていないか確認 */
 	position: relative;
 	width: 100%;
 }
@@ -385,6 +384,7 @@ figcaption {
 	top: 185px;
 	transform: rotateY(0deg);
 	width: 26px;
+	z-index: 1;
 }
 
 .c-coffee__image-after {
@@ -397,28 +397,29 @@ figcaption {
 	position: absolute;
 	top: 211px;
 	width: 45px;
+	z-index: 1;
 }
 
 .c-bg__image-flour {
 	position: absolute;
-	right: 77px;
+	right: -180px;
 	top: 157px;
 }
 
 .c-bg__image-flesh {
 	position: absolute;
-	right: 0px;
+	right: -250px;
 	top: 373px;
 }
 
 .c-bg__image-boul {
-	left: 23px;
+	left: -230px;
 	position: absolute;
 	top: 735px;
 }
 
 .c-bg__image-scall {
-	left: 44px;
+	left: -220px;
 	position: absolute;
 	top: 813px;
 }
@@ -1154,13 +1155,12 @@ figcaption {
 
 .swiper-slide {
 	align-items: center;
-	animation: slideAnimation 2s linear infinite; /* アニメーションを追加 */
 	display: flex;
 	justify-content: flex-start;
-	transition: transform 2s ease; /* スライド切り替え時のアニメーション時間を設定 */
 }
 
 .swiper-slide img {
+	animation: slideAnimation 2000ms linear 1 forwards; /* アニメーションを追加 */
 	-o-object-fit: cover;
 	height: 100%;
 	object-fit: cover;
@@ -1170,8 +1170,8 @@ figcaption {
 .swiper-container {
 	-webkit-mask-size: cover;
 	mask-size: cover;
-	-webkit-mask-image: url(/public/assets/img/Vector.png);
-	mask-image: url(/public/assets/img/Vector.png);
+	-webkit-mask-image: url(/img/Vector.png);
+	mask-image: url(/img/Vector.png);
 	-webkit-mask-repeat: no-repeat;
 	mask-repeat: no-repeat;
 	-webkit-mask-position: 160% 0%;
@@ -1743,11 +1743,11 @@ footer {
 @keyframes slideAnimation {
 
 0% {
-	transform: translateX(0);
+	transform: translateX(0px);
 }
 
 100% {
-	transform: translateX(-30px);
+	transform: translateX(-100px);
 }
 
 }

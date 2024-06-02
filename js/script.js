@@ -91,19 +91,25 @@ document.addEventListener("DOMContentLoaded", function() {
 var swiper = new Swiper('.swiper-container', {
   loop: true,
   autoplay: {
-      delay: 1800, // スライドが切り替わるまでの時間（ミリ秒）
-      disableOnInteraction: false
+    delay: 2000, // スライドが切り替わるまでの時間（ミリ秒）
+    disableOnInteraction: false
   },
   speed: 1000, // スライドが切り替わるアニメーションの時間（ミリ秒）
   on: {
-      slideChangeTransitionStart: function() {
-          // スライドの切り替え時にアニメーションをリセット
-          var slides = document.querySelectorAll('.swiper-slide img');
-          slides.forEach(function(slide) {
-              slide.style.animation = 'none';
-              slide.offsetHeight; // トリガーリフロー
-              slide.style.animation = 'slideAnimation 3s linear infinite';
-          });
-      },
-  },
+    slideChangeTransitionEnd: function() {
+      // スライド切り替え完了後に新しいスライドでアニメーションを開始
+      var slides = document.querySelectorAll('.swiper-slide img');
+      slides.forEach(function(slide) {
+        slide.style.animation = 'slideAnimation 2000ms linear 1 forwards';
+      });
+    },
+    slideChangeTransitionStart: function() {
+      // スライドの切り替え時に現在のアニメーションを停止
+      var slides = document.querySelectorAll('.swiper-slide img');
+      slides.forEach(function(slide) {
+        slide.style.animation = 'none';
+      });
+    }
+  }
 });
+

@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible; /* 親要素が隠れていないか確認 */
 }
 
 .c-coffee__image-1 {
@@ -44,6 +45,7 @@
     top: 185px;
     left: 200px;
     width: 26px;
+    z-index: 1;
 
     @include mq('sp') {
         width: clamp(1.063rem, 0.526rem + 2.29vw, 1.625rem);
@@ -74,6 +76,7 @@
     top: 211px;
     left: 143px;
     width: 45px;
+    z-index: 1;
 
     @include mq('sp') {
         // left: 9%;
