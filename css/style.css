@@ -476,6 +476,7 @@ figcaption {
 }
 
 .p-mainVisual p {
+	color: #ffffff;
 	display: inline-block;
 	font-family: "Zen Kaku Gothic New", "Noto Serif JP", sans-serif;
 	font-size: 32px;
@@ -1063,6 +1064,16 @@ figcaption {
 /* 
 ------------------------------------------*/
 
+#splash {
+	background: #F2edeb;
+	color: #fff;
+	height: 100%;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 999;
+}
+
 /* 
 ------------------------------------------*/
 
@@ -1160,7 +1171,6 @@ figcaption {
 }
 
 .swiper-slide img {
-	animation: slideAnimation 2000ms linear 1 forwards; /* アニメーションを追加 */
 	-o-object-fit: cover;
 	height: 100%;
 	object-fit: cover;

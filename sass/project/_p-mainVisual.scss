@@ -61,6 +61,7 @@
     letter-spacing: 1px;
     padding-left: 7%;
     padding-top: 20px;
+    color: $text-color-white;
 
     @include mq('sp') {
         // font-size: 18px;

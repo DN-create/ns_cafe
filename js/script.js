@@ -64,8 +64,8 @@ function(){
 );
 
 $(window).on('load',function(){
-  $("#splash").delay(3000).fadeOut('slow');//ローディング画面を3秒（3000ms）待機してからフェイドアウト
-	$("#splash_logo").delay(3000).fadeOut('slow');//ロゴを3秒（3000ms）待機してからフェイドアウト
+  $("#splash").delay(4500).fadeOut('slow');//ローディング画面を3秒（3000ms）待機してからフェイドアウト
+	$("#splash_logo").delay(4500).fadeOut('slow');//ロゴを3秒（3000ms）待機してからフェイドアウト
         stroke.play();//SVGアニメーションの実行
 });
 
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
         beforeImage.style.transform = 'rotateY(-180deg)';
         afterImage.style.transform = 'rotateY(0deg)';
         afterImage.style.zIndex = '1';
-    }, 5000);
+    }, 7000);
 });
 
 /*==========================================================
@@ -96,20 +96,16 @@ var swiper = new Swiper('.swiper-container', {
   },
   speed: 1000, // スライドが切り替わるアニメーションの時間（ミリ秒）
   on: {
-    slideChangeTransitionEnd: function() {
-      // スライド切り替え完了後に新しいスライドでアニメーションを開始
-      var slides = document.querySelectorAll('.swiper-slide img');
-      slides.forEach(function(slide) {
-        slide.style.animation = 'slideAnimation 2000ms linear 1 forwards';
-      });
-    },
-    slideChangeTransitionStart: function() {
-      // スライドの切り替え時に現在のアニメーションを停止
+    init: function() {
+      // スライダーが初期化されたときにアニメーションを設定
       var slides = document.querySelectorAll('.swiper-slide img');
       slides.forEach(function(slide) {
         slide.style.animation = 'none';
+        slide.offsetHeight; // 強制的にリフローを発生させる
+        slide.style.animation = 'slideAnimation 4500ms linear infinite';
       });
+    },
     }
-  }
-});
+  });
 
+swiper.init();

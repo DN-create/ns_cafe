@@ -15,15 +15,15 @@
 ------------------------------------------*/
 // コメントアウト化でローディングの一時停止
 
-// #splash {
-//     position: fixed;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 999;
-//     background:$base-color;
-//     text-align:center;
-//     color:#fff;
-// }
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:$base-color;
+    text-align:center;
+    color:#fff;
+}
 
 /* 
 ------------------------------------------*/
@@ -193,12 +193,12 @@
 }
 
 .swiper-slide img {
-  animation: slideAnimation 2000ms linear 1 forwards; /* アニメーションを追加 */
-  // transition: transform 1000ms ease; /* スライド切り替え時のアニメーション時間を設定 */
+  // animation: slideAnimation 10ms ease; /* アニメーションを追加 */
+  // transition: transform 2000ms ease; /* スライド切り替え時のアニメーション時間を設定 */
   object-fit: cover;
   width: 100%;
   height: 100%;
-  
+
 }
 
 .swiper-container {
