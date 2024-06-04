@@ -1,0 +1,13 @@
+@use "../../foundation/variable";
+
+.c-inner {
+  padding-left: 36px;
+  padding-right: 36px;
+
+  @include variable.mq("lg") {
+    padding-left: 64px;
+    padding-right: 64px;
+    margin: 0 auto;
+    max-width: calc(variable.$content-width + 30px * 2);
+  }
+}

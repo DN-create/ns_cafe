@@ -1,0 +1,17 @@
+@use "../../foundation/variable";
+
+.c-section {
+}
+
+.c-section__heading {
+  color: #d43333;
+  font-family: variable.$font-en2;
+  font-size: 32px;
+  text-align: center;
+  position: relative;
+
+  @include variable.mq("lg") {
+    font-size: 40px;
+    letter-spacing: 1.6px;
+  }
+}

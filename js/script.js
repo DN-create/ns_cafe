@@ -102,7 +102,7 @@ var swiper = new Swiper('.swiper-container', {
       slides.forEach(function(slide) {
         slide.style.animation = 'none';
         slide.offsetHeight; // 強制的にリフローを発生させる
-        slide.style.animation = 'slideAnimation 4500ms linear infinite';
+        slide.style.animation = 'slideAnimation 5100ms linear infinite';
       });
     },
     }

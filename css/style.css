@@ -408,7 +408,7 @@ figcaption {
 
 .c-bg__image-flesh {
 	position: absolute;
-	right: -250px;
+	right: -230px;
 	top: 373px;
 }
 
@@ -1064,16 +1064,6 @@ figcaption {
 /* 
 ------------------------------------------*/
 
-#splash {
-	background: #F2edeb;
-	color: #fff;
-	height: 100%;
-	position: fixed;
-	text-align: center;
-	width: 100%;
-	z-index: 999;
-}
-
 /* 
 ------------------------------------------*/
 
@@ -1168,6 +1158,7 @@ figcaption {
 	align-items: center;
 	display: flex;
 	justify-content: flex-start;
+	overflow: hidden;
 }
 
 .swiper-slide img {
@@ -1186,9 +1177,9 @@ figcaption {
 	mask-repeat: no-repeat;
 	-webkit-mask-position: 160% 0%;
 	bottom: 0px;
+	height: 100%;
 	left: 120px;
 	mask-position: 160% 0%;
-	overflow: hidden;
 	position: absolute;
 	top: 13%;
 	width: 100%;
@@ -1639,14 +1630,14 @@ footer {
 	width: clamp(15.938rem, 12.312rem + 15.47vw, 24.688rem);
 }
 
+.swiper-slide img {
+	width: 200%;
 }
 
-@media (max-width: 375px) {
-
 .swiper-container {
-	left: 30px;
+	height: 45%;
+	left: 50px;
 	top: 9%;
-	width: 160%;
 }
 
 }

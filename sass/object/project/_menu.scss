@@ -1,0 +1,319 @@
+@use "../../foundation/variable";
+
+/* menu
+------------------------------------------ */
+
+.p-menu {
+  padding-top: 32px;
+  padding-bottom: 22px;
+}
+
+.p-menu__heading {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: url(../img/menu_icon-heading.png) no-repeat center center /
+      contain;
+
+    @include variable.mq("lg") {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.p-menu__wrapper {
+  margin-top: 24px;
+  font-family: variable.$font-en1;
+
+  @include variable.mq("lg") {
+    margin-top: 61px;
+  }
+}
+
+.p-menu__category--cake {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 304px;
+
+  @include variable.mq('lg') {
+    max-width: 640px;
+  }
+}
+
+.p-menu__category-heading {
+  font-family: variable.$font-en1;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+
+  @include variable.mq("lg") {
+    font-size: 36px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 111px;
+    height: 15px;
+    background: url(../img/menu_deco01.png) no-repeat center center / contain;
+
+    @include variable.mq("lg") {
+      top: 49px;
+      width: 200px;
+      height: 27.027px;
+    }
+  }
+}
+
+.p-menu-list {
+  margin-top: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+
+  @include variable.mq("lg") {
+    margin-top: 64px;
+    gap: 64px;
+  }
+}
+
+.p-menu-list__item--cake {
+  padding-top: 22px;
+  padding-bottom: 18px;
+  width: 144px;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+
+  @include variable.mq("lg") {
+    padding-top: 44px;
+    padding-bottom: 38px;
+    width: 288px;
+  }
+}
+
+.p-menu-list__item--drink {
+  padding-top: 22px;
+  padding-bottom: 16px;
+  width: 144px;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+
+  @include variable.mq("lg") {
+    padding-top: 44px;
+    padding-bottom: 38px;
+    width: 288px;
+  }
+}
+
+.p-menu-card {
+}
+
+.p-menu-card__head {
+  width: 100px;
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include variable.mq("lg") {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+.p-menu-card__image {
+}
+
+.p-menu-card__body {
+
+  &--cake {
+    margin-top: 16px;
+
+    @include variable.mq('lg') {
+      margin-top: 42px;
+    }
+  }
+
+  &--drink {
+    margin-top: 8px;
+
+    @include variable.mq('lg') {
+      margin-top: 26px;
+    }
+  }
+}
+
+.p-menu-card__name {
+
+  &--cake {
+    font-size: 16px;
+
+    @include variable.mq("lg") {
+      font-size: 24px;
+    }
+  }
+
+  &--drink {
+    font-size: 16px;
+
+    @include variable.mq("lg") {
+      font-size: 24px;
+    }
+  }
+}
+
+.p-menu-card__price {
+
+  &--cake {
+    margin-top: -2px;
+    font-size: 12px;
+
+    @include variable.mq("lg") {
+      margin-top: 5px;
+      font-size: 16px;
+    }
+  }
+
+  &--drink {
+    font-size: 12px;
+
+    @include variable.mq("lg") {
+      margin-top: 6px;
+      font-size: 16px;
+    }
+  }
+}
+
+.p-menu__category--drink {
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 304px;
+
+  @include variable.mq("lg") {
+    margin-top: 64px;
+    max-width: 640px;
+  }
+}
+
+.p-menu-card__notes {
+
+  &--cake {
+  }
+
+  &--drink {
+    margin-top: -6px;
+    font-size: 10px;
+
+    @include variable.mq("lg") {
+      margin-top: 0px;
+      font-size: 12px;
+    }
+  }
+}
+
+.p-menu__cover-background {
+  margin-top: 80px;
+  height: 140px;
+  position: relative;
+
+  @include variable.mq('md') {
+    height: 200px;
+  }
+
+  @include variable.mq('lg') {
+    margin-top: 145px;
+    height: 287px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -41px;
+    left: 51%;
+    transform: translateX(-50%);
+    width: 312px;
+    height: 42.889px;
+    background: url(../img/menu_deco02.png) no-repeat center center / contain;
+
+    @include variable.mq("lg") {
+      top: -84px;
+      left: 50%;
+      width: 640px;
+      height: 87.978px;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.p-menu__decoration {
+  position: relative;
+}
+
+.p-menu__decoration-item {
+  display: none;
+
+  @include variable.mq("xl") {
+    display: block;
+  }
+
+  &.--cooking {
+    position: absolute;
+    content: "";
+    top: 273px;
+    right: -291px;
+    width: 192px;
+    height: 204px;
+  }
+
+  &.--spatula {
+    position: absolute;
+    content: "";
+    top: 713px;
+    left: -273px;
+    width: 173.215px;
+    height: 185.845px;
+  }
+
+  &.--spatulabowl {
+    position: absolute;
+    content: "";
+    top: 786px;
+    left: -319px;
+    width: 191.215px;
+    height: auto;
+  }
+
+  &.--spatulamold {
+    position: absolute;
+    content: "";
+    top: 874px;
+    left: -228px;
+    width: 173.215px;
+    height: 103.748px;
+  }
+
+  &.--oven {
+    position: absolute;
+    content: "";
+    top: 1251px;
+    right: -291px;
+    width: 192px;
+    height: 181px;
+  }
+}
