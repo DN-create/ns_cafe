@@ -223,9 +223,9 @@
   height: 100%;
   
   @include mq('sp') {
-    left: 50px;
-    top: 9%;
-    height: 45%;
+    // height: 75% !important;
+    height: clamp(29.063rem, 23.218rem + 24.94vw, 35.188rem) !important;
+    left: 16%;
+    top: 15%;
   }
 }
-

@@ -65,8 +65,14 @@
     }
 
     @include mq('sp') {
-        top: clamp(6.875rem, 2.999rem + 16.54vw, 10.938rem);
-        left: clamp(4.688rem, -2.171rem + 29.26vw, 11.875rem);
+        // max-top: 166px;
+        // min-top: 112px;
+        // top: clamp(6.875rem, 2.999rem + 16.54vw, 10.938rem);
+        top: clamp(7rem, 3.763rem + 13.81vw, 10.375rem);
+        // max-left: 115px;
+        // min-left: 75px;
+        // left: clamp(4.688rem, -2.171rem + 29.26vw, 11.875rem);
+        left: clamp(4.688rem, 2.083rem + 11.11vw, 7.188rem);
         width: clamp(1.875rem, 0.98rem + 3.82vw, 2.813rem);
     }
 }
@@ -79,9 +85,8 @@
     z-index: 1;
 
     @include mq('sp') {
-        // left: 9%;
-        // top: -37%;
-        // width: 6%;
+        // max-left: 80px;
+        // min-left: 45px;
 
     // top: 133px;
     top: clamp(8.313rem, 3.661rem + 19.85vw, 13.188rem);

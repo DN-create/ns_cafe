@@ -7,8 +7,18 @@ $('.c-hamburger').on('click',function(e) {
     $('.c-hamburger').toggleClass('is-active');
     $('.l-header-nav').toggleClass('is-active'); // ドロワーメニューの表示状態を切り替える
     $('.c-hamburger-icon').toggleClass('is-active'); // ドロワーメニューの表示状態を切り替える
+    $('.wrapper').toggleClass('is-active'); 
   
     return false;
+});
+
+
+// ナビメニュー内のliをクリックしたときにメニューを閉じる
+$('.l-header-nav li').on('click', function() {
+  $('.c-hamburger').removeClass('is-active');
+  $('.l-header-nav').removeClass('is-active'); // ドロワーメニューの表示状態を非表示にする
+  $('.c-hamburger-icon').removeClass('is-active'); // ドロワーメニューの表示状態を非表示にする
+  $('.wrapper').removeClass('is-active');
 });
 
 

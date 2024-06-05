@@ -10,6 +10,10 @@
   @include mq("lg") {
     padding-bottom: 42px;
   }
+
+  @include mq('sp') {
+   padding-top: 0; 
+  }
 }
 
 .p-about__heading {
