@@ -98,24 +98,25 @@ document.addEventListener("DOMContentLoaded", function() {
 /*==========================================================
 # swiper
 ===========================================================*/
-var swiper = new Swiper('.swiper-container', {
-  loop: true,
-  autoplay: {
-    delay: 2000, // スライドが切り替わるまでの時間（ミリ秒）
-    disableOnInteraction: false
-  },
-  speed: 1000, // スライドが切り替わるアニメーションの時間（ミリ秒）
-  on: {
-    init: function() {
-      // スライダーが初期化されたときにアニメーションを設定
-      var slides = document.querySelectorAll('.swiper-slide img');
-      slides.forEach(function(slide) {
-        slide.style.animation = 'none';
-        slide.offsetHeight; // 強制的にリフローを発生させる
-        slide.style.animation = 'slideAnimation 5100ms linear infinite';
-      });
-    },
-    }
-  });
 
-swiper.init();
+// var swiper = new Swiper('.swiper-container', {
+//   loop: true,
+//   autoplay: {
+//     delay: 2000, // スライドが切り替わるまでの時間（ミリ秒）
+//     disableOnInteraction: false
+//   },
+//   speed: 1000, // スライドが切り替わるアニメーションの時間（ミリ秒）
+//   on: {
+//     init: function() {
+//       // スライダーが初期化されたときにアニメーションを設定
+//       var slides = document.querySelectorAll('.swiper-slide img');
+//       slides.forEach(function(slide) {
+//         slide.style.animation = 'none';
+//         slide.offsetHeight; // 強制的にリフローを発生させる
+//         slide.style.animation = 'slideAnimation 5100ms linear infinite';
+//       });
+//     },
+//     }
+//   });
+
+// swiper.init();

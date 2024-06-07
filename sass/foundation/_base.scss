@@ -80,7 +80,6 @@ main {
   height: 1010px;
   min-height: 572px;
   position: relative;
-  overflow: hidden;
   
   @include mq('tb') {
     // height: 700px; 

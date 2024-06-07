@@ -181,9 +181,7 @@
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
-  @include mq('sp') {
-  }
-  // height: 100%;
+
 }
 
 @keyframes slideAnimation {
@@ -196,36 +194,60 @@
 }
 
 .swiper-slide img {
-  // animation: slideAnimation 10ms ease; /* アニメーションを追加 */
-  // transition: transform 2000ms ease; /* スライド切り替え時のアニメーション時間を設定 */
   object-fit: cover;
   width: 100%;
   height: 100%;
-  // overflow: hidden;
+  overflow: hidden;
+
+  @include mq('tb') {
+   width: 150%; 
+  }
 
   @include mq('sp') {
    width: 200%;
   }
+
 }
 
 .swiper-container {
   mask-size: cover;
-  mask-image: url(/img/Vector.png);
+  mask-image: 
+    linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(242, 237, 235, 0) 30%),
+    url(/img/Vector.png);
   mask-repeat: no-repeat;
   mask-position: 160% 0%;
-  bottom: 0px;
-  // overflow: hidden;
+  // bottom: 0px;
+  overflow: hidden;
   position: absolute;
-  left: 120px;
-  top: 13%;
+  // left: 110px;
+  left: 18%;
+  top: 2%;
   width: 100%;
-  z-index: -2;
-  height: 100%;
+  z-index: 1;
+  height: 85vh;
   
   @include mq('sp') {
     // height: 75% !important;
     height: clamp(29.063rem, 23.218rem + 24.94vw, 35.188rem) !important;
-    left: 16%;
+    left: 18%;
     top: 15%;
   }
+}
+
+// .blur-overlay {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 20%; /* Adjust the height of the blur effect */
+//   background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 0%, rgba(242, 237, 235, 1) 100%);
+//   filter: blur(30px); /* Adjust the blur intensity */
+//   pointer-events: none; /* Prevent interaction with the overlay */
+//   z-index: 1;
+// }
+
+.slide4 {
+  background:
+  linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgba(242, 237, 235, 1) 100%), 
+  url("/img/mainVisual_FV1.png") no-repeat center center / cover;
 }
