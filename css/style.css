@@ -608,8 +608,8 @@ figcaption {
 	content: "";
 	height: 138.667px;
 	position: absolute;
-	right: -290px;
-	top: 145px;
+	right: -230px;
+	top: 1319px;
 	width: 192px;
 }
 
@@ -617,26 +617,26 @@ figcaption {
 	content: "";
 	height: 112px;
 	position: absolute;
-	right: -290px;
-	top: 284px;
+	right: -227px;
+	top: 1456px;
 	width: 192px;
 }
 
 .p-about__decoration-item.--whisk {
 	content: "";
 	height: 206px;
-	left: -268px;
+	left: -208px;
 	position: absolute;
-	top: 592px;
+	top: 1764px;
 	width: 192px;
 }
 
 .p-about__decoration-item.--whiskbowl {
 	content: "";
 	height: 139px;
-	left: -300px;
+	left: -238px;
 	position: absolute;
-	top: 697px;
+	top: 1871px;
 	width: 192px;
 }
 
@@ -719,18 +719,18 @@ figcaption {
 .p-info__decoration-item.--caddy {
 	content: "";
 	height: 117px;
-	left: -315px;
+	left: -253px;
 	position: absolute;
-	top: -328px;
+	top: 3825px;
 	width: 192px;
 }
 
 .p-info__decoration-item.--pot {
 	content: "";
 	height: 127px;
-	left: -251px;
+	left: -189px;
 	position: absolute;
-	top: -236px;
+	top: 3917px;
 	width: 192px;
 }
 
@@ -738,26 +738,26 @@ figcaption {
 	content: "";
 	height: 204px;
 	position: absolute;
-	right: -291px;
-	top: 126px;
+	right: -225px;
+	top: 4278px;
 	width: 192px;
 }
 
 .p-info__decoration-item.--cup {
 	content: "";
 	height: 88px;
-	left: -316px;
+	left: -254px;
 	position: absolute;
-	top: 665px;
+	top: 4815px;
 	width: 192px;
 }
 
 .p-info__decoration-item.--cake {
 	content: "";
 	height: 117px;
-	left: -252px;
+	left: -190px;
 	position: absolute;
-	top: 745px;
+	top: 4897px;
 	width: 192px;
 }
 
@@ -765,8 +765,8 @@ figcaption {
 	content: "";
 	height: 227px;
 	position: absolute;
-	right: -291px;
-	top: 1104px;
+	right: -225px;
+	top: 5258px;
 	width: 192px;
 }
 
@@ -923,35 +923,35 @@ figcaption {
 	content: "";
 	height: 204px;
 	position: absolute;
-	right: -291px;
-	top: 273px;
+	right: -223px;
+	top: 2346px;
 	width: 192px;
 }
 
 .p-menu__decoration-item.--spatula {
 	content: "";
 	height: 185.845px;
-	left: -273px;
+	left: -207px;
 	position: absolute;
-	top: 713px;
+	top: 2786px;
 	width: 173.215px;
 }
 
 .p-menu__decoration-item.--spatulabowl {
 	content: "";
 	height: auto;
-	left: -319px;
+	left: -256px;
 	position: absolute;
-	top: 786px;
+	top: 2856px;
 	width: 191.215px;
 }
 
 .p-menu__decoration-item.--spatulamold {
 	content: "";
 	height: 103.748px;
-	left: -228px;
+	left: -166px;
 	position: absolute;
-	top: 874px;
+	top: 2947px;
 	width: 173.215px;
 }
 
@@ -959,8 +959,8 @@ figcaption {
 	content: "";
 	height: 181px;
 	position: absolute;
-	right: -291px;
-	top: 1251px;
+	right: -223px;
+	top: 3324px;
 	width: 192px;
 }
 
@@ -1038,9 +1038,9 @@ figcaption {
 .p-sns__decoration-item.--yummy1 {
 	content: "";
 	height: 200px;
-	left: -273px;
+	left: -209px;
 	position: absolute;
-	top: 203px;
+	top: 5787px;
 	width: 170.37px;
 }
 
@@ -1048,8 +1048,8 @@ figcaption {
 	content: "";
 	height: 200px;
 	position: absolute;
-	right: -280px;
-	top: 672px;
+	right: -212px;
+	top: 6253px;
 	width: 169px;
 }
 
