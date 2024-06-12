@@ -6,11 +6,14 @@
     flex-direction: column;
     overflow: visible; /* 子要素がはみ出ても表示させる */
     position: relative;
-    margin-top: 300px; 
+    margin-top: 140px; 
 
     @include mq('sp') {
     //  margin-top: 182px;
-     margin-top: clamp(11.375rem, 8.917rem + 12.29vw, 18.75rem);
+    //  margin-top: clamp(11.375rem, 8.917rem + 12.29vw, 18.75rem);
+
+     margin-top: 58px;
+     left: 30px;
     }
 }
 

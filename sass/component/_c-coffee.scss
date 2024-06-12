@@ -66,12 +66,12 @@
     top: 168px;
     width: 26px;
     z-index: 1;
-
+    
     @include mq('sp') {
-        // left: 112px;
+        left: -20px;
+        // top: 110px;
+        top: clamp(6.875rem, 3.416rem + 14.76vw, 10.5rem);
         width: clamp(1.063rem, 0.526rem + 2.29vw, 1.625rem);
-        top: clamp(7.188rem, 3.013rem + 17.81vw, 11.563rem);
-        // left: clamp(5rem, -2.156rem + 30.53vw, 12.5rem);
     }
 }
 
@@ -82,21 +82,8 @@
     width: 46px;
     left: -48px;
 
-    // @include mq('tb') {
-    //     top: 175px;
-    //     left: 190px;
-    //     width: 45px;
-    // }
 
     @include mq('sp') {
-        // max-top: 166px;
-        // min-top: 112px;
-        // top: clamp(6.875rem, 2.999rem + 16.54vw, 10.938rem);
-        // top: clamp(7rem, 3.763rem + 13.81vw, 10.375rem);
-        // max-left: 115px;
-        // min-left: 106px;
-        // left: clamp(4.688rem, -2.171rem + 29.26vw, 11.875rem);
-        // left: clamp(4.688rem, 2.083rem + 11.11vw, 7.188rem);
         width: clamp(1.875rem, 1.338rem + 2.29vw, 2.438rem);
     }
 }

@@ -74,8 +74,8 @@ function(){
 );
 
 $(window).on('load',function(){
-  $("#splash").delay(4500).fadeOut('slow');//ローディング画面を3秒（3000ms）待機してからフェイドアウト
-	$("#splash_logo").delay(4500).fadeOut('slow');//ロゴを3秒（3000ms）待機してからフェイドアウト
+  $("#splash").delay(3500).fadeOut('slow');//ローディング画面を3秒（3000ms）待機してからフェイドアウト
+	$("#splash_logo").delay(3500).fadeOut('slow');//ロゴを3秒（3000ms）待機してからフェイドアウト
         stroke.play();//SVGアニメーションの実行
 });
 
@@ -99,24 +99,24 @@ document.addEventListener("DOMContentLoaded", function() {
 # swiper
 ===========================================================*/
 
-// var swiper = new Swiper('.swiper-container', {
-//   loop: true,
-//   autoplay: {
-//     delay: 2000, // スライドが切り替わるまでの時間（ミリ秒）
-//     disableOnInteraction: false
-//   },
-//   speed: 1000, // スライドが切り替わるアニメーションの時間（ミリ秒）
-//   on: {
-//     init: function() {
-//       // スライダーが初期化されたときにアニメーションを設定
-//       var slides = document.querySelectorAll('.swiper-slide img');
-//       slides.forEach(function(slide) {
-//         slide.style.animation = 'none';
-//         slide.offsetHeight; // 強制的にリフローを発生させる
-//         slide.style.animation = 'slideAnimation 5100ms linear infinite';
-//       });
-//     },
-//     }
-//   });
+var swiper = new Swiper('.swiper-container', {
+  loop: true,
+  autoplay: {
+    delay: 2000, // スライドが切り替わるまでの時間（ミリ秒）
+    disableOnInteraction: false
+  },
+  speed: 1000, // スライドが切り替わるアニメーションの時間（ミリ秒）
+  on: {
+    init: function() {
+      // スライダーが初期化されたときにアニメーションを設定
+      var slides = document.querySelectorAll('.swiper-slide');
+      slides.forEach(function(slide) {
+        slide.style.animation = 'none';
+        slide.offsetHeight; // 強制的にリフローを発生させる
+        slide.style.animation = 'slideAnimation 5100ms linear infinite';
+      });
+    },
+    }
+  });
 
-// swiper.init();
+swiper.init();
