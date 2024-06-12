@@ -356,10 +356,16 @@ figcaption {
 
 .c-coffee__container {
 	align-items: center;
+	background-image: url(/img/coffee_1.png);
+	background-repeat: no-repeat;
+	background-size: contain;
 	display: flex;
+	height: 156px;
 	justify-content: center;
+	left: 270px;
 	overflow: visible; /* 親要素が隠れていないか確認 */
 	position: relative;
+	top: 22px;
 	width: 100%;
 }
 
@@ -374,30 +380,30 @@ figcaption {
 .c-coffee__image-before,
 .c-coffee__image-after {
 	backface-visibility: hidden;
-	left: 27%;
 	position: absolute;
-	top: 177px;
 	transition: transform 2s;
-	width: 46px;
 }
 
 .c-coffee__image-before {
-	left: 200px;
-	top: 185px;
+	left: -39px;
+	top: 168px;
 	transform: rotateY(0deg);
 	width: 26px;
 	z-index: 1;
 }
 
 .c-coffee__image-after {
+	left: -48px;
+	top: 155px;
 	transform: rotateY(180deg);
+	width: 46px;
 	z-index: -1;
 }
 
 .c-coffee__image-3 {
-	left: 143px;
+	left: -93px;
 	position: absolute;
-	top: 211px;
+	top: 192px;
 	width: 45px;
 	z-index: 1;
 }
@@ -484,15 +490,15 @@ figcaption {
 	font-size: 32px;
 	font-weight: 700;
 	letter-spacing: 1px;
-	padding-left: 7%;
-	padding-top: 20px;
+	padding-left: 11%;
+	padding-top: 14px;
 	text-shadow: 0px 2px 2px rgba(85, 70, 61, 0.7);
 }
 
 .p-mainVisual__title {
 	display: inline-block;
-	margin-left: 55px;
-	margin-top: 15px;
+	margin-left: 86px;
+	margin-top: 8px;
 	width: 395px;
 }
 
@@ -500,7 +506,7 @@ figcaption {
 ------------------------------------------ */
 
 .p-about {
-	padding-top: 48px;
+	padding-top: 465px;
 }
 
 .p-about__heading {
@@ -1179,7 +1185,7 @@ figcaption {
 	-webkit-mask-repeat: no-repeat;
 	mask-repeat: no-repeat;
 	-webkit-mask-position: 160% 0%;
-	height: 85vh;
+	height: 124vh;
 	left: 18%;
 	mask-position: 160% 0%;
 	overflow: hidden;
@@ -1189,8 +1195,16 @@ figcaption {
 	z-index: 1;
 }
 
-.slide4 {
+.slide1 {
 	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV1.png") no-repeat center center/cover;
+}
+
+.slide2 {
+	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV2.png") no-repeat center center/cover;
+}
+
+.slide3 {
+	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV3.png") no-repeat center center/cover;
 }
 
 /* foundation
@@ -1517,12 +1531,6 @@ footer {
 	top: 21px;
 }
 
-.c-coffee__image-after {
-	left: 190px;
-	top: 175px;
-	width: 45px;
-}
-
 .c-bg__image {
 	display: none;
 }
@@ -1591,27 +1599,36 @@ footer {
 	width: 51%;
 }
 
+.c-coffee__container {
+	height: clamp(6.938rem, 4.254rem + 11.45vw, 9.75rem);
+	left: clamp(8.25rem, 6.58rem + 7.12vw, 10rem);
+	top: 6px;
+}
+
 .c-coffee__image-1 {
-	left: 42%;
+	left: 44%;
 	top: 10px;
 	width: clamp(4.125rem, 1.793rem + 9.95vw, 6.563rem);
 }
 
+.c-coffee__image-before,
+.c-coffee__image-after {
+	left: clamp(-1.688rem, -0.435rem - 5.34vw, -3rem);
+	top: clamp(6.375rem, 3.512rem + 12.21vw, 9.375rem);
+}
+
 .c-coffee__image-before {
-	left: clamp(5rem, -2.156rem + 30.53vw, 12.5rem);
 	top: clamp(7.188rem, 3.013rem + 17.81vw, 11.563rem);
 	width: clamp(1.063rem, 0.526rem + 2.29vw, 1.625rem);
 }
 
 .c-coffee__image-after {
-	left: clamp(4.688rem, 2.083rem + 11.11vw, 7.188rem);
-	top: clamp(7rem, 3.763rem + 13.81vw, 10.375rem);
-	width: clamp(1.875rem, 0.98rem + 3.82vw, 2.813rem);
+	width: clamp(1.875rem, 1.338rem + 2.29vw, 2.438rem);
 }
 
 .c-coffee__image-3 {
-	left: clamp(2.813rem, -3.032rem + 24.94vw, 8.938rem);
-	top: clamp(8.313rem, 3.661rem + 19.85vw, 13.188rem);
+	left: -55px;
+	top: clamp(7.813rem, 3.817rem + 17.05vw, 12rem);
 	width: clamp(1.875rem, 0.98rem + 3.82vw, 2.813rem);
 }
 

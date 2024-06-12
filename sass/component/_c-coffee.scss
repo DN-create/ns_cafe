@@ -8,6 +8,23 @@
     align-items: center;
     justify-content: center;
     overflow: visible; /* 親要素が隠れていないか確認 */
+    background-image: url(/img/coffee_1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 22px;
+    height: 156px;
+    left: 270px;
+
+    @include mq('sp') {
+        // max-height:156px
+        // min-height:111px
+        height: clamp(6.938rem, 4.254rem + 11.45vw, 9.75rem);
+        // max-left:160px
+        // min-left::132px
+        left: clamp(8.25rem, 6.58rem + 7.12vw, 10rem);
+        top: 6px;
+    }
+
 }
 
 .c-coffee__image-1 {
@@ -24,7 +41,7 @@
     @include mq('sp') {
         width: clamp(4.125rem, 1.793rem + 9.95vw, 6.563rem); //sp版から徐々に拡大
         top: 10px;
-        left: 42%;
+        left: 44%;
     }
 }
 
@@ -34,65 +51,75 @@
     backface-visibility: hidden; // 裏面が見えないようにする
     transition: transform 2s;
 
-    top: 177px;
-    left: 27%;
-    width: 46px;
+
+    @include mq('sp') {
+    //   top: 102px;
+      top: clamp(6.375rem, 3.512rem + 12.21vw, 9.375rem);
+    //   left: -27px;
+      left: clamp(-1.688rem, -0.435rem + -5.34vw, -3rem);
+    }
 }
 
 .c-coffee__image-before {
     transform: rotateY(0deg); // 初期状態は正面を向いている
-
-    top: 185px;
-    left: 200px;
+    left: -39px;
+    top: 168px;
     width: 26px;
     z-index: 1;
 
     @include mq('sp') {
+        // left: 112px;
         width: clamp(1.063rem, 0.526rem + 2.29vw, 1.625rem);
         top: clamp(7.188rem, 3.013rem + 17.81vw, 11.563rem);
-        left: clamp(5rem, -2.156rem + 30.53vw, 12.5rem);
+        // left: clamp(5rem, -2.156rem + 30.53vw, 12.5rem);
     }
 }
 
 .c-coffee__image-after {
     transform: rotateY(180deg); // 初期状態は裏を向いている
     z-index: -1; // 最初はbeforeの後ろに配置
+    top: 155px;
+    width: 46px;
+    left: -48px;
 
-    @include mq('tb') {
-        top: 175px;
-        left: 190px;
-        width: 45px;
-    }
+    // @include mq('tb') {
+    //     top: 175px;
+    //     left: 190px;
+    //     width: 45px;
+    // }
 
     @include mq('sp') {
         // max-top: 166px;
         // min-top: 112px;
         // top: clamp(6.875rem, 2.999rem + 16.54vw, 10.938rem);
-        top: clamp(7rem, 3.763rem + 13.81vw, 10.375rem);
+        // top: clamp(7rem, 3.763rem + 13.81vw, 10.375rem);
         // max-left: 115px;
-        // min-left: 75px;
+        // min-left: 106px;
         // left: clamp(4.688rem, -2.171rem + 29.26vw, 11.875rem);
-        left: clamp(4.688rem, 2.083rem + 11.11vw, 7.188rem);
-        width: clamp(1.875rem, 0.98rem + 3.82vw, 2.813rem);
+        // left: clamp(4.688rem, 2.083rem + 11.11vw, 7.188rem);
+        width: clamp(1.875rem, 1.338rem + 2.29vw, 2.438rem);
     }
 }
 
 .c-coffee__image-3 {
     position: absolute;
-    top: 211px;
-    left: 143px;
+    top: 192px;
+    left: -93px;
     width: 45px;
     z-index: 1;
+
 
     @include mq('sp') {
         // max-left: 80px;
         // min-left: 45px;
 
-    // top: 133px;
-    top: clamp(8.313rem, 3.661rem + 19.85vw, 13.188rem);
     // left: 45px;
-    left: clamp(2.813rem, -3.032rem + 24.94vw, 8.938rem);
+    // left: clamp(2.813rem, -3.032rem + 24.94vw, 8.938rem);
     // width: 30px;
     width: clamp(1.875rem, 0.98rem + 3.82vw, 2.813rem);
+
+    // top: 125px;
+    top: clamp(7.813rem, 3.817rem + 17.05vw, 12rem);
+    left: -55px;
     }
 }

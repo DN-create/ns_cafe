@@ -59,8 +59,8 @@
     font-weight: 700;
     font-size: 32px;
     letter-spacing: 1px;
-    padding-left: 7%;
-    padding-top: 20px;
+    padding-left: 11%;
+    padding-top: 14px;
     color: $text-color-white;
 
     @include mq('sp') {
@@ -76,9 +76,9 @@
 
 .p-mainVisual__title {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 8px;
     width: 395px;
-    margin-left: 55px;
+    margin-left: 86px;
   
     @include mq('sp') {
     //  margin-top: 5px; 
