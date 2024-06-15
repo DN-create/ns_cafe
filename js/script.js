@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
         beforeImage.style.transform = 'rotateY(-180deg)';
         afterImage.style.transform = 'rotateY(0deg)';
         afterImage.style.zIndex = '1';
-    }, 7000);
+    }, 5000);
 });
 
 /*==========================================================

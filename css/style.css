@@ -356,7 +356,7 @@ figcaption {
 
 .c-coffee__container {
 	align-items: center;
-	background-image: url(/img/coffee_1.png);
+	background-image: url(/img/coffee_1.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: flex;
@@ -1206,15 +1206,15 @@ figcaption {
 }
 
 .slide1 {
-	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV1.png") no-repeat center center/cover;
+	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV1.svg") no-repeat center center/cover;
 }
 
 .slide2 {
-	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV2.png") no-repeat center center/cover;
+	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV2.svg") no-repeat center center/cover;
 }
 
 .slide3 {
-	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV3.png") no-repeat center center/cover;
+	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV3.svg") no-repeat center center/cover;
 }
 
 /* foundation
