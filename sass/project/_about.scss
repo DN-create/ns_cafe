@@ -1,0 +1,223 @@
+// @use "../../foundation/variable";
+@use "../global" as *;
+
+/* about
+------------------------------------------ */
+
+.p-about {
+  padding-top: 470px;
+
+  @include mq("lg") {
+    padding-bottom: 42px;
+  }
+
+  @include mq('sp') {
+   padding-top: 250px; 
+  }
+}
+
+.p-about__heading {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: url(/img/about_icon-heading.png) no-repeat center center /
+      contain;
+
+    @include mq("lg") {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.p-about__wrapper {
+  margin-top: 34px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -45px;
+    left: -106px;
+    background: url(/img/about_background.png) no-repeat center center /
+      contain;
+    width: 358.909px;
+    height: 240.382px;
+    opacity: 0.7;
+    z-index: 0;
+
+    @include mq("lg") {
+      bottom: -129px;
+      left: -171px;
+      width: 662.222px;
+      height: 464.199px;
+    }
+  }
+
+  @include mq("lg") {
+    margin-top: 56px;
+  }
+}
+
+.p-about__item {
+  position: relative;
+  margin-bottom: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  @include mq("lg") {
+    margin-bottom: 63px;
+    align-items: start;
+    gap: 65px;
+  }
+
+  &._reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.p-about__body {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-about__title {
+  color: $color-main1;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+
+  @include mq("lg") {
+    margin-top: 48px;
+    font-size: 24px;
+    letter-spacing: 0.48px;
+  }
+}
+
+._cafe {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 26px;
+    left: -16px;
+    width: 178px;
+    height: 12px;
+    background: url(/img/about_deco01.png) no-repeat center center / contain;
+
+    @include mq("lg") {
+      top: 42px;
+      left: 0px;
+      width: 225px;
+      height: 18px;
+    }
+  }
+}
+
+._cake {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: 0px;
+    width: 148px;
+    height: 12px;
+    background: url(/img/about_deco02.png) no-repeat center center / contain;
+
+    @include mq("lg") {
+      top: 42px;
+      left: 0px;
+      width: 225px;
+      height: 18px;
+    }
+  }
+}
+
+.p-about__text {
+  margin-top: 30px;
+  font-size: 16px;
+
+  @include mq("lg") {
+    margin-top: 46px;
+    font-size: 20px;
+    line-height: 1.76;
+    letter-spacing: 0.4px;
+  }
+}
+
+.p-about__head {
+  text-align: center;
+
+  @include mq("lg") {
+    text-align: left;
+    width: 50%;
+  }
+}
+
+.p-about__image {
+  width: 146px;
+  height: 139px;
+
+  @include mq("lg") {
+    width: 288px;
+    height: 288px;
+  }
+}
+
+.p-about__decoration {
+  position: relative;
+}
+
+.p-about__decoration-item {
+  display: none;
+
+  @include mq("xl") {
+    display: block;
+  }
+
+  &.--egg {
+    position: absolute;
+    content: "";
+    top: 1319px;
+    right: -230px;
+    width: 192px;
+    height: 138.667px;
+  }
+
+  &.--eggbowl {
+    position: absolute;
+    content: "";
+    top: 1456px;
+    right: -227px;
+    width: 192px;
+    height: 112px;
+  }
+
+  &.--whisk {
+    position: absolute;
+    content: "";
+    top: 1764px;
+    left: -208px;
+    width: 192px;
+    height: 206px;
+  }
+
+  &.--whiskbowl {
+    position: absolute;
+    content: "";
+    top: 1871px;
+    left: -238px;
+    width: 192px;
+    height: 139px;
+  }
+}

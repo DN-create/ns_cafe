@@ -1,0 +1,147 @@
+@use "../global" as *;
+
+
+.c-hamburger {
+    background: #fefefe;
+    filter: drop-shadow(0px 2px 4px rgba(85, 70, 61, 0.20));
+    cursor: pointer;                /*リンクを示すカーソルを表示（指差しマーク）*/
+    margin: 7% 3% 0 auto;
+    z-index: 11;
+    border-radius: 9999px;
+    display: block;
+    transition: transform 1s ease 0s, -webkit-transform 1s ease 0s; /*アイコンの動きを指定*/
+    width: 66px;
+
+    position: absolute;
+    top: 0;
+    right: 3%;
+
+    &:hover {
+        &:before,
+        &:after {
+            background: $main-color;
+        }
+        background: $main-color;
+
+        .c-hamburger-icon span {
+            background: $base-color-white;
+        }
+    }
+
+    @include mq('sp') {
+     margin: 7% 5% 0 auto;
+     width: 51px;
+
+     position: absolute;
+     right: 20px;
+     top: -4px;
+    }
+
+    &.is-active {
+        /* ハンバーガーメニュー 閉じる際のアイコンアクション
+        ------------------------------------------*/
+
+        /*drawer-contentの幅の分だけ－で指定(drawer-iconの位置)*/
+        //   transform: translateX(-20vw); 
+          transition: transform 1s ease 0s, -webkit-transform 1s ease 0s; /*アイコンの動きを指定*/
+          background: $main-color;
+
+        /*c-hamburger-iconの左耳の色*/
+          &::before {
+            background: $main-color ;
+        } 
+        /*c-hamburger-iconの右耳の色*/
+        &::after {
+            background: $main-color ;
+        }
+
+          span:nth-of-type(1), 
+          span:nth-of-type(2), 
+          span:nth-of-type(3) {
+            background-color: $base-color-white;
+        }
+
+          span:nth-of-type(1), 
+          span:nth-of-type(3) {
+            //   position: relative; /* top を有効にするために追加 */
+              top: 46%;
+          }
+
+          span:nth-of-type(1) {
+            transform: rotate(45deg); /* 反時計周りに45度回転 */
+        }
+
+            span:nth-of-type(2) {
+                opacity: 0;
+            }
+
+            span:nth-of-type(3) {
+                transform: rotate(-45deg);
+                /*時計周りに45度回転*/
+            }
+        }
+  }
+
+.c-hamburger:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -3%;
+    left: 55%;
+    margin: auto;
+    background: #fefefe;
+    width: 50%;
+    height: 50%;
+    clip-path: polygon(80% 0,10% 10%, 70% 70%);
+    }
+
+.c-hamburger:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -3%;
+    left: -45%;
+    margin: auto;
+    background: #fefefe;
+    width: 50%;
+    height: 50%;
+    clip-path: polygon(0 0,10% 70%, 70% 10%);
+}
+
+.c-hamburger-icon {
+    width: 100%;
+    padding-top: 100%;
+}
+
+
+.c-hamburger-icon span {
+    position: absolute;       /*親要素である#c-hamburgerを基準に位置を指定*/
+    width: 57%;              /*横線の幅が30px*/
+    height: 6px;              /*横線の高さが4px*/
+    background-color: $main-color;  /*横線を白色*/
+    border-radius: 8px;       /*横線の両端の角に丸みを持たせる*/
+    transition: ease 0.75s;   /*変化の時間（easeは初期値）*/
+    left: 21%;
+    
+    @include mq('tb') {
+    left: 23%;
+    }
+    
+    @include mq('sp') {
+    left: 25%;
+     width: 51%;
+     height: 4px;
+    }
+}
+
+.c-hamburger-icon span:nth-of-type(1) {
+    top: 27%;
+}
+
+.c-hamburger-icon span:nth-of-type(2) {
+    top: 49%;
+}
+
+.c-hamburger-icon span:nth-of-type(3) {
+    top: 71%;
+}

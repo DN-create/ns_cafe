@@ -17,20 +17,205 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- drawer.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" media="screen and (max-width:767px)">
+ 
+    <!-- swiper.css -->
+    <link rel="stylesheet" href="/css/swiper.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="/css/animate.css">
+
     <!-- original css -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-
-    <div class="about">test</div>
     
+<!-- ===========================================
+./ローディング
+./splashにmaskを付与することで、ローディングアニメーション非表示
+================================================-->
+
+<div id="splash">
+  <div id="splash_logo">
+      <svg id="mask" width="107" height="81" viewBox="0 0 107 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_262_157)">
+          <path d="M101.715 22.529C101.061 21.8751 98.348 20.6195 97.6976 18.9808C95.8715 13.806 89.5543 12.3026 89.5543 12.3026L89.5443 2.62595C86.8605 3.65422 83.2776 7.07526 79.5793 11.3489C78.9436 11.306 78.3058 11.3042 77.6699 11.3435C73.1024 11.6629 69.182 14.075 66.7644 17.5665C60.6728 13.2427 54.1682 10.3882 44.0052 11.4627C22.4911 13.7437 11.6864 29.1413 9.21662 49.5673C4.53252 53.865 4.61344 58.2812 5.16311 60.6816C6.8344 68.0012 15.9733 72.7646 21.9273 73.8065C39.8 76.9387 57.3476 68.4061 66.629 52.0796C67.2026 51.0296 67.3408 49.7964 67.0138 48.6455C66.6868 47.4947 65.9207 46.5184 64.8807 45.927C63.8407 45.3356 62.61 45.1765 61.4537 45.4839C60.2975 45.7913 59.3083 46.5407 58.6993 47.5705C51.3458 60.5057 37.5302 67.2791 23.5 64.8208C19.601 64.1369 14.9894 61.1959 14.15 58.9407L15.3232 59.1515L46.6759 56.9591C50.5062 54.2445 53.8234 50.6251 56.3261 46.2221C58.3123 42.7218 62.7796 41.4979 66.2759 43.4843C69.7713 45.4729 71.0019 49.9356 69.0136 53.4341C68.6149 54.126 68.2014 54.8094 67.7736 55.4839L86.6951 54.1607C86.6107 54.0127 86.7721 54.0904 86.7721 54.0904C86.5985 53.8656 84.6435 51.2516 84.23 48.154C83.4451 42.2898 87.055 37.1387 87.055 37.1387L87.0917 37.0771C99.5842 38.3705 101.714 30.4353 102.134 26.6178C102.329 24.8529 102.848 23.1834 101.715 22.529ZM91.238 21.9013C91.0111 21.9225 90.7822 21.898 90.5649 21.8295C90.3476 21.7609 90.1461 21.6495 89.9725 21.5019C89.7988 21.3544 89.6564 21.1735 89.5537 20.9701C89.4509 20.7667 89.3899 20.5447 89.3742 20.3174C89.3585 20.09 89.3885 19.8618 89.4623 19.6462C89.5361 19.4306 89.6523 19.2319 89.804 19.0619C89.9557 18.8918 90.1399 18.7538 90.3458 18.656C90.5516 18.5582 90.775 18.5026 91.0026 18.4924C91.4483 18.4724 91.8841 18.6275 92.217 18.9245C92.5499 19.2215 92.7534 19.6369 92.7841 20.0819C92.8149 20.527 92.6703 20.9664 92.3814 21.3064C92.0926 21.6463 91.6822 21.8598 91.238 21.9013Z" fill="#FEFEFE"/>
+          </g>
+          <defs>
+          <filter id="filter0_d_262_157" x="0.904785" y="0.625977" width="105.519" height="79.821" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="2"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0.333333 0 0 0 0 0.27451 0 0 0 0 0.239216 0 0 0 0.4 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_262_157"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_262_157" result="shape"/>
+          </filter>
+        </defs>
+      </svg>
+      
+      <div class="loading">Loading</div>
+    </div>
+  <!--/splash-->
+</div>
+
+
+
+<main>
+  <!-- ===========================================
+  ./枠外アニメーション
+  ================================================-->
+  <div class="c-bg__image">
+    <img class="c-bg__image-flour c-swing-animation01" src="/img/fv_pc_flour.png" alt="">
+    <img class="c-bg__image-flesh c-swing-animation02" src="/img/fv_pc_fresh.png" alt="">
+    <img class="c-bg__image-boul c-swing-animation02" src="/img/fv_pc_bowl-1.png" alt="">
+    <img class="c-bg__image-scall c-swing-animation01" src="/img/fv_pc_scall.png" alt="">
+  </div>
+  
+  <div class="p-about__decoration">
+    <div class="p-about__decoration-item --egg c-swing-animation01">
+      <img src="./img/body_deco-egg.png" alt="" width="288" height="208"/>
+    </div>
+
+    <div class="p-about__decoration-item --eggbowl c-swing-animation02">
+      <img src="./img/body_deco-eggbowl.png" alt="" width="288" height="168"/>
+    </div>
+    
+    <div class="p-about__decoration-item --whisk c-swing-animation01">
+      <img src="./img/body_deco-whisk.png" alt="" width="289" height="310"/>
+    </div>
+
+    <div class="p-about__decoration-item --whiskbowl c-swing-animation02">
+      <img src="./img/body_deco-whiskbowl.png" alt="" width="289" height="210"/>
+    </div>
+  </div>
+
+  <div class="p-menu__decoration">
+    <div class="p-menu__decoration-item --cooking c-swing-animation01">
+      <img src="./img/body_deco-cooking.png" alt="" width="288" height="306"/>
+    </div>
+    <div class="p-menu__decoration-item --spatula c-swing-animation01">
+      <img src="./img/body_deco-spatula.png" alt="" width="261" height="280"/>
+    </div>
+    <div class="p-menu__decoration-item --spatulabowl c-swing-animation02">
+      <img src="./img/body_deco-spatulabowl.png" alt="" width="291" height="215"/>
+    </div>
+    <div class="p-menu__decoration-item --spatulamold">
+      <img src="./img/body_deco-spatulamold.png" alt="" width="261" height="156"/>
+    </div>
+    <div class="p-menu__decoration-item --oven c-swing-animation01">
+      <img src="./img/body_deco-oven.png" alt="" width="288" height="272"/>
+    </div>
+  </div>
+
+  <div class="p-info__decoration">
+    <div class="p-info__decoration-item --caddy c-swing-animation01">
+      <img src="./img/body_deco-caddy.png" alt="" width="289" height="176"/>
+    </div>
+    <div class="p-info__decoration-item --pot c-swing-animation02">
+      <img src="./img/body_deco-pot.png" alt="" width="289" height="191"/>
+    </div>
+    <div class="p-info__decoration-item --pouring c-swing-animation01">
+      <img src="./img/body_deco-pouring.png" alt="" width="288" height="306"/>
+    </div>
+    <div class="p-info__decoration-item --cup c-swing-animation01">
+      <img src="./img/body_deco-cup.png" alt="" width="289" height="132"/>
+    </div>
+    <div class="p-info__decoration-item --cake c-swing-animation02">
+      <img src="./img/body_deco-cake.png" alt="" width="289" height="176"/>
+    </div>
+    <div class="p-info__decoration-item --eating c-swing-animation01">
+      <img src="./img/body_deco-eating.png" alt="" width="288" height="341"/>
+    </div>
+  </div>
+
+  <div class="p-sns__decoration">
+    <div class="p-sns__decoration-item --yummy1 c-swing-animation01">
+      <img src="./img/body_deco-yummy1.png" alt="" width="256" height="300"/>
+    </div>
+    <div class="p-sns__decoration-item --yummy2 c-swing-animation01">
+      <img src="./img/body_deco-yummy2.png" alt="" width="254" height="300"/>
+    </div>
+  </div>
+
+  <!-- <div class="wrapper" id="home"> -->
+
     <div class="l-wrapper">
-      <main>
-        <section class="p-about">
+    <!-- ===========================================
+      ./ドロワーメニュー
+      ================================================-->
+      <div class="c-hamburger">
+        <div class="c-hamburger-icon">
+          <span></span>
+          <span></span>
+            <span></span>
+          </div>
+        </div>
+        
+        <!-- ===========================================
+          ./ナビメニュー
+          ================================================-->
+          <nav class="l-header-nav">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#menu">menu</a></li>
+              <li><a href="#info">shop info</a></li>
+              <li><a href="https://www.instagram.com/ns_feca/" target="_blank"><img src="/img/Instagram.png" alt=""></a></li>
+              <li><img src="/img/fv_cat_drawer.png" alt=""></li>
+            </ul>
+          </nav>
+
+          
+          <!-- ===========================================
+            ./ファーストビュー
+            ================================================-->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- <div class="swiper-slide slide4" style="width:120%"></div> -->
+              <div class="swiper-slide slide1" style="width:120%"></div>
+              <div class="swiper-slide slide2" style="width:120%"></div>
+              <div class="swiper-slide slide3" style="width:120%"></div>
+            </div>
+            <div class="blur-overlay"></div> <!-- ぼかし用のオーバーレイを追加 -->
+        </div>
+        <!-- コーヒーのアイコン -->
+        <div class="c-coffee__container">
+            <!-- <img class="c-coffee__image-1" src="/img/coffee_1.png" alt=""> -->
+            <img class="c-coffee__image-before" src="/img/coffee__before.svg" alt="">
+            <img class="c-coffee__image-after" src="/img/coffee__after.svg" alt="">
+            <img class="c-coffee__image-3" src="/img/coffee_3.svg" alt="">
+        </div>
+
+          <!-- ===========================================
+            ./FV画像
+      ================================================-->
+      <div class="p-mainVisual">
+        <!-- <div class="stepsTrigger steps steps-top"></div> -->
+
+        <!-- 猫のアイコン -->
+        <img class="p-mainVisual__logo" src="/img/fv_cat.svg" alt="猫のアイコン">
+
+          <!-- N's Cafe -->
+          <h1><img class="p-mainVisual__title" src="/img/fv_title.svg" alt=""></h1>
+
+          <p>京都の小さな隠れ家風カフェ</p>
+      </div><!-- mainVisual -->
+      <!-- <picture><img class="p-mainVisual__bg" src="/img/fv_bg.png" alt="カフェ店内のイメージ"></picture> -->
+      
+    <!-- </div> -->
+    <!-- /wrapper -->
+              
+
+    <!-- <div class="l-wrapper"> -->
+      <!-- <main> -->
+        <section class="p-about" id="about">
           <div class="c-inner">
             <div class="c-section__heading p-about__heading">about</div>
             <div class="p-about__wrapper">
-              <div class="p-about__decoration">
+              <!-- <div class="p-about__decoration">
                 <div class="p-about__decoration-item --egg c-swing-animation01">
                   <img
                     src="./img/body_deco-egg.png"
@@ -69,7 +254,7 @@
                     height="210"
                   />
                 </div>
-              </div>
+              </div> -->
               <div class="p-about__item _reverse">
                 <div class="p-about__body">
                   <h2 class="p-about__title _cafe">小さな空間のカフェ</h2>
@@ -108,11 +293,11 @@
           </div>
         </section>
 
-        <section class="p-menu c-section">
+        <section class="p-menu c-section" id="menu">
           <div class="c-inner">
             <div class="c-section__heading p-menu__heading">menu</div>
             <div class="p-menu__wrapper">
-              <div class="p-menu__decoration">
+              <!-- <div class="p-menu__decoration">
                 <div
                   class="p-menu__decoration-item --cooking c-swing-animation01"
                 >
@@ -159,7 +344,7 @@
                     height="272"
                   />
                 </div>
-              </div>
+              </div> -->
               <div class="p-menu__category--cake">
                 <div class="p-menu__category-heading">cake</div>
                 <ul class="p-menu-list">
@@ -290,7 +475,7 @@
           </div>
         </section>
 
-        <section class="p-info">
+        <section class="p-info" id="info">
           <div class="c-inner">
             <div class="c-section__heading p-info__heading">shop info</div>
             <div class="p-info__wrapper">
@@ -302,7 +487,7 @@
                   height="66"
                 />
               </div>
-              <div class="p-info__decoration">
+              <!-- <div class="p-info__decoration">
                 <div
                   class="p-info__decoration-item --caddy c-swing-animation01"
                 >
@@ -357,7 +542,7 @@
                     height="341"
                   />
                 </div>
-              </div>
+              </div> -->
               <dl class="p-info-list">
                 <div class="p-info-list__item">
                   <dt class="p-info-list__tag">営業時間</dt>
@@ -407,7 +592,7 @@
         <div class="p-sns">
           <div class="c-inner">
             <div class="p-sns__wrapper">
-              <div class="p-sns__decoration">
+              <!-- <div class="p-sns__decoration">
                 <div
                   class="p-sns__decoration-item --yummy1 c-swing-animation01"
                 >
@@ -428,7 +613,7 @@
                     height="300"
                   />
                 </div>
-              </div>
+              </div> -->
               <div class="p-sns__text">\ Follow me ! /</div>
               <div class="p-sns__image">
                 <a href="https://www.instagram.com/ns_feca/" target="_blank">
@@ -469,14 +654,30 @@
             </div>
           </div>
         </div>
-      </main>
-      <!-- footer -->
-      <footer class="l-footer">
-        <div class="c-inner">
-          <p><small class="l-footer__copyright">&copy;N’sCafe2024</small></p>
-        </div>
-      </footer>
-      <!-- /footer -->
-    </div>
+        <!-- footer -->
+        <footer class="l-footer">
+          <div class="c-inner">
+            <p><small class="l-footer__copyright">&copy;N’sCafe2024</small></p>
+          </div>
+        </footer>
+        <!-- /footer -->
+      </div>
+    </main>
+      
+     <!-- jquery & iScroll -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+
+      <!-- swiper -->
+      <script src="/js/swiper.js"></script>
+
+      <!-- drawer.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+      <!-- wow -->
+      <script src="/js/wow.min.js"></script>
+      <!-- vivus.min.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+      <!-- original -->
+      <script src="/js/script.js"></script>
   </body>
 </html>

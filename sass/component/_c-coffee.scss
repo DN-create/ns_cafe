@@ -1,0 +1,112 @@
+@use "../global" as *;
+
+.c-coffee__container {
+    position: relative;
+    width: 100%;
+    // height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible; /* 親要素が隠れていないか確認 */
+    background-image: url(/img/coffee_1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 22px;
+    height: 156px;
+    left: 270px;
+
+    @include mq('sp') {
+        // max-height:156px
+        // min-height:111px
+        height: clamp(6.938rem, 4.254rem + 11.45vw, 9.75rem);
+        // max-left:160px
+        // min-left::132px
+        left: clamp(8.25rem, 6.58rem + 7.12vw, 10rem);
+        top: 6px;
+    }
+
+}
+
+.c-coffee__image-1 {
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 40%;
+    width: 105px; 
+    top: 20px;
+
+    @include mq('tb') {
+        top: 21px;
+    }
+
+    @include mq('sp') {
+        width: clamp(4.125rem, 1.793rem + 9.95vw, 6.563rem); //sp版から徐々に拡大
+        top: 10px;
+        left: 44%;
+    }
+}
+
+.c-coffee__image-before,
+.c-coffee__image-after {
+    position: absolute;
+    backface-visibility: hidden; // 裏面が見えないようにする
+    transition: transform 2s;
+
+
+    @include mq('sp') {
+    //   top: 102px;
+      top: clamp(6.375rem, 3.512rem + 12.21vw, 9.375rem);
+    //   left: -27px;
+      left: clamp(-1.688rem, -0.435rem + -5.34vw, -3rem);
+    }
+}
+
+.c-coffee__image-before {
+    transform: rotateY(0deg); // 初期状態は正面を向いている
+    left: -39px;
+    top: 168px;
+    width: 26px;
+    z-index: 1;
+    
+    @include mq('sp') {
+        left: -20px;
+        // top: 110px;
+        top: clamp(6.875rem, 3.416rem + 14.76vw, 10.5rem);
+        width: clamp(1.063rem, 0.526rem + 2.29vw, 1.625rem);
+    }
+}
+
+.c-coffee__image-after {
+    transform: rotateY(180deg); // 初期状態は裏を向いている
+    z-index: -1; // 最初はbeforeの後ろに配置
+    top: 155px;
+    width: 46px;
+    left: -48px;
+
+
+    @include mq('sp') {
+        width: clamp(1.875rem, 1.338rem + 2.29vw, 2.438rem);
+    }
+}
+
+.c-coffee__image-3 {
+    position: absolute;
+    top: 192px;
+    left: -93px;
+    width: 45px;
+    z-index: 1;
+
+
+    @include mq('sp') {
+        // max-left: 80px;
+        // min-left: 45px;
+
+    // left: 45px;
+    // left: clamp(2.813rem, -3.032rem + 24.94vw, 8.938rem);
+    // width: 30px;
+    width: clamp(1.875rem, 0.98rem + 3.82vw, 2.813rem);
+
+    // top: 125px;
+    top: clamp(7.813rem, 3.817rem + 17.05vw, 12rem);
+    left: -55px;
+    }
+}

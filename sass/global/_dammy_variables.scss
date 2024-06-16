@@ -1,0 +1,54 @@
+
+  // 色
+  $main-color:#A67D59; //メインカラー
+  $main-color-right:#bd9f85; //メインカラー ブラウン
+  $base-color:#F2edeb;//ベースカラー ベージュ
+  $base-color-white:#fefefe;//ベースカラー ホワイト
+  //   $button-color:#888888;//ボタンカラー
+  $text-color:#55463d; //ベーステキストカラー
+  $accent-color:#d43333;//アクセントカラー
+//   $text-color-white:#ffffff; //ベーステキストカラー 白
+
+  
+  
+  // フォント
+  $ff-jp:"Zen Kaku Gothic New","Noto Serif JP",sans-serif; //日本語
+  $ff-en:"DM Sans","Noto Serif JP",sans-serif; //英語
+  $ff-title:"Cormorant",sans-serif; //英語 タイトル
+  $ff-en-bold:"Patua One",sans-serif; //英語 太字
+  $ff-en-price:"Damion",sans-serif; //英語 値段
+  $fz-text:16px; //テキストフォントサイズ
+  $fz-title:32px; //タイトルフォントサイズ
+  $fz-about:20px; //アバウトフォントサイズ
+//   $fz-large:28px; //ベースラージサイズ
+//   $fw-base:500; //ベースフォントウェイト
+//   $lh-base:1.6; //ベース行間
+  
+  // レイアウト
+  $layout-width-inner :1280px; //インナー幅サイズ
+  $sp-width: 768px; //スマホサイズ
+  
+
+  // ブレークポイント
+  $breakpoints: (
+    "sp" : "(max-width: 767px)",
+    "tb" : "(min-width: 768px) and (max-width: #{$layout-width-inner - 1})",
+    "pc" : "(min-width: #{$layout-width-inner})",
+  );
+  
+  //重なり順の定義
+  $layer: (
+      //ローディング
+      loading:300,
+      //モーダル
+      modal:100,
+      //ドロワー
+      drawer:40,
+      //フローティング
+      floating:30,
+      //ヘッダー
+      header:20,
+      //フッター
+      footer:10,
+      default:1
+  );

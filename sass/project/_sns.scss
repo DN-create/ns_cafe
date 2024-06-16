@@ -1,0 +1,143 @@
+// @use "../../foundation/variable";
+@use "../global" as *;
+
+/* sns
+------------------------------------------ */
+
+.p-sns {
+  padding-top: 140px;
+
+  @include mq("lg") {
+    padding-top: 226px;
+  }
+}
+
+.p-sns__wrapper {
+  text-align: center;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -104px;
+    left: 49%;
+    transform: translateX(-50%);
+    width: 302px;
+    height: 49.462px;
+    background: url(/img/info_deco01.png) no-repeat center center / contain;
+
+    @include mq("lg") {
+      top: -165px;
+      left: 50%;
+      width: 640px;
+      height: 104.821px;
+    }
+  }
+}
+
+.p-sns__text {
+  color: $color-main1;
+  font-size: 20px;
+
+  @include mq("lg") {
+    font-size: 36px;
+  }
+}
+
+.p-sns__image {
+  margin-top: 16px;
+  display: inline-block;
+  text-align: center;
+
+  @include mq("lg") {
+    margin-top: 34px;
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
+
+    @include mq("lg") {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
+
+.p-account {
+  margin-top: 18px;
+
+  @include mq("lg") {
+    margin-top: 41px;
+  }
+}
+
+.p-account__info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+
+  @include mq("lg") {
+    padding-left: 2px;
+    gap: 16px;
+  }
+}
+
+.p-account__icon {
+  img {
+    width: 40px;
+    height: 40px;
+
+    @include mq("lg") {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
+
+.p-account__name {
+  font-size: 20px;
+
+  @include mq("lg") {
+    font-size: 24px;
+  }
+}
+
+.p-account__post {
+  margin-top: 8px;
+
+  @include mq("lg") {
+    margin-top: 27px;
+  }
+}
+
+.p-sns__decoration {
+  position: relative;
+}
+
+.p-sns__decoration-item {
+  display: none;
+
+  @include mq("xl") {
+    display: block;
+  }
+
+  &.--yummy1 {
+    position: absolute;
+    content: "";
+    top: 5787px;
+    left: -209px;
+    width: 170.37px;
+    height: 200px;
+  }
+
+  &.--yummy2 {
+    position: absolute;
+    content: "";
+    top: 6253px;
+    right: -212px;
+    width: 169px;
+    height: 200px;
+  }
+}

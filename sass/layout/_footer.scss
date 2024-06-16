@@ -1,5 +1,5 @@
-@use "../foundation/variable";
-
+// @use "../foundation/variable";
+@use "../global" as *;
 /* footer
 ------------------------------------------ */
 
@@ -8,7 +8,7 @@
   padding-bottom: 24px;
   text-align: center;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     padding-top: 45px;
   }
 }
@@ -16,7 +16,7 @@
 .l-footer__copyright {
   font-size: 10px;
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     font-size: 12px;
   }
 }

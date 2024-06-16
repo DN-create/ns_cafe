@@ -1,0 +1,192 @@
+// @use "../../foundation/variable";
+@use "../global" as *;
+/* info
+------------------------------------------ */
+
+.p-info {
+  padding-top: 34px;
+  position: relative;
+  overflow: hidden;
+
+  @include mq("lg") {
+    padding-top: 60px;
+  }
+
+  @include mq("xl") {
+    overflow: visible;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 247px;
+    right: -38px;
+    background: url(/img/info_background.png) no-repeat center center /
+      contain;
+    width: 305.154px;
+    height: 216.678px;
+
+    @include mq("lg") {
+      top: 442px;
+      right: -75px;
+      width: 627.812px;
+      height: 450.18px;
+    }
+  }
+}
+
+.p-info__wrapper {
+  margin-top: 37px;
+
+  @include mq("lg") {
+    margin-top: 58px;
+  }
+}
+
+.p-info__heading {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 64px;
+    background: url(/img/info_icon-heading.png) no-repeat center center /
+      contain;
+
+    @include mq("lg") {
+      width: 100px;
+      height: 99.01px;
+    }
+  }
+}
+
+.p-info__shop-logo {
+  width: 146.487px;
+  height: 32.262px;
+
+  @include mq("lg") {
+    width: 272px;
+    height: 60px;
+  }
+}
+
+.p-info-list {
+  margin-top: 31px;
+
+  @include mq("lg") {
+    margin-top: 67px;
+  }
+}
+
+.p-info-list__item {
+  margin-bottom: 17px;
+
+  @include mq("lg") {
+    margin-bottom: 33px;
+  }
+}
+
+.p-info-list__tag {
+  display: inline-block;
+  padding: 2px 8px;
+  color: #fff;
+  font-size: 16px;
+  background-color: $color-main1;
+
+  @include mq("lg") {
+    padding: 4px 16px;
+    font-size: 20px;
+    line-height: 1.76;
+    letter-spacing: 0.4px;
+  }
+}
+
+.p-info-list__text {
+  margin-top: 9px;
+  font-size: 16px;
+
+  @include mq("lg") {
+    margin-top: 18px;
+    font-size: 20px;
+  }
+
+  span {
+    @include mq("lg") {
+      font-size: 24px;
+    }
+  }
+}
+
+.p-info-map {
+  padding-top: 6px;
+}
+
+.p-info__decoration {
+  position: relative;
+}
+
+.p-info__decoration-item {
+  display: none;
+
+  @include mq("xl") {
+    display: block;
+  }
+
+  &.--caddy {
+    position: absolute;
+    content: "";
+    top: 3825px;
+    left: -253px;
+    width: 192px;
+    height: 117px;
+  }
+
+  &.--pot {
+    position: absolute;
+    content: "";
+    top: 3917px;
+    left: -189px;
+    width: 192px;
+    height: 127px;
+  }
+
+  &.--pouring {
+    position: absolute;
+    content: "";
+    top: 4278px;
+    right: -225px;
+    width: 192px;
+    height: 204px;
+  }
+
+  &.--cup {
+    position: absolute;
+    content: "";
+    top: 4815px;
+    left: -254px;
+    width: 192px;
+    height: 88px;
+  }
+
+  &.--cake {
+    position: absolute;
+    content: "";
+    top: 4897px;
+    left: -190px;
+    width: 192px;
+    height: 117px;
+  }
+
+  &.--eating {
+    position: absolute;
+    content: "";
+    top: 5258px;
+    right: -225px;
+    width: 192px;
+    height: 227px;
+  }
+}

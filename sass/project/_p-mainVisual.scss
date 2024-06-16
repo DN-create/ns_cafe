@@ -1,0 +1,94 @@
+@use "../global" as *;
+
+.p-mainVisual {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: visible; /* 子要素がはみ出ても表示させる */
+    position: relative;
+    margin-top: 140px; 
+
+    @include mq('sp') {
+    //  margin-top: 182px;
+    //  margin-top: clamp(11.375rem, 8.917rem + 12.29vw, 18.75rem);
+
+     margin-top: 58px;
+     left: 30px;
+    }
+}
+
+.p-mainVisual__logo {
+    overflow: visible; /* 子要素がはみ出ても表示させる */
+    width: 24%;
+    top: -30px;
+    margin-left: 6%;
+    
+    @include mq('sp') {
+    width: 33%;
+    margin-left: 1%;
+    margin-top: clamp(0rem, -2.009rem + 10.04vw, 2.813rem);
+    }
+}
+
+.p-mainVisual__bg {
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    right: 0px;
+    background: var(--beige, #F2EDEB);
+    background-repeat: no-repeat;
+    width: clamp(25rem, 20.599rem + 18.78vw, 37.5rem);
+
+    @include mq('pc') {
+        min-width: 80%;
+        max-width: 70%;
+    }
+    @include mq('tb') {
+        min-width: 80%;
+        max-width: 70%;
+    }
+
+    @include mq('sp') {
+    width: 90%;
+    top: 90px;
+    }
+}
+
+
+.p-mainVisual p {
+    text-shadow: 0px 2px 2px rgba(85, 70, 61, 0.70);
+    font-family: $ff-jp;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 1px;
+    padding-left: 11%;
+    padding-top: 14px;
+    color: $text-color-white;
+
+    @include mq('sp') {
+        // font-size: 18px;
+        font-size: clamp(1.125rem, 0.762rem + 1.55vw, 2rem);
+        margin-left: 5%;
+        letter-spacing: 2px;
+        margin-top: 0;
+        padding-left: 0;
+        padding-top: 18px;
+    }
+}
+
+.p-mainVisual__title {
+    display: inline-block;
+    margin-top: 8px;
+    width: 395px;
+    margin-left: 86px;
+  
+    @include mq('sp') {
+    //  margin-top: 5px; 
+     margin-top: clamp(0.313rem, 0.104rem + 1.04vw, 0.938rem); 
+    //  width: 255px;
+     width: clamp(15.938rem, 12.312rem + 15.47vw, 24.688rem);
+    //  margin-left: 14px; 
+     margin-left: clamp(0.875rem, -0.187rem + 4.53vw, 3.438rem); 
+    }
+  }

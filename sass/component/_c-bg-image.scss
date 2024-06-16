@@ -1,0 +1,36 @@
+// @use "../global" as *;
+@use "../global" as *;
+
+.c-bg__image {
+    @include mq('tb') {
+     display: none; 
+    }
+
+    @include mq('sp') {
+     display: none; 
+    }
+}
+
+.c-bg__image-flour {
+    position: absolute;
+    right: -180px;
+    top: 157px;
+}
+
+.c-bg__image-flesh {
+    position: absolute;
+    right: -230px;
+    top: 373px;
+}
+
+.c-bg__image-boul {
+    position: absolute;
+    top: 735px;
+    left: -230px;
+}
+
+.c-bg__image-scall {
+    position: absolute;
+    top: 813px;
+    left: -220px;
+}

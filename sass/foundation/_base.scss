@@ -1,4 +1,5 @@
-@use "./variable";
+// @use "./variable";
+@use "../global" as *;
 
 /* 基本設定
 ------------------------------------------ */
@@ -6,23 +7,24 @@
 body {
   font-family: "DM Sans", "Zen Kaku Gothic New", sans-serif;
   font-size: 16px;
-  color: variable.$color-text;
+  color:$color-text;
   line-height: 1.5;
+  background-image: url(/img/pc_bg_color.png);
 }
 
 main,
 footer {
   margin-left: auto;
   margin-right: auto;
-  background-color: variable.$color-base;
+  background-color: $color-base;
   // background-color: #333;
   max-width: 375px;
 
-  @include variable.mq("md") {
+  @include mq("md") {
     max-width: 540px;
   }
 
-  @include variable.mq("lg") {
+  @include mq("lg") {
     max-width: 768px;
   }
 }
@@ -40,5 +42,54 @@ a {
 
   &:hover {
     opacity: 0.7;
+  }
+}
+
+
+
+/*==========================================================
+# about
+===========================================================*/
+// section {
+//   // width: 100%;
+//   // max-width: 1280px;
+//   background: $accent-color;
+//   height: 1000px;
+// }
+
+main {
+  // background-image: url(/img/pc_bg_color.png);
+  // background-image: url(/img/body_background.jpg);
+  // color: #fff;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+  min-width: 375px;
+  position: relative;
+  background: rgba(242, 237, 235, 1);
+}
+
+.wrapper {
+  filter: drop-shadow(0px 2px 4px rgba(85, 70, 61, 0.20));
+  padding-right: 24px;
+  padding-left: 32px;
+  margin: 0 auto;
+  overflow-x: hidden; /* 横方向のオーバーフローを非表示にする */
+  max-width: 768px;
+  width: 100%;
+  height: 1010px;
+  min-height: 572px;
+  position: relative;
+  
+  @include mq('tb') {
+    // height: 700px; 
+  }
+  
+  @include mq('sp') {
+    height: clamp(38.75rem, 24.437rem + 61.07vw, 53.75rem); 
+    
+    &.is-active {
+     min-height: 740px;
+   }
   }
 }
