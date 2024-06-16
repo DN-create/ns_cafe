@@ -1,0 +1,11 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -21,6 +21,9 @@
+     <link rel="stylesheet" href="./css/style.css" />
+   </head>
+   <body>
++
++    <div class="about">test</div>
++    
+     <div class="l-wrapper">
+       <main>
+         <section class="p-about">
