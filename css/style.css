@@ -357,7 +357,7 @@ figcaption {
 
 .c-coffee__container {
 	align-items: center;
-	background-image: url(../img/coffee_1.svg);
+	background-image: url(https://raw.githubusercontent.com/DN-create/ns_cafe/49406a18bf8f8989c613e1b431e17c43ba0d1e09/img/coffee_1.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: flex;
