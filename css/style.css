@@ -515,7 +515,7 @@ figcaption {
 }
 
 .p-about__heading::before {
-	background: url(./img/about_icon-heading.png) no-repeat center center/contain;
+	background: url(../img/about_icon-heading.png) no-repeat center center/contain;
 	content: "";
 	height: 64px;
 	left: 50%;
@@ -570,7 +570,7 @@ figcaption {
 }
 
 ._cafe::before {
-	background: url(./img/about_deco01.png) no-repeat center center/contain;
+	background: url(/img/about_deco01.png) no-repeat center center/contain;
 	content: "";
 	height: 12px;
 	left: -16px;
@@ -580,7 +580,7 @@ figcaption {
 }
 
 ._cake::before {
-	background: url(./img/about_deco02.png) no-repeat center center/contain;
+	background: url(/img/about_deco02.png) no-repeat center center/contain;
 	content: "";
 	height: 12px;
 	left: 0px;
