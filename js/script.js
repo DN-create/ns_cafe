@@ -74,8 +74,8 @@ function(){
 );
 
 $(window).on('load',function(){
-  $("#splash").delay(3500).fadeOut('slow');//ローディング画面を3秒（3000ms）待機してからフェイドアウト
-	$("#splash_logo").delay(3500).fadeOut('slow');//ロゴを3秒（3000ms）待機してからフェイドアウト
+  $("#splash").delay(2700).fadeOut('slow');//ローディング画面を3秒（3000ms）待機してからフェイドアウト
+	$("#splash_logo").delay(2700).fadeOut('slow');//ロゴを3秒（3000ms）待機してからフェイドアウト
         stroke.play();//SVGアニメーションの実行
 });
 
