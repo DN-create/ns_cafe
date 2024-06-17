@@ -22,7 +22,7 @@
 ------------------------------------------ */
 
 body {
-	background-image: url(../img/pc_bg_color.png);
+	background-image: url(./img/pc_bg_color.png);
 	color: #55463d;
 	font-family: "DM Sans", "Zen Kaku Gothic New", sans-serif;
 	font-size: 16px;
@@ -357,7 +357,7 @@ figcaption {
 
 .c-coffee__container {
 	align-items: center;
-	background-image: url(../img/coffee_1.svg);
+	background-image: url(/img/coffee_1.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: flex;
@@ -1207,15 +1207,15 @@ figcaption {
 }
 
 .slide1 {
-	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("../img/mainVisual_FV1.svg") no-repeat center center/cover;
+	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV1.svg") no-repeat center center/cover;
 }
 
 .slide2 {
-	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("../img/mainVisual_FV2.svg") no-repeat center center/cover;
+	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV2.svg") no-repeat center center/cover;
 }
 
 .slide3 {
-	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("../img/mainVisual_FV3.svg") no-repeat center center/cover;
+	background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV3.svg") no-repeat center center/cover;
 }
 
 /* foundation
