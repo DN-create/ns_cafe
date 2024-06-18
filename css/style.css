@@ -1693,7 +1693,8 @@ footer {
 
 .swiper-container {
 	height: clamp(28.125rem, 22.161rem + 25.45vw, 34.375rem);
-	left: clamp(2.375rem, 0.168rem + 9.41vw, 4.688rem);
+	/* left: clamp(2.375rem, 0.168rem + 9.41vw, 4.688rem); */
+	left: 16%;
 	top: 100px;
 }
 
