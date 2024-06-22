@@ -99,13 +99,14 @@ document.addEventListener("DOMContentLoaded", function() {
 # swiper
 ===========================================================*/
 
+
 var swiper = new Swiper('.swiper-container', {
   loop: true,
   autoplay: {
     delay: 2000, // スライドが切り替わるまでの時間（ミリ秒）
     disableOnInteraction: false
   },
-  speed: 1000, // スライドが切り替わるアニメーションの時間（ミリ秒）
+  speed: 2000, // スライドが切り替わるアニメーションの時間（ミリ秒）
   on: {
     init: function() {
       // スライダーが初期化されたときにアニメーションを設定
@@ -115,6 +116,15 @@ var swiper = new Swiper('.swiper-container', {
         slide.offsetHeight; // 強制的にリフローを発生させる
         slide.style.animation = 'slideAnimation 5100ms linear infinite';
       });
+      
+      // 最初は自動再生を止めておく
+      swiper.autoplay.stop();
+      
+      // 5秒後にスライドショーを開始
+      setTimeout(function() {
+        swiper.autoplay.start();
+      }, 30000);
+      
     },
     }
   });
