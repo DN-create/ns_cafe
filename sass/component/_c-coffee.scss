@@ -55,7 +55,7 @@
     @include mq('sp') {
     //   top: 102px;
       top: clamp(6.375rem, 3.512rem + 12.21vw, 9.375rem);
-    //   left: -27px;
+      //   left: -27px;
       left: clamp(-1.688rem, -0.435rem + -5.34vw, -3rem);
     }
 }
@@ -81,9 +81,11 @@
     top: 155px;
     width: 46px;
     left: -48px;
-
-
+    
+    
     @include mq('sp') {
+        left: -25px;
+        top: clamp(6.375rem, 3.512rem + 12.21vw, 9.375rem);
         width: clamp(1.875rem, 1.338rem + 2.29vw, 2.438rem);
     }
 }

@@ -15,15 +15,15 @@
 ------------------------------------------*/
 // コメントアウト化でローディングの一時停止
 
-#splash {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    background:$base-color;
-    text-align:center;
-    color:#fff;
-}
+// #splash {
+//     position: fixed;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 999;
+//     background:$base-color;
+//     text-align:center;
+//     color:#fff;
+// }
 
 /* 
 ------------------------------------------*/
@@ -181,16 +181,21 @@
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
-
+  animation: backgroundSlide 10s linear 7s 1;
 }
 
-@keyframes slideAnimation {
+
+@keyframes backgroundSlide {
   0% {
-    transform: translateX(0px);
+    background-position: 50% 0;
   }
   100% {
-    transform: translateX(-100px);
+    background-position: 90% 0; /* 背景画像を左から右へ動かす */
   }
+}
+
+.swiper-slide-active {
+  animation-play-state: running; // アクティブスライドではアニメーションを再生
 }
 
 .swiper-slide img {
@@ -206,7 +211,6 @@
   @include mq('sp') {
    width: 200%;
   }
-
 }
 
 .swiper-container {
@@ -215,17 +219,15 @@
     linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(242, 237, 235, 0) 30%),
     url(/img/Vector.png);
   mask-repeat: no-repeat;
-  mask-position: 160% 0%;
-  // bottom: 0px;
-  overflow: hidden;
+  // mask-position: 160% 0%;
+  // overflow: hidden;
   position: absolute;
-  // left: 110px;
   left: 18%;
   top: 2%;
   width: 100%;
   z-index: 1;
-  // height: 124vh;
   height: 865px;
+  
   
   @include mq('tb') {
     left: 15%;
@@ -243,6 +245,7 @@
 
   }
 }
+
 
 .slide1 {
   background:

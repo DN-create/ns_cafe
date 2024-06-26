@@ -99,34 +99,43 @@ document.addEventListener("DOMContentLoaded", function() {
 # swiper
 ===========================================================*/
 
-
+// 5秒後にスライダーを初期化する
+setTimeout(function() {
 var swiper = new Swiper('.swiper-container', {
   loop: true,
   autoplay: {
-    delay: 2000, // スライドが切り替わるまでの時間（ミリ秒）
+    delay: 3000, // スライドが切り替わるまでの時間（ミリ秒）
     disableOnInteraction: false
   },
-  speed: 2000, // スライドが切り替わるアニメーションの時間（ミリ秒）
+  speed: 3000, // スライドが切り替わるアニメーションの時間（ミリ秒）
   on: {
     init: function() {
-      // スライダーが初期化されたときにアニメーションを設定
+      var slides = document.querySelectorAll('.swiper-slide');
+      slides.forEach(function(slide) {
+        slide.style.animation = 'none'; // 最初はアニメーションを無効にしておく
+      });
+     // 8秒後にアニメーションを開始
+     setTimeout(function() {
+      slides.forEach(function(slide) {
+        slide.style.animation = 'backgroundSlide 10s linear 1';
+      });
+    }, 6000);
+  },
+    slideChangeTransitionEnd: function() {
       var slides = document.querySelectorAll('.swiper-slide');
       slides.forEach(function(slide) {
         slide.style.animation = 'none';
         slide.offsetHeight; // 強制的にリフローを発生させる
-        slide.style.animation = 'slideAnimation 5100ms linear infinite';
       });
-      
-      // 最初は自動再生を止めておく
-      swiper.autoplay.stop();
-      
-      // 5秒後にスライドショーを開始
-      setTimeout(function() {
-        swiper.autoplay.start();
-      }, 30000);
-      
-    },
-    }
-  });
 
+    // アクティブスライドに対してアニメーションをリセットして開始
+    var activeSlide = document.querySelector('.swiper-slide-active');
+    if (activeSlide) {
+      // activeSlide.style.transform = 'translateX(0%)'; // アクティブスライドを左端に設定
+      activeSlide.style.animation = 'backgroundSlide 10s linear 1';
+    }
+  }
+  }
+});
 swiper.init();
+},5000);// スライダーの初期化自体はすぐに行う
