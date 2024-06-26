@@ -24,7 +24,7 @@
     transform: translateX(-50%);
     width: 302px;
     height: 49.462px;
-    background: url(/img/info_deco01.png) no-repeat center center / contain;
+    background: url(./img/info_deco01.png) no-repeat center center / contain;
 
     @include mq("lg") {
       top: -165px;

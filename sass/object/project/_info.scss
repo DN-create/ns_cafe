@@ -21,7 +21,7 @@
     content: "";
     top: 247px;
     right: -38px;
-    background: url(../img/info_background.png) no-repeat center center /
+    background: url(./img/info_background.png) no-repeat center center /
       contain;
     width: 305.154px;
     height: 216.678px;
@@ -54,7 +54,7 @@
     transform: translate(-50%, -50%);
     width: 70px;
     height: 64px;
-    background: url(../img/info_icon-heading.png) no-repeat center center /
+    background: url(./img/info_icon-heading.png) no-repeat center center /
       contain;
 
     @include variable.mq("lg") {

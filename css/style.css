@@ -19,7 +19,7 @@ body {
   font-size: 16px;
   color: #55463d;
   line-height: 1.5;
-  background-image: url(/img/pc_bg_color.png);
+  background-image: url(./img/pc_bg_color.png);
 }
 
 main,
@@ -385,7 +385,7 @@ figure, figcaption {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: visible; /* 親要素が隠れていないか確認 */
-  background-image: url(/img/coffee_1.svg);
+  background-image: url(./img/coffee_1.svg);
   background-repeat: no-repeat;
   background-size: contain;
   top: 22px;
@@ -777,7 +777,7 @@ figure, figcaption {
           transform: translate(-50%, -50%);
   width: 64px;
   height: 64px;
-  background: url(/img/about_icon-heading.png) no-repeat center center/contain;
+  background: url(./img/about_icon-heading.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) {
   .p-about__heading::before {
@@ -795,7 +795,7 @@ figure, figcaption {
   content: "";
   bottom: -45px;
   left: -106px;
-  background: url(/img/about_background.png) no-repeat center center/contain;
+  background: url(./img/about_background.png) no-repeat center center/contain;
   width: 358.909px;
   height: 240.382px;
   opacity: 0.7;
@@ -880,7 +880,7 @@ figure, figcaption {
   left: -16px;
   width: 178px;
   height: 12px;
-  background: url(/img/about_deco01.png) no-repeat center center/contain;
+  background: url(./img/about_deco01.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) {
   ._cafe::before {
@@ -898,7 +898,7 @@ figure, figcaption {
   left: 0px;
   width: 148px;
   height: 12px;
-  background: url(/img/about_deco02.png) no-repeat center center/contain;
+  background: url(./img/about_deco02.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) {
   ._cake::before {
@@ -1010,7 +1010,7 @@ figure, figcaption {
   content: "";
   top: 247px;
   right: -38px;
-  background: url(/img/info_background.png) no-repeat center center/contain;
+  background: url(./img/info_background.png) no-repeat center center/contain;
   width: 305.154px;
   height: 216.678px;
 }
@@ -1044,7 +1044,7 @@ figure, figcaption {
           transform: translate(-50%, -50%);
   width: 70px;
   height: 64px;
-  background: url(/img/info_icon-heading.png) no-repeat center center/contain;
+  background: url(./img/info_icon-heading.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) {
   .p-info__heading::before {
@@ -1195,7 +1195,7 @@ figure, figcaption {
           transform: translate(-50%, -50%);
   width: 64px;
   height: 64px;
-  background: url(/img/menu_icon-heading.png) no-repeat center center/contain;
+  background: url(./img/menu_icon-heading.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) {
   .p-menu__heading::before {
@@ -1245,7 +1245,7 @@ figure, figcaption {
           transform: translateX(-50%);
   width: 111px;
   height: 15px;
-  background: url(/img/menu_deco01.png) no-repeat center center/contain;
+  background: url(./img/menu_deco01.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) {
   .p-menu__category-heading::before {
@@ -1420,7 +1420,7 @@ figure, figcaption {
           transform: translateX(-50%);
   width: 312px;
   height: 42.889px;
-  background: url(/img/menu_deco02.png) no-repeat center center/contain;
+  background: url(./img/menu_deco02.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) {
   .p-menu__cover-background::before {
@@ -1515,7 +1515,7 @@ figure, figcaption {
           transform: translateX(-50%);
   width: 302px;
   height: 49.462px;
-  background: url(/img/info_deco01.png) no-repeat center center/contain;
+  background: url(./img/info_deco01.png) no-repeat center center/contain;
 }
 @media (min-width: 768px) {
   .p-sns__wrapper::after {
@@ -1762,7 +1762,7 @@ figure, figcaption {
   margin: 0 auto;
   width: 120px;
   height: 190px;
-  background: url(/img/fv_coffee_first.png) no-repeat;
+  background: url(./img/fv_coffee_first.png) no-repeat;
   position: relative;
   /*==========================================================
   # 一度だけアニメーションさせる
@@ -1876,10 +1876,10 @@ figure, figcaption {
 .swiper-container {
   -webkit-mask-size: cover;
           mask-size: cover;
-  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(242, 237, 235, 0))), url(/img/Vector.png);
-  -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(242, 237, 235, 0) 30%), url(/img/Vector.png);
-          mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(242, 237, 235, 0))), url(/img/Vector.png);
-          mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(242, 237, 235, 0) 30%), url(/img/Vector.png);
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(242, 237, 235, 0))), url(./img/Vector.png);
+  -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(242, 237, 235, 0) 30%), url(./img/Vector.png);
+          mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(242, 237, 235, 0))), url(./img/Vector.png);
+          mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(242, 237, 235, 0) 30%), url(./img/Vector.png);
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   position: absolute;
@@ -1903,18 +1903,18 @@ figure, figcaption {
 }
 
 .slide1 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(242, 237, 235, 0)), to(rgb(242, 237, 235))), url("/img/mainVisual_FV1.svg") no-repeat center center/cover;
-  background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV1.svg") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(242, 237, 235, 0)), to(rgb(242, 237, 235))), url("./img/mainVisual_FV1.svg") no-repeat center center/cover;
+  background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("./img/mainVisual_FV1.svg") no-repeat center center/cover;
 }
 
 .slide2 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(242, 237, 235, 0)), to(rgb(242, 237, 235))), url("/img/mainVisual_FV2.svg") no-repeat center center/cover;
-  background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV2.svg") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(242, 237, 235, 0)), to(rgb(242, 237, 235))), url("./img/mainVisual_FV2.svg") no-repeat center center/cover;
+  background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("./img/mainVisual_FV2.svg") no-repeat center center/cover;
 }
 
 .slide3 {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(242, 237, 235, 0)), to(rgb(242, 237, 235))), url("/img/mainVisual_FV3.svg") no-repeat center center/cover;
-  background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("/img/mainVisual_FV3.svg") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(242, 237, 235, 0)), to(rgb(242, 237, 235))), url("./img/mainVisual_FV3.svg") no-repeat center center/cover;
+  background: linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgb(242, 237, 235) 100%), url("./img/mainVisual_FV3.svg") no-repeat center center/cover;
 }
 
 /* foundation

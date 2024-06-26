@@ -22,7 +22,7 @@
     transform: translate(-50%, -50%);
     width: 64px;
     height: 64px;
-    background: url(../img/about_icon-heading.png) no-repeat center center /
+    background: url(./img/about_icon-heading.png) no-repeat center center /
       contain;
 
     @include variable.mq("lg") {
@@ -41,7 +41,7 @@
     content: "";
     bottom: -45px;
     left: -106px;
-    background: url(../img/about_background.png) no-repeat center center /
+    background: url(./img/about_background.png) no-repeat center center /
       contain;
     width: 358.909px;
     height: 240.382px;
@@ -108,7 +108,7 @@
     left: -16px;
     width: 178px;
     height: 12px;
-    background: url(../img/about_deco01.png) no-repeat center center / contain;
+    background: url(./img/about_deco01.png) no-repeat center center / contain;
 
     @include variable.mq("lg") {
       top: 42px;
@@ -127,7 +127,7 @@
     left: 0px;
     width: 148px;
     height: 12px;
-    background: url(../img/about_deco02.png) no-repeat center center / contain;
+    background: url(./img/about_deco02.png) no-repeat center center / contain;
 
     @include variable.mq("lg") {
       top: 42px;

@@ -9,7 +9,7 @@ body {
   font-size: 16px;
   color:$color-text;
   line-height: 1.5;
-  background-image: url(/img/pc_bg_color.png);
+  background-image: url(./img/pc_bg_color.png);
 }
 
 main,
@@ -58,8 +58,8 @@ a {
 // }
 
 main {
-  // background-image: url(/img/pc_bg_color.png);
-  // background-image: url(/img/body_background.jpg);
+  // background-image: url(./img/pc_bg_color.png);
+  // background-image: url(./img/body_background.jpg);
   // color: #fff;
   margin: 0 auto;
   justify-content: center;
