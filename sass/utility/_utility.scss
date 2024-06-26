@@ -121,8 +121,8 @@
   width: 120px;
   height: 190px;
   // background-color: blue;
-  // background: url(./img/fv_coffee_first.png) no-repeat;
-  background: url(./img/fv_coffee_first.png) no-repeat;
+  // background: url(../img/fv_coffee_first.png) no-repeat;
+  background: url(../img/fv_coffee_first.png) no-repeat;
   // cursor: pointer;
   // z-index: 1;
   position: relative;
@@ -217,7 +217,7 @@
   mask-size: cover;
   mask-image: 
     linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(242, 237, 235, 0) 30%),
-    url(./img/Vector.png);
+    url(../img/Vector.png);
   mask-repeat: no-repeat;
   // mask-position: 160% 0%;
   // overflow: hidden;
@@ -249,17 +249,17 @@
 .slide1 {
   background:
   linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgba(242, 237, 235, 1) 100%), 
-  url("./img/mainVisual_FV1.svg") no-repeat center center / cover;
+  url("../img/mainVisual_FV1.svg") no-repeat center center / cover;
 }
 
 .slide2 {
   background:
   linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgba(242, 237, 235, 1) 100%), 
-  url("./img/mainVisual_FV2.svg") no-repeat center center / cover;
+  url("../img/mainVisual_FV2.svg") no-repeat center center / cover;
 }
 
 .slide3 {
   background:
   linear-gradient(to bottom, rgba(242, 237, 235, 0) 90%, rgba(242, 237, 235, 1) 100%), 
-  url("./img/mainVisual_FV3.svg") no-repeat center center / cover;
+  url("../img/mainVisual_FV3.svg") no-repeat center center / cover;
 }

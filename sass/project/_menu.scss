@@ -17,7 +17,7 @@
     transform: translate(-50%, -50%);
     width: 64px;
     height: 64px;
-    background: url(./img/menu_icon-heading.png) no-repeat center center /
+    background: url(../img/menu_icon-heading.png) no-repeat center center /
       contain;
 
     @include mq("lg") {
@@ -64,7 +64,7 @@
     transform: translateX(-50%);
     width: 111px;
     height: 15px;
-    background: url(./img/menu_deco01.png) no-repeat center center / contain;
+    background: url(../img/menu_deco01.png) no-repeat center center / contain;
 
     @include mq("lg") {
       top: 49px;
@@ -236,7 +236,7 @@
     transform: translateX(-50%);
     width: 312px;
     height: 42.889px;
-    background: url(./img/menu_deco02.png) no-repeat center center / contain;
+    background: url(../img/menu_deco02.png) no-repeat center center / contain;
 
     @include mq("lg") {
       top: -84px;
