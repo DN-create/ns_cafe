@@ -5,14 +5,14 @@
 ------------------------------------------ */
 
 .p-about {
-  padding-top: 470px;
+  margin-top: 470px;
 
   @include mq("lg") {
     padding-bottom: 42px;
   }
 
   @include mq('sp') {
-   padding-top: 250px; 
+   margin-top: 250px; 
   }
 }
 
