@@ -4,12 +4,12 @@
 ------------------------------------------ */
 
 .p-info {
-  padding-top: 34px;
+  margin-top: 34px;
   position: relative;
   overflow: hidden;
 
   @include variable.mq("lg") {
-    padding-top: 60px;
+    margin-top: 60px;
   }
 
   @include variable.mq("xl") {

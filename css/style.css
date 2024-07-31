@@ -507,6 +507,7 @@ figcaption {
 
 .p-about {
 	margin-top: 470px;
+	padding-top: 40px;
 }
 
 .p-about__heading {
@@ -780,8 +781,9 @@ figcaption {
 ------------------------------------------ */
 
 .p-menu {
+	margin-top: 32px;
 	padding-bottom: 22px;
-	padding-top: 32px;
+	padding-top: 40px;
 }
 
 .p-menu__heading::before {
