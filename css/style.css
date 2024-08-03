@@ -60,7 +60,6 @@ main {
 	background: rgb(242, 237, 235);
 	justify-content: center;
 	margin: 0 auto;
-	min-width: 375px;
 	position: relative;
 	width: 100%;
 }
